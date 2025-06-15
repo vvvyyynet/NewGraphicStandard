@@ -5,6 +5,8 @@
 </script>
 
 <div class="grid md:grid-cols-2">
-	<Menu />
-	{@render children()}
+	<!-- <Menu /> -->
+	 <div class="prose">
+		{@render children()}
+	</div>
 </div>

@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="absolute bg-primary-500 h-full w-full">
+<div class="bg-primary-500 text-white">
 	<div class="grid grid-cols-[auto_80px]">
 		<h1>New Graphic Standard</h1>
 		<div class="flex flex-col">

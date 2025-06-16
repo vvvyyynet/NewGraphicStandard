@@ -4,9 +4,7 @@
 	let { children } = $props();
 </script>
 
-<div class="grid md:grid-cols-2">
-	<!-- <Menu /> -->
-	 <div class="prose">
-		{@render children()}
-	</div>
+<div class="absolute grid h-full w-full md:grid-cols-[600px_auto]">
+	<Menu />
+	{@render children()}
 </div>

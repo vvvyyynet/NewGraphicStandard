@@ -3,6 +3,7 @@
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
 @import '@skeletonlabs/skeleton/themes/cerberus';
+@import '../theme_newgraphicstd';
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 

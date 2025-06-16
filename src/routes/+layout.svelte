@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import Menu from './Menu.svelte';
+	import DarkSwitch from '$lib/components/darkSwitch.svelte';
 	let { children } = $props();
 </script>
 
@@ -8,3 +9,4 @@
 	<Menu />
 	{@render children()}
 </div>
+<DarkSwitch />

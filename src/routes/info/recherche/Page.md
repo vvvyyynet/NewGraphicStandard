@@ -3,8 +3,6 @@ title: Info
 abstract: T-h-is is a *test* abstract with a "very short quote".
 ---
 
-# {title}
-
 Unsere fortlaufende Recherchearbeit widmet sich der umfassenden Analyse und Bewertung der gängigen Materialien und Produktionsverfahren und erarbeitet Alternativen. 
 
 Wir setzen uns kritisch mit gängigen Materialien auseinander und hinterfragen übliche Produktionsprozesse. Konkret beleuchten und analysieren wir alle Stationen eines Grafikprodukts auf dem Weg zur Herstellung – von der Idee über das Konzept, die Gestaltung, Produktion und Materialwahl bis hin zur Entsorgung. Dies gilt sowohl für Print- als für digitale Publikationsformate. 

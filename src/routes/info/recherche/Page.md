@@ -1,6 +1,6 @@
 ---
-title: Info
-abstract: T-h-is is a *test* abstract with a "very short quote".
+title: Recherche
+abstract:
 ---
 
 Unsere fortlaufende Recherchearbeit widmet sich der umfassenden Analyse und Bewertung der gängigen Materialien und Produktionsverfahren und erarbeitet Alternativen. 

@@ -8,14 +8,14 @@
 	let { classes = '' } = $props();
 
 	$effect(() => {
-		const mode = localStorage.getItem('mode') || 'light';
-		checked = mode === 'dark';
+		const darkModeState = localStorage.getItem('darkModeState') || 'light';
+		checked = darkModeState === 'dark';
 	});
 
 	const onCheckedChange = (event: { checked: boolean }) => {
-		const mode = event.checked ? 'dark' : 'light';
-		document.documentElement.setAttribute('data-mode', mode);
-		localStorage.setItem('mode', mode);
+		const darkModeState = event.checked ? 'dark' : 'light';
+		document.documentElement.setAttribute('data-darkModeState', darkModeState);
+		localStorage.setItem('darkModeState', darkModeState);
 		checked = event.checked;
 	};
 
@@ -31,8 +31,8 @@
 
 <svelte:head>
 	<script>
-		const mode = localStorage.getItem('mode') || 'light';
-		document.documentElement.setAttribute('data-mode', mode);
+		const darkModeState = localStorage.getItem('darkModeState') || 'light';
+		document.documentElement.setAttribute('data-darkModeState', darkModeState);
 	</script>
 </svelte:head>
 

@@ -50,7 +50,7 @@
 				};
 			case 'open':
 				return {
-					menu: 'fixed w-full lg:w-[500px] p-6',
+					menu: 'fixed w-full lg:w-[500px] p-6 dark:lg:border-r-2 dark:lg:border-white',
 					content: 'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
 					heading: 'text-5xl leading-tight',
 					mainNav: 'absolute top-48 w-full',
@@ -71,7 +71,7 @@
 				};
 			case 'closed':
 				return {
-					menu: 'fixed hidden lg:block md:w-[100px] p-6',
+					menu: 'fixed hidden lg:block md:w-[100px] p-6 dark:border-r-2 dark:border-white',
 					content: 'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
 					heading: 'hidden',
 					mainNav: 'absolute top-48',
@@ -147,12 +147,7 @@
 
 	<!-- Light Switch -->
 	{#if route !== '/'}
-		<LightSwitch
-			classes={circleClass.concat(
-				' ',
-				'lg:text-black text-white fixed top-17 right-5 lg:top-4 lg:right-4'
-			)}
-		/>
+		<LightSwitch classes="fixed top-17 right-5 lg:top-4 lg:right-4"/>
 	{/if}
 
 	<!-- Title -->

@@ -10,7 +10,7 @@
 	} = $props();
 
 	// Obtain route-dependent custom maxwidth via callback or set to fallback.
-	const MAXWIDTHCLASS = 'max-w-[95%] md:max-w-[85%] lg:max-w-[70%]';
+	const MAXWIDTHCLASS = 'max-w-[95%] md:max-w-[85%] lg:max-w-[70%] mx-auto';
 	let maxWidthClass = $derived(getMaxWidth(route) ? getMaxWidth(route) : MAXWIDTHCLASS);
 </script>
 
@@ -46,7 +46,7 @@
 	</nav>
 
 	<!-- Content -->
-	<div class={['prose-base md:text-md mx-auto lg:text-lg', maxWidthClass]}>
+	<div class={['prose-base md:text-md lg:text-lg', maxWidthClass]}>
 		{@render children()}
 	</div>
 </div>

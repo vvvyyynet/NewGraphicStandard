@@ -25,6 +25,9 @@
 		if (prefersDarkScheme) {
 			checked = true;
 			onCheckedChange({ checked: checked });
+		} else {
+			checked = false;
+			onCheckedChange({ checked: checked });
 		}
 	});
 </script>

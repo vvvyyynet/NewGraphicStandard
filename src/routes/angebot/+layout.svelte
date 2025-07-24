@@ -3,12 +3,13 @@
 	import Multipage from '$lib/components/Multipage.svelte';
 
 	let { children } = $props();
+
 	let route = $derived(page.url.pathname.split('/').pop());
 	let navList = [
-		['recherche', 'Recherche'],
-		['ueber', 'Über uns'],
-		['verein', 'Verein']
+		['beratung', 'Beratung'],
+		['talks', 'Talks'],
+		['workshops', 'Workshops']
 	];
 </script>
 
-<Multipage title="Info" {navList} {children} {route} />
+<Multipage title="Angebot" {navList} {children} {route} />

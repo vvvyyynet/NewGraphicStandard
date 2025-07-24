@@ -11,4 +11,18 @@
 	];
 </script>
 
-<Multipage title="Toolbox" {navList} {children} {route} getMaxWidth = {(rt)=>{return (rt == 'publikationen') ? 'max-w-full' : undefined}}/>
+<Multipage
+	title="Toolbox"
+	{navList}
+	{children}
+	{route}
+	getMaxWidth={(rt) => {
+		if (rt == 'publikationen') {
+			return 'max-w-full mx-auto';
+		} else if (rt == 'links') {
+			return 'max-w-full';
+		} else {
+			return undefined;
+		}
+	}}
+/>

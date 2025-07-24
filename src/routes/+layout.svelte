@@ -35,7 +35,9 @@
 		switch (mode) {
 			case 'full':
 				return {
-					container: 'w-full p-3',
+					container: 'grid grid-cols-[1fr_0fr]',
+					menu: 'p-3',
+					content: 'hidden',
 					expander: '',
 					heading: 'text-5xl lg:text-8xl leading-tight',
 					mainNav: 'mt-10',
@@ -50,7 +52,9 @@
 				};
 			case 'open':
 				return {
-					container: 'fixed w-full lg:w-120 p-6',
+					container: 'absolute grid grid-cols-[0fr_auto] lg:grid-cols[100px_auto]',
+					menu: 'p-6',
+					content: '',
 					expander: '',
 					heading: 'text-3xl leading-tight',
 					mainNav: 'absolute top-48',
@@ -71,7 +75,9 @@
 				};
 			case 'closed':
 				return {
-					container: 'fixed hidden lg:block md:w-22 p-6',
+					container: 'grid grid-cols-[0fr_auto] lg:grid-cols-[86px_auto]',
+					menu: 'hidden lg:block md:w-22 p-6',
+					content: '',
 					expander: '',
 					heading: 'hidden',
 					mainNav: 'absolute top-48',
@@ -87,6 +93,8 @@
 			default:
 				return {
 					container: '',
+					menu: '',
+					content: '',
 					expander: '',
 					heading: '',
 					mainNav: 'absolute top-30 text-2xl',
@@ -115,110 +123,113 @@
 	</button>
 {/if}
 
-<!-- Sidebar Menu -->
-<div
-	class={[
-		'bg-primary-500 absolute h-full text-white transition-all duration-300',
-		cl(mode).container
-	]}
->
-	<!-- Expanding Menu -->
-	{#if mode !== 'full'}
-		<button
-			class={'absolute top-5 right-5 lg:right-3'}
-			onclick={() => {
-				isExpanded = !isExpanded;
-			}}
-		>
-			{#if isExpanded}
-				<div class={[circleClass, 'fixed top-5 right-5 lg:hidden']}>
-					<X size={40} />
-				</div>
-				<div class={['hidden lg:block', cl(mode).expander]}>
-					<ChevronLeft size={70} />
-				</div>
-			{:else}
-				<div class={['hidden lg:block', cl(mode).expander]}>
-					<ChevronRight size={70} />
-				</div>
-			{/if}
-		</button>
-	{/if}
-
-	<!-- Light Switch -->
-	{#if route !== '/'}
-		<LightSwitch
-			classes={circleClass.concat(
-				' ',
-				'lg:text-black text-white fixed top-17 right-5 lg:top-4 lg:right-4'
-			)}
-		/>
-	{/if}
-
-	<!-- Title -->
-	<div class="grid grid-cols-[auto_80px]">
-		<h1>
-			<a class={['transition-all duration-300', cl(mode).heading]} href="/"
-				>New Graphic{#if mode !== 'full'}<br />{/if} Standard</a
+<!-- Grid Container -->
+<div class={['absolute w-full h-full', cl(mode).container]}>
+	<!-- Menu (Sidebar or Fullscreen) -->
+	<div
+		class={['w-full h-full bg-primary-500 text-white transition-all duration-300', cl(mode).menu]}
+	>
+		<!-- Expanding Menu -->
+		{#if mode !== 'full'}
+			<button
+				class={'absolute top-5 right-5 lg:right-3'}
+				onclick={() => {
+					isExpanded = !isExpanded;
+				}}
 			>
-		</h1>
+				{#if isExpanded}
+					<div class={[circleClass, 'fixed top-5 right-5 lg:hidden']}>
+						<X size={40} />
+					</div>
+					<div class={['hidden lg:block', cl(mode).expander]}>
+						<ChevronLeft size={70} />
+					</div>
+				{:else}
+					<div class={['hidden lg:block', cl(mode).expander]}>
+						<ChevronRight size={70} />
+					</div>
+				{/if}
+			</button>
+		{/if}
+
+		<!-- Light Switch -->
+		{#if route !== '/'}
+			<LightSwitch
+				classes={circleClass.concat(
+					' ',
+					'lg:text-black text-white fixed top-17 right-5 lg:top-4 lg:right-4'
+				)}
+			/>
+		{/if}
+
+		<!-- Title -->
+		<div class="grid grid-cols-[auto_80px]">
+			<h1>
+				<a class={['transition-all duration-300', cl(mode).heading]} href="/"
+					>New Graphic{#if mode !== 'full'}<br />{/if} Standard</a
+				>
+			</h1>
+		</div>
+
+		<!-- Main Menu -->
+		<nav class={['transition-all duration-300', cl(mode).mainNav]}>
+			<ol class={['transition-all duration-300', cl(mode).mainOl]}>
+				{#each pages as page}
+					{#if page.set === 'main'}
+						<li>
+							<a
+								href={`${base}${page.path}`}
+								onclick={() => {
+									const mediaQuery = window.matchMedia('(min-width: 1024px)');
+									if (!mediaQuery.matches) {
+										isExpanded = false;
+									}
+								}}
+								class={['transition-transform duration-300', cl(mode).mainItem]}
+							>
+								<span class={['transition-transform duration-300', cl(mode).mainIcon]}
+									><page.icon
+										size="h-full"
+										color={checkActive(page.path) ? 'var(--color-secondary-500)' : 'white'}
+									/></span
+								>
+								<span class={['transition-transform duration-300', cl(mode, page.path).mainText]}
+									>{page.name}</span
+								>
+							</a>
+						</li>
+					{/if}
+				{/each}
+			</ol>
+		</nav>
+
+		<!-- Footer Menu -->
+		<nav class={['transition-transform duration-300', cl(mode).footNav]}>
+			<ol class={['', cl(mode).footOl]}>
+				{#each pages as page}
+					{#if page.set === 'footer'}
+						<li>
+							<a
+								href={`${base}${page.path}`}
+								class={['list-nav-item m-4 h-full', cl(mode, page.path).footText]}>{page.name}</a
+							>
+						</li>
+					{/if}
+				{/each}
+			</ol>
+		</nav>
+
+		<!-- CO2 Button -->
+		{#if mode == 'full'}
+			<Co2Popup classes="fixed right-6 bottom-6 z-100 hidden lg:flex" />
+			<a href="/co2" class={['z-10', cl(mode).co2]}><span>🌍</span></a>
+		{:else}
+			<a href="/co2" class={['', cl(mode).co2]}><span>🌍</span></a>
+		{/if}
 	</div>
 
-	<!-- Main Menu -->
-	<nav class={['transition-all duration-300', cl(mode).mainNav]}>
-		<ol class={['transition-all duration-300', cl(mode).mainOl]}>
-			{#each pages as page}
-				{#if page.set === 'main'}
-					<li>
-						<a
-							href={`${base}${page.path}`}
-							onclick={() => {
-								const mediaQuery = window.matchMedia('(min-width: 1024px)');
-								if (!mediaQuery.matches) {
-									isExpanded = false;
-								}
-							}}
-							class={['transition-transform duration-300', cl(mode).mainItem]}
-						>
-							<span class={['transition-transform duration-300', cl(mode).mainIcon]}
-								><page.icon
-									size="h-full"
-									color={checkActive(page.path) ? 'var(--color-secondary-500)' : 'white'}
-								/></span
-							>
-							<span class={['transition-transform duration-300', cl(mode, page.path).mainText]}
-								>{page.name}</span
-							>
-						</a>
-					</li>
-				{/if}
-			{/each}
-		</ol>
-	</nav>
-
-	<!-- Footer Menu -->
-	<nav class={['transition-transform duration-300', cl(mode).footNav]}>
-		<ol class={['', cl(mode).footOl]}>
-			{#each pages as page}
-				{#if page.set === 'footer'}
-					<li>
-						<a
-							href={`${base}${page.path}`}
-							class={['list-nav-item m-4 h-full', cl(mode, page.path).footText]}>{page.name}</a
-						>
-					</li>
-				{/if}
-			{/each}
-		</ol>
-	</nav>
-
-	<!-- CO2 Button -->
-	{#if mode == 'full'}
-		<Co2Popup classes="fixed right-6 bottom-6 z-100 hidden lg:flex" />
-		<a href="/co2" class={['z-10', cl(mode).co2]}><span>🌍</span></a>
-	{:else}
-		<a href="/co2" class={['', cl(mode).co2]}><span>🌍</span></a>
-	{/if}
+	<!-- Content -->
+	<div class={['w-full h-full', cl(mode).content]}>
+		{@render children()}
+	</div>
 </div>
-
-{@render children()}

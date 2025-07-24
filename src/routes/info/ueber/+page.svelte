@@ -1,15 +1,5 @@
 <script>   
 	import Page from './Page.md';
 </script>
-<!-- <Page /> -->
 
-<img src="/team.png" />
-
-<div class="grid grid-cols-2 gap-10">
-    <div>
-        <strong>Ladina Ingold</strong> studierte Visuelle Kommunikation (BA), Integrative Design (MA) an der HGK Basel sowie zwei Semester Eco-Social Design an der Uni BZ Bozen. Ihr Interesse gilt zukunftsfähigem Design, welches Verantwortung übernimmt. Als Grafikerin bedeutet das für sie, den Lebenszyklus eines Print­produkts in seiner Gesamtheit zu betrachten. Nebenbei experimentiert und forscht sie an einem ­Druckverfahren, welches organisches Restmaterial zu Pigmenten und Prints verwertet.
-    </div>
-    <div>
-        <strong>Katharina Scheller</strong> ist Kommunikationsdesignerin und Designforscherin mit einem BA in Visueller Kommunikation (Hochschule für Gestaltung Basel) und einem MA in Design Research (Hochschule der Künste Bern). Als Kommunikationsdesignerin konzipiert und gestaltet sie in den Bereichen Informationsdesign, Buch- und Ausstellungsgestaltung. Derzeit forscht sie als Doktorandin (Universität Bern) zur visuellen Kommunikation von ökologischen Themen. Daneben absolviert sie eine Weiterbildung in Hochschuldidaktik (Universität Bern), ist Gastdozentin für Kommunikationsdesign und Designtheorie und fungiert als Mentorin.
-    </div>
-</div>
+<Page />

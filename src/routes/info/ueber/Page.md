@@ -7,7 +7,7 @@ abstract:
     import Columns from '$lib/components/Columns.svelte';
 </script>
 
-![Portraitbild mit Ladina Ingold und Katharina Scheller](/team.png)
+<img src="/team.png" alt="Portraitbild mit Ladina Ingold und Katharina Scheller" class="max-h-[60vh] mx-auto"/>
 
 <Columns ncols={[2,2,1]} gap={10}>
 

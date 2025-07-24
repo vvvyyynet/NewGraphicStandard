@@ -53,7 +53,7 @@
 					menu: 'fixed w-full lg:w-[500px] p-6',
 					content: 'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
 					heading: 'text-5xl leading-tight',
-					mainNav: 'absolute top-48',
+					mainNav: 'absolute top-48 w-full',
 					mainOl: 'flex flex-col gap-5 place-content-center',
 					mainItem: 'h-10 flex hover:text-secondary-500',
 					mainIcon: 'h-full flex flex-row place-content-start',

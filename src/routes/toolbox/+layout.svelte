@@ -5,11 +5,10 @@
 	let { children } = $props();
 
 	let route = $derived(page.url.pathname.split('/').pop());
-	console.log(route);
 	let navList = [
 		['publikationen', 'Publikationen'],
 		['links', 'Links']
 	];
 </script>
 
-<Multipage title="Toolbox" {navList} {children} {route} />
+<Multipage title="Toolbox" {navList} {children} {route} getMaxWidth = {(rt)=>{return (rt == 'publikationen') ? 'max-w-full' : undefined}}/>

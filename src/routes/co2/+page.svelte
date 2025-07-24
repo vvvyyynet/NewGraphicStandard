@@ -6,6 +6,6 @@
 	let route = $derived(page.url.pathname.split('/').pop());
 </script>
 
-<Multipage title="CO-2 Abdruck" {route} >
+<Multipage title="CO<sub>2</sub> Abdruck" {route} >
 	<Page />
 </Multipage>

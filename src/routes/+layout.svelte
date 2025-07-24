@@ -216,6 +216,6 @@
 	{/if}
 </div>
 
-<div class={['z-100 transition-all duration-300', cl(mode).content]}>
+<div class={['z-100 transition-all h-full duration-300', cl(mode).content]}>
 	{@render children()}
 </div>

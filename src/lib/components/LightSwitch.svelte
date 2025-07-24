@@ -2,8 +2,7 @@
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
 
-	import { Lightbulb } from 'lucide-svelte';
-	import { LightbulbOff } from 'lucide-svelte';
+	import { Moon, Sun } from 'lucide-svelte';
 
 	let checked = $state(false); // false = light-mode (default)
 	let { classes = '' } = $props();
@@ -46,6 +45,6 @@
 	controlInactive="bg-white border border-primary-500 hover:bg-secondary-500"
 	{onCheckedChange}
 >
-	{#snippet inactiveChild()}<Lightbulb />{/snippet}
-	{#snippet activeChild()}<LightbulbOff />{/snippet}
+	{#snippet inactiveChild()}<Moon />{/snippet}
+	{#snippet activeChild()}<Sun />{/snippet}
 </Switch>

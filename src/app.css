@@ -5,6 +5,16 @@
 @import '@skeletonlabs/skeleton/themes/cerberus';
 @import '../theme_newgraphicstd';
 
+@layer base {
+	@font-face {
+		font-family: 'SuisseIntl';
+		src: url('/fonts/SuisseIntl/SuisseIntl-Regular-WebM.woff') format('woff');
+		font-style: normal;
+		font-weight: normal;
+		font-display: swap;
+	}
+}
+
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
 @plugin '@tailwindcss/typography';

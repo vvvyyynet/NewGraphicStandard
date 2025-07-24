@@ -11,4 +11,16 @@
 	];
 </script>
 
-<Multipage title="Info" {navList} {children} {route} />
+<Multipage
+	title="Info"
+	{navList}
+	{children}
+	{route}
+	getMaxWidth={(rt) => {
+		if (rt == 'ueber') {
+			return 'lg:max-w-[85%] mx-auto';
+		} else {
+			return undefined;
+		}
+	}}
+/>

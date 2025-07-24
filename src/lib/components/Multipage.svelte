@@ -34,8 +34,8 @@
 						}}
 						href={item[0]}
 						class={[
-							route == item[0] && 'bg-secondary-500',
-							'hover:bg-secondary-500 flex min-w-30 justify-center rounded-full border p-0 text-lg'
+							route == item[0] && 'bg-secondary-500 text-primary-500',
+							'hover:bg-secondary-500 hover:text-primary-500 flex min-w-30 justify-center rounded-full border p-0 text-lg'
 						]}
 					>
 						<p class="text-center">{item[1]}</p>

@@ -43,7 +43,7 @@
 	{checked}
 	name="darkmodeToggle"
 	controlActive="bg-white hover:bg-secondary-500"
-	controlInactive="bg-white border-primary-500 hover:bg-secondary-500"
+	controlInactive="bg-white border border-primary-500 hover:bg-secondary-500"
 	{onCheckedChange}
 >
 	{#snippet inactiveChild()}<Lightbulb />{/snippet}

@@ -14,7 +14,7 @@
 
 #digital
 
-abstract: Wieviele CO2-Emissionen verursacht meine Webseite? Ganz einfach berechnen mit dem [Website Carbon Calculator](https://www.websitecarbon.com/).
+Wieviele CO2-Emissionen verursacht meine Webseite? Ganz einfach berechnen mit dem [Website Carbon Calculator](https://www.websitecarbon.com/).
 
 </Linkbox>
 

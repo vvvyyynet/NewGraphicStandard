@@ -35,8 +35,8 @@
 		switch (mode) {
 			case 'full':
 				return {
-					container: 'w-full p-3',
-					expander: '',
+					menu: 'w-full p-3',
+					content: 'w-0 p-3',
 					heading: 'text-5xl lg:text-8xl leading-tight',
 					mainNav: 'mt-10',
 					mainOl: 'flex flex-col gap-5 lg:flex lg:flex-row lg:gap-14',
@@ -46,12 +46,12 @@
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
 					footText: 'hover:text-secondary-500',
-					co2: 'absolute bottom-5 right-5 z-10 lg:right-10 lg:bottom-10 lg:block text-3xl'
+					co2: 'absolute bottom-5 right-5 lg:right-10 lg:bottom-10 lg:block text-3xl'
 				};
 			case 'open':
 				return {
-					container: 'fixed w-full lg:w-120 p-6',
-					expander: '',
+					menu: 'fixed w-full lg:w-[500px] p-6',
+					content: 'absolute left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)] p-6',
 					heading: 'text-3xl leading-tight',
 					mainNav: 'absolute top-48',
 					mainOl: 'flex flex-col gap-5 place-content-center',
@@ -71,8 +71,8 @@
 				};
 			case 'closed':
 				return {
-					container: 'fixed hidden lg:block md:w-22 p-6',
-					expander: '',
+					menu: 'fixed hidden lg:block md:w-[100px] p-6',
+					content: 'absolute left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)] p-6',
 					heading: 'hidden',
 					mainNav: 'absolute top-48',
 					mainOl: 'flex flex-col gap-5 place-content-center',
@@ -86,8 +86,8 @@
 				};
 			default:
 				return {
-					container: '',
-					expander: '',
+					menu: '',
+					content: '',
 					heading: '',
 					mainNav: 'absolute top-30 text-2xl',
 					mainOl: '',
@@ -109,7 +109,7 @@
 		onclick={() => {
 			isExpanded = true;
 		}}
-		class={[circleClass, 'fixed top-5 right-5 lg:hidden']}
+		class={[circleClass, 'z-1000 fixed top-5 right-5 lg:hidden']}
 	>
 		<Ellipsis size={30} />
 	</button>
@@ -118,8 +118,8 @@
 <!-- Sidebar Menu -->
 <div
 	class={[
-		'bg-primary-500 absolute h-full text-white transition-all duration-300',
-		cl(mode).container
+		'z-200 bg-primary-500 transition-transition absolute h-full text-white duration-300',
+		cl(mode).menu
 	]}
 >
 	<!-- Expanding Menu -->
@@ -134,11 +134,11 @@
 				<div class={[circleClass, 'fixed top-5 right-5 lg:hidden']}>
 					<X size={40} />
 				</div>
-				<div class={['hidden lg:block', cl(mode).expander]}>
+				<div class="hidden lg:block">
 					<ChevronLeft size={70} />
 				</div>
 			{:else}
-				<div class={['hidden lg:block', cl(mode).expander]}>
+				<div class="hidden lg:block">
 					<ChevronRight size={70} />
 				</div>
 			{/if}
@@ -214,11 +214,13 @@
 
 	<!-- CO2 Button -->
 	{#if mode == 'full'}
-		<Co2Popup classes="fixed right-6 bottom-6 z-100 hidden lg:flex" />
-		<a href="/co2" class={['z-10', cl(mode).co2]}><span>🌍</span></a>
+		<a href="/co2" class={['z-210', cl(mode).co2]}><span>🌍</span></a>
+		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:flex" />
 	{:else}
 		<a href="/co2" class={['', cl(mode).co2]}><span>🌍</span></a>
 	{/if}
 </div>
 
-{@render children()}
+<div class={['z-100 transition-transform duration-300', cl(mode).content]}>
+	{@render children()}
+</div>

@@ -36,7 +36,7 @@
 			case 'full':
 				return {
 					menu: 'w-full p-3',
-					content: 'w-0 p-3',
+					content: 'hidden w-0',
 					heading: 'text-5xl lg:text-8xl leading-tight',
 					mainNav: 'mt-10',
 					mainOl: 'flex flex-col gap-5 lg:flex lg:flex-row lg:gap-14',
@@ -51,8 +51,8 @@
 			case 'open':
 				return {
 					menu: 'fixed w-full lg:w-[500px] p-6',
-					content: 'absolute left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)] p-6',
-					heading: 'text-3xl leading-tight',
+					content: 'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
+					heading: 'text-5xl leading-tight',
 					mainNav: 'absolute top-48',
 					mainOl: 'flex flex-col gap-5 place-content-center',
 					mainItem: 'h-10 flex hover:text-secondary-500',
@@ -72,7 +72,7 @@
 			case 'closed':
 				return {
 					menu: 'fixed hidden lg:block md:w-[100px] p-6',
-					content: 'absolute left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)] p-6',
+					content: 'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
 					heading: 'hidden',
 					mainNav: 'absolute top-48',
 					mainOl: 'flex flex-col gap-5 place-content-center',
@@ -216,11 +216,11 @@
 	{#if mode == 'full'}
 		<a href="/co2" class={['z-210', cl(mode).co2]}><span>🌍</span></a>
 		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:flex" />
-	{:else}
+	{:else if (route !== '/co2')}
 		<a href="/co2" class={['', cl(mode).co2]}><span>🌍</span></a>
 	{/if}
 </div>
 
-<div class={['z-100 transition-transform duration-300', cl(mode).content]}>
+<div class={['z-100 transition-all duration-300', cl(mode).content]}>
 	{@render children()}
 </div>

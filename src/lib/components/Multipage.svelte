@@ -46,7 +46,7 @@
 	</nav>
 
 	<!-- Content -->
-	<div class={['prose-base md:text-md lg:text-lg', maxWidthClass]}>
+	<div class={['prose-base md:text-md lg:text-lg pb-20', maxWidthClass]}>
 		{@render children()}
 	</div>
 </div>

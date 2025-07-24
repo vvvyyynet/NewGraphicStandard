@@ -5,7 +5,7 @@
 
 {#if hasContent}
 	<button
-		class="max-w-[30vw]"
+		class="max-w-[90vw] lg:max-w-[30vw]"
 		onclick={() => {
 			goto(href);
 		}}

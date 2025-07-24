@@ -6,7 +6,7 @@
 </script>
 
 <!-- <Columns ncols={2} gap={10} classes="gap-y-5"> -->
-<Div classes="flex flex-col flex-wrap gap-4 max-h-[200vh]">
+<Div classes="flex flex-col lg:flex-wrap gap-4 max-h-[200vh]">
 
 <Linkbox hasContent={true} classes="" href="links/articles/fussabdruck-von-webseiten">
 

@@ -103,6 +103,13 @@
 				};
 		}
 	});
+
+	const closeMenu = () => {
+		const mediaQuery = window.matchMedia('(min-width: 1024px)');
+		if (!mediaQuery.matches) {
+			isExpanded = false;
+		}
+	};
 </script>
 
 <!-- Hamburger Trigger -->
@@ -149,7 +156,7 @@
 
 	<!-- Light Switch -->
 	{#if route !== '/'}
-		<LightSwitch classes="fixed top-17 right-5 lg:top-4 lg:right-4" />
+		<LightSwitch call={closeMenu} classes="fixed top-17 right-5 lg:top-4 lg:right-4" />
 	{/if}
 
 	<!-- Title -->
@@ -169,12 +176,7 @@
 					<li>
 						<a
 							href={`${base}${page.path}`}
-							onclick={() => {
-								const mediaQuery = window.matchMedia('(min-width: 1024px)');
-								if (!mediaQuery.matches) {
-									isExpanded = false;
-								}
-							}}
+							onclick={closeMenu}
 							class={['transition-transform duration-300', cl(mode).mainItem]}
 						>
 							<span class={['transition-transform duration-300', cl(mode).mainIcon]}
@@ -201,6 +203,7 @@
 					<li>
 						<a
 							href={`${base}${page.path}`}
+							onclick={closeMenu}
 							class={['list-nav-item m-4 h-full', cl(mode, page.path).footText]}>{page.name}</a
 						>
 					</li>

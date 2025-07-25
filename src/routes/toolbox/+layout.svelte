@@ -1,25 +1,25 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import Multipage from '$lib/components/Multipage.svelte';
+	import { onMount } from 'svelte';
 
-	let { children } = $props();
-
-	let route = $derived(page.url.pathname.split('/').pop());
-	let navList = [
-		['publikationen', 'Publikationen'],
-		['links', 'Links']
-	];
+	import type { LayoutProps } from './$types';
+	let { data, children }: LayoutProps = $props();
+	let parentRoute = $state('/');
+	onMount(() => {
+		parentRoute = page.url.pathname;
+	});
 </script>
 
 <Multipage
-	title="Toolbox"
-	{navList}
+	title={data.title}
 	{children}
-	{route}
+	sections={data.sections}
+	{parentRoute}
 	getMaxWidth={(rt) => {
 		if (rt == 'publikationen') {
 			return 'max-w-full mx-auto';
-		} else if (rt == 'links') {
+		} else if (rt == 'tools') {
 			return 'max-w-full';
 		} else {
 			return undefined;

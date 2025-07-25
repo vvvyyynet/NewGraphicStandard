@@ -1,13 +1,16 @@
 <script>
+	import { page } from '$app/state';
 	let {
-		navList = [],
+		sections = [{ slug: '', title: '' }],
 		title = '',
 		children,
 		getMaxWidth = (rt) => {
 			return undefined;
 		},
-		route
+		parentRoute
 	} = $props();
+
+	let route = $derived(page.url.pathname.split('/').pop());
 
 	// Obtain route-dependent custom maxwidth via callback or set to fallback.
 	const MAXWIDTHCLASS = 'max-w-[95%] md:max-w-[85%] lg:max-w-[70%] mx-auto';
@@ -20,25 +23,22 @@
 
 	<!-- Menu Top -->
 
-	<nav class="mx-auto mt-5 mb-10 block w-full overflow-x-auto pb-4 pl-10 pr-5 lg:mb-20">
+	<nav class="mx-auto mt-5 mb-10 block w-full overflow-x-auto pr-5 pb-4 pl-10 lg:mb-20">
 		<ul class="flex justify-center gap-2">
-	<!-- 	
+			<!-- 	
 	<nav class="mx-auto mt-5 mb-10 block lg:mb-20">
 		<ul class="flex flex-wrap justify-center gap-2">
 	 -->
-			{#each navList as item}
+			{#each sections as section}
 				<li class="">
 					<a
-						onclick={() => {
-							route = item[0];
-						}}
-						href={item[0]}
+						href="{parentRoute}/{section.slug}"
 						class={[
-							route == item[0] && 'bg-secondary-500 text-primary-500',
+							route == section.slug && 'bg-secondary-500 text-primary-500',
 							'hover:bg-secondary-500 hover:text-primary-500 flex min-w-30 justify-center rounded-full border p-0 text-lg'
 						]}
 					>
-						<p class="text-center">{item[1]}</p>
+						<span class="text-center">{section.title}</span>
 					</a>
 				</li>
 			{/each}
@@ -46,7 +46,7 @@
 	</nav>
 
 	<!-- Content -->
-	<div class={['prose-base md:text-md lg:text-lg pb-20', maxWidthClass]}>
+	<div class={['prose-base md:text-md pb-20 lg:text-lg', maxWidthClass]}>
 		{@render children()}
 	</div>
 </div>

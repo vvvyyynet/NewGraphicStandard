@@ -1,15 +1,14 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import Multipage from '$lib/components/Multipage.svelte';
+	import { onMount } from 'svelte';
 
-	let { children } = $props();
-
-	let route = $derived(page.url.pathname.split('/').pop());
-	let navList = [
-		['beratung', 'Beratung'],
-		['talks', 'Talks'],
-		['workshops', 'Workshops']
-	];
+	import type { LayoutProps } from './$types';
+	let { data, children }: LayoutProps = $props();
+	let parentRoute = '';
+	onMount(() => {
+		parentRoute = page.url.pathname;
+	});
 </script>
 
-<Multipage title="Angebot" {navList} {children} {route} />
+<Multipage title={data.title} {children} sections={data.sections} {parentRoute} />

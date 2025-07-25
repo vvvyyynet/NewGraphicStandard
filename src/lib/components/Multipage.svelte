@@ -1,7 +1,8 @@
 <script>
 	import { page } from '$app/state';
 	let {
-		sections = [{ slug: '', title: '' }],
+		noMenu = false,
+		sections = [],
 		title = '',
 		children,
 		getMaxWidth = (rt) => {
@@ -26,6 +27,7 @@
 		<ul class="flex justify-center gap-2"> -->
 
 	<nav class="mx-auto mt-5 mb-10 block lg:mb-20">
+		<!-- {#if !noMenu} -->
 		<ul class="flex flex-wrap justify-center gap-2">
 			{#each sections as section}
 				<li class="">
@@ -41,8 +43,8 @@
 				</li>
 			{/each}
 		</ul>
+		<!-- {/if} -->
 	</nav>
-
 	<!-- Content -->
 	<div class={['prose-base md:text-md pb-20 lg:text-lg', maxWidthClass]}>
 		{@render children()}

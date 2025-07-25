@@ -6,7 +6,7 @@
 	import IconLightswitch2 from '$lib/icons/lightswitch_2.svelte';
 
 	let checked = $state(false); // false = light-mode (default)
-	let { classes = '' } = $props();
+	let { call = ()=>{}, classes = '' } = $props();
 
 	$effect(() => {
 		const darkModeState = localStorage.getItem('darkModeState') || 'light';
@@ -18,6 +18,7 @@
 		document.documentElement.setAttribute('data-darkModeState', darkModeState);
 		localStorage.setItem('darkModeState', darkModeState);
 		checked = event.checked;
+		call();
 	};
 
 	onMount(() => {

@@ -1,7 +1,7 @@
 <script>
-    let {classes=""} = $props()
+	let { classes = '', children } = $props();
 </script>
 
 <div class={classes}>
-<slot></slot>
+	{@render children()}
 </div>

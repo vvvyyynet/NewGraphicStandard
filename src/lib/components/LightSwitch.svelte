@@ -2,7 +2,8 @@
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
 
-	import { Moon, Sun } from 'lucide-svelte';
+	import IconLightswitch1 from '$lib/icons/lightswitch_1.svelte';
+	import IconLightswitch2 from '$lib/icons/lightswitch_2.svelte';
 
 	let checked = $state(false); // false = light-mode (default)
 	let { classes = '' } = $props();
@@ -41,13 +42,13 @@
 
 <Switch
 	compact
-	classes = {'text-primary-500'.concat(' ', classes)}
+	classes={'text-primary-500 h-40 w-40'.concat(' ', classes)}
 	{checked}
 	name="darkmodeToggle"
 	controlActive="bg-white hover:bg-secondary-500"
 	controlInactive="bg-white border border-primary-500 hover:bg-secondary-500"
 	{onCheckedChange}
 >
-	{#snippet inactiveChild()}<Moon />{/snippet}
-	{#snippet activeChild()}<Sun />{/snippet}
+	{#snippet inactiveChild()}<IconLightswitch1 />{/snippet}
+	{#snippet activeChild()}<IconLightswitch2 />{/snippet}
 </Switch>

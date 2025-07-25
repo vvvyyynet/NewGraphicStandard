@@ -5,15 +5,22 @@
 	import LightSwitch from '$lib/components/LightSwitch.svelte';
 	import Co2Popup from '$lib/components/CO2Popup.svelte';
 	import { ChevronRight, ChevronLeft, X, Ellipsis } from 'lucide-svelte';
-	import { Heart, Stars, ToolCase, Info } from 'lucide-svelte';
+	import IconMenu from '$lib/icons/menu.svelte';
+	import IconClose from '$lib/icons/close.svelte';
+	import IconLightswitch1 from '$lib/icons/lightswitch_1.svelte';
+	import IconLightswitch2 from '$lib/icons/lightswitch_2.svelte';
+	import IconAngebot from '$lib/icons/angebot.svelte';
+	import IconFriends from '$lib/icons/friends.svelte';
+	import IconInfo from '$lib/icons/info.svelte';
+	import IconToolbox from '$lib/icons/toolbox.svelte';
 
 	let { children } = $props();
 	let route = $derived(page.url.pathname);
 	const pages = [
-		{ set: 'main', name: 'Info', path: '/info', icon: Info },
-		{ set: 'main', name: 'Angebot', path: '/angebot', icon: Stars },
-		{ set: 'main', name: 'Toolbox', path: '/toolbox', icon: ToolCase },
-		{ set: 'main', name: 'Friends', path: '/friends', icon: Heart },
+		{ set: 'main', name: 'Info', path: '/info', icon: IconInfo },
+		{ set: 'main', name: 'Angebot', path: '/angebot', icon: IconAngebot },
+		{ set: 'main', name: 'Toolbox', path: '/toolbox', icon: IconToolbox },
+		{ set: 'main', name: 'Friends', path: '/friends', icon: IconFriends },
 		{ set: 'footer', name: 'Kontakt', path: '/kontakt', icon: null },
 		{ set: 'footer', name: 'Unterstütze uns!', path: '/support', icon: null },
 		{ set: 'footer', name: 'Impressum', path: '/impressum', icon: null }
@@ -133,23 +140,17 @@
 			}}
 		>
 			{#if isExpanded}
-				<div class={[circleClass, 'fixed top-5 right-5 lg:hidden']}>
-					<X size={40} />
-				</div>
-				<div class="hidden lg:block">
-					<ChevronLeft size={70} />
-				</div>
+				<IconClose classes="fixed top-5 right-5 lg:hidden" size={50} />
+				<ChevronLeft classes="hidden lg:block" size={50} />
 			{:else}
-				<div class="hidden lg:block">
-					<ChevronRight size={70} />
-				</div>
+				<ChevronRight classes="hidden lg:block" size={50} />
 			{/if}
 		</button>
 	{/if}
 
 	<!-- Light Switch -->
 	{#if route !== '/'}
-		<LightSwitch classes="fixed top-17 right-5 lg:top-4 lg:right-4" />
+		<LightSwitch classes="fixed top-17 right-5 lg:top-4 lg:right-4" size={50}/>
 	{/if}
 
 	<!-- Title -->
@@ -179,8 +180,9 @@
 						>
 							<span class={['transition-transform duration-300', cl(mode).mainIcon]}
 								><page.icon
-									size="h-full"
-									color={checkActive(page.path) ? 'var(--color-secondary-500)' : 'white'}
+									classes="h-full"
+									size={180}
+									active={checkActive(page.path)}
 								/></span
 							>
 							<span class={['transition-transform duration-300', cl(mode, page.path).mainText]}

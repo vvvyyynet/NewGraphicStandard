@@ -66,7 +66,7 @@ USAGE
 -->
 
 <script>
-    let {ncols=[1,1,1], gap=[10,10,10], classes=""} = $props()
+    let {ncols=[1,1,1], gap=[10,10,10], classes="", children} = $props()
     if (typeof ncols == "number") ncols = [ncols, ncols, ncols]
     if (typeof gap == "number") gap = [gap, gap, gap]
 </script>
@@ -78,7 +78,7 @@ USAGE
     `lg:gap-${gap[0]} lg:gap-${gap[1]} gap-${gap[2]}`, 
     "gap-y-0", 
     classes]}> -->
-<slot></slot>
+{@render children()}
 </div>
 
 <!-- Safelists to prevent treeshaking -->

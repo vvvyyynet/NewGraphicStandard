@@ -8,7 +8,7 @@
 <!-- <Columns ncols={2} gap={10} classes="gap-y-5"> -->
 <Div classes="flex flex-col lg:flex-wrap gap-4 max-h-[200vh]">
 
-<Linkbox hasContent={true} classes="" href="links/articles/fussabdruck-von-webseiten">
+<Linkbox hasContent={true} classes="" href="tools/articles/fussabdruck-von-webseiten">
 
 # Fussabdruck von Webseiten
 
@@ -26,15 +26,15 @@ Wieviele CO2-Emissionen verursacht meine Webseite? Ganz einfach berechnen mit de
 
 Um Inhalte im Web möglichst für viele barrierearm zugänglich zu machen, gibt es unzählige Guidelines. Folgende Links geben anschauliche Hilfestellungen und helfen, Webseiten möglichst ohne Hindernisse zu entwickeln:
 
-→ <a href="" class="underline">Link 1</a>
+→ <a href="#changeme" class="underline">Link 1</a>
 
-→ <a href="" class="underline">Link 2</a>
+→ <a href="#changeme" class="underline">Link 2</a>
 
-→ <a href="" class="underline">Link 3</a>
+→ <a href="#changeme" class="underline">Link 3</a>
 
 </Linkbox>
 
-<Linkbox hasContent={true} classes="" href="links/articles/font-diversity">
+<Linkbox hasContent={true} classes="" href="tools/articles/font-diversity">
 
 # Font\*Diversity
 
@@ -53,13 +53,13 @@ Sammlungen wie [flin\*type]() oder [Libre Fonts by Womxn]() möchten die Diversi
 
 Um Inhalte im Web möglichst für viele barrierearm zugänglich zu machen, gibt es unzählige Guidelines. Folgende Links geben anschauliche Hilfestellungen und helfen, Webseiten möglichst ohne Hindernisse zu entwickeln:
 
-→ <a href="" class="underline">Link 1</a>
+→ <a href="#changeme" class="underline">Link 1</a>
 
-→ <a href="" class="underline">Link 2</a>
+→ <a href="#changeme" class="underline">Link 2</a>
 
-→ <a href="" class="underline">Link 3</a>
+→ <a href="#changeme" class="underline">Link 3</a>
 
-→ <a href="" class="underline">Link 4</a>
+→ <a href="#changeme" class="underline">Link 4</a>
 
 </Linkbox>
 

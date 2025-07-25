@@ -12,9 +12,9 @@
 
 Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Papierherstellung und optimierten Einsatz von Material sowie grundlegende Theorien und Konzepte umweltbewusster Gestaltung. Sie bietet einen Überblick über wichtige ökologische Zusammenhänge, Informationen und Anleitungen für den täglichen Gebrauch und einen zeitgemässen Umgang mit Ressourcen.
 
-→ <a href="" class="underline">Print-PDF zum Download</a>
+→ <a href="#changeme" class="underline">Print-PDF zum Download</a>
 
-→ <a href="" class="underline">E-PDF zum Download</a>
+→ <a href="#changeme" class="underline">E-PDF zum Download</a>
 
 </Div>
 
@@ -26,9 +26,9 @@ Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Pa
 
 Das Faltplakat soll als praktisches Nachschlagewerk und Leitfaden für Fachleute dienen, die in den Bereichen Grafik, Illustration, Druck, Verlagswesen, Kommunikation und Marketing tätig sind. Sie kann ebenso als Hilfsmittel für Ausbildungszwecke verwendet werden.
 
-→ <a href="" class="underline">Print-PDF zum Download</a>
+→ <a href="#changeme" class="underline">Print-PDF zum Download</a>
 
-→ <a href="" class="underline">E-PDF zum Download</a>
+→ <a href="#changeme" class="underline">E-PDF zum Download</a>
 
 </Div>
 
@@ -40,9 +40,9 @@ Das Faltplakat soll als praktisches Nachschlagewerk und Leitfaden für Fachleut
 
 Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Papierherstellung und optimierten Einsatz von Material sowie grundlegende Theorien und Konzepte umweltbewusster Gestaltung. Sie bietet einen Überblick über wichtige ökologische Zusammenhänge, Informationen und Anleitungen für den täglichen Gebrauch und einen zeitgemässen Umgang mit Ressourcen.
 
-→ <a href="" class="underline">Print-PDF zum Download</a>
+→ <a href="#changeme" class="underline">Print-PDF zum Download</a>
 
-→ <a href="" class="underline">E-PDF zum Download</a>
+→ <a href="#changeme" class="underline">E-PDF zum Download</a>
 
 </Div>
 
@@ -54,9 +54,9 @@ Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Pa
 
 Das Faltplakat soll als praktisches Nachschlagewerk und Leitfaden für Fachleute dienen, die in den Bereichen Grafik, Illustration, Druck, Verlagswesen, Kommunikation und Marketing tätig sind. Sie kann ebenso als Hilfsmittel für Ausbildungszwecke verwendet werden.
 
-→ <a href="" class="underline">Print-PDF zum Download</a>
+→ <a href="#changeme" class="underline">Print-PDF zum Download</a>
 
-→ <a href="" class="underline">E-PDF zum Download</a>
+→ <a href="#changeme" class="underline">E-PDF zum Download</a>
 
 </Div>
 

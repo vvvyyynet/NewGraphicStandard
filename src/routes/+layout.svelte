@@ -50,8 +50,9 @@
 				};
 			case 'open':
 				return {
-					menu: 'fixed w-full lg:w-[500px] p-6 dark:lg:border-r-2 dark:lg:border-white',
-					content: 'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
+					menu: 'fixed w-full lg:w-[500px] p-6 lg:border-r-2 dark:lg:border-white lg:border-white',
+					content:
+						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
 					heading: 'text-5xl leading-tight',
 					mainNav: 'absolute top-48 w-full',
 					mainOl: 'flex flex-col gap-5 place-content-center',
@@ -71,8 +72,9 @@
 				};
 			case 'closed':
 				return {
-					menu: 'fixed hidden lg:block md:w-[100px] p-6 dark:border-r-2 dark:border-white',
-					content: 'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
+					menu: 'fixed hidden lg:block md:w-[100px] p-6 lg:border-r-2 lg:dark:border-white lg:border-white',
+					content:
+						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
 					heading: 'hidden',
 					mainNav: 'absolute top-48',
 					mainOl: 'flex flex-col gap-5 place-content-center',
@@ -109,7 +111,7 @@
 		onclick={() => {
 			isExpanded = true;
 		}}
-		class={[circleClass, 'z-1000 fixed top-5 right-5 lg:hidden']}
+		class={[circleClass, 'fixed top-5 right-5 z-1000 lg:hidden']}
 	>
 		<Ellipsis size={30} />
 	</button>
@@ -118,7 +120,7 @@
 <!-- Sidebar Menu -->
 <div
 	class={[
-		'z-200 bg-primary-500 transition-transition absolute h-full text-white duration-300',
+		'bg-primary-500 transition-transition absolute z-200 h-full text-white duration-300',
 		cl(mode).menu
 	]}
 >
@@ -147,7 +149,7 @@
 
 	<!-- Light Switch -->
 	{#if route !== '/'}
-		<LightSwitch classes="fixed top-17 right-5 lg:top-4 lg:right-4"/>
+		<LightSwitch classes="fixed top-17 right-5 lg:top-4 lg:right-4" />
 	{/if}
 
 	<!-- Title -->
@@ -211,11 +213,11 @@
 	{#if mode == 'full'}
 		<a href="/co2" class={['z-210', cl(mode).co2]}><span>🌍</span></a>
 		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:flex" />
-	{:else if (route !== '/co2')}
+	{:else if route !== '/co2'}
 		<a href="/co2" class={['', cl(mode).co2]}><span>🌍</span></a>
 	{/if}
 </div>
 
-<div class={['z-100 transition-all h-full duration-300', cl(mode).content]}>
+<div class={['z-100 h-full transition-all duration-300', cl(mode).content]}>
 	{@render children()}
 </div>

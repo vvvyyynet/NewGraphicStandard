@@ -3,4 +3,4 @@ title: Kontakt
 abstract:
 ---
 
-Alle Kontakte, die uns wichtig sind...
+Unsere telefonischen Öffnungszeiten geben wir dir gerne per Email bekannt.

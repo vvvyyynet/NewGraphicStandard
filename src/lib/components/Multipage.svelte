@@ -22,13 +22,11 @@
 	<h1 class="h1 text-center">{@html title}</h1>
 
 	<!-- Menu Top -->
+	<!-- <nav class="mx-auto mt-5 mb-10 block w-full overflow-x-auto pr-5 pb-4 pl-10 lg:mb-20">
+		<ul class="flex justify-center gap-2"> -->
 
-	<nav class="mx-auto mt-5 mb-10 block w-full overflow-x-auto pr-5 pb-4 pl-10 lg:mb-20">
-		<ul class="flex justify-center gap-2">
-			<!-- 	
 	<nav class="mx-auto mt-5 mb-10 block lg:mb-20">
 		<ul class="flex flex-wrap justify-center gap-2">
-	 -->
 			{#each sections as section}
 				<li class="">
 					<a

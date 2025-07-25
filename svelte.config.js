@@ -25,7 +25,8 @@ const config = {
 			strict: true
 		}),
 		prerender: {
-			handleMissingId: 'ignore'
+			handleMissingId: 'ignore',
+			handleHttpError: 'ignore'
 		},
 	},
 	extensions: ['.svelte', '.svx', '.md']

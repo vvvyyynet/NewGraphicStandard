@@ -35,7 +35,7 @@
 						href="{parentRoute}/{section.slug}"
 						class={[
 							route == section.slug && 'bg-secondary-500 text-primary-500 hover:cursor-default',
-							route !== section.slug && 'hover:border-secondary-500 hover:text-secondary-500',
+							route !== section.slug && 'dark:hover:border-secondary-500 dark:hover:text-secondary-500 hover:bg-secondary-500 dark:hover:bg-primary-500',
 							'flex min-w-30 justify-center rounded-full border p-0 text-lg'
 						]}
 					>

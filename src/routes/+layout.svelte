@@ -142,7 +142,7 @@
 		onclick={() => {
 			isExpanded = true;
 		}}
-		class={['fixed top-5 right-5 z-1000 h-12 lg:hidden']}
+		class={['fixed top-5 right-5 h-9 lg:h-12 z-1000 lg:hidden']}
 	>
 		<IconMenu size={100} colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }} />
 	</button>
@@ -166,17 +166,17 @@
 			{#if isExpanded}
 				<IconClose
 					size={100}
-					classes="h-12 lg:hidden"
+					classes="h-9 lg:h-12 lg:hidden"
 					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 				/>
 				<IconChevronLeft
-					classes="hidden h-12 lg:block"
+					classes="hidden h-9 lg:h-12 lg:block"
 					size={100}
 					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 				/>
 			{:else}
 				<IconChevronRight
-					classes="hidden h-12 lg:block"
+					classes="hidden h-9 lg:h-12 lg:block"
 					size={100}
 					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 				/>
@@ -189,7 +189,7 @@
 		<LightSwitch
 			bind:isDark
 			callback={closeMenu}
-			classes="fixed h-12 top-20 right-5 lg:top-4 lg:right-4"
+			classes="fixed h-9 top-18 right-5 lg:h-12 lg:top-4 lg:right-4"
 			colors={{ bg: COLOR_BG_FLEX, w: COLOR_W_FLEX }}
 		/>
 	{/if}

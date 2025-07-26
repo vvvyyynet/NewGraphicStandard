@@ -8,7 +8,7 @@
 	class={classes}
 	xmlns="http://www.w3.org/2000/svg"
 	width="{size}px"
-	height="{2 * size}px"
+	height="{size}px"
 	viewBox="0 0 25.033305 45.442234"
 	><polyline
 		style="fill: {figFill}; stroke: {figStroke}; stroke-miterlimit: 4; stroke-width: 2px;"

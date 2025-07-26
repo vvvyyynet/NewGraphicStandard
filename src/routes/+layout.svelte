@@ -156,7 +156,7 @@
 	<!-- Expanding Menu -->
 	{#if mode !== 'full'}
 		<button
-			class={'absolute top-8 right-5 lg:right-8'}
+			class={['absolute top-8 right-5',(mode=='open') ? 'lg:right-8': 'lg:right-3']}
 			onclick={() => {
 				isExpanded = !isExpanded;
 			}}
@@ -169,13 +169,13 @@
 				/>
 				<IconChevronLeft
 					classes="hidden lg:block"
-					size={26}
+					size={60}
 					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 				/>
 			{:else}
 				<IconChevronRight
 					classes="hidden lg:block"
-					size={26}
+					size={60}
 					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 				/>
 			{/if}

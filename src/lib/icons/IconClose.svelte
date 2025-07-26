@@ -7,8 +7,8 @@
 <svg
 	class={classes}
 	xmlns="http://www.w3.org/2000/svg"
-	width="{size}px"
-	height="{size}px"
+	width="{size}%"
+	height="{size}%"
 	viewBox="0 0 39.962601 39.962601"
 	><circle
 		style="fill: {figFill}; stroke: {figStroke}; stroke-miterlimit: 4;

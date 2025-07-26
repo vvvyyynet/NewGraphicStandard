@@ -55,8 +55,8 @@
 					mainNav: 'mt-10',
 					mainOl: 'flex flex-col gap-5 lg:flex lg:flex-row lg:gap-14',
 					mainItem: 'flex place-content-start hover:text-secondary-500',
-					mainIcon: 'w-10 h-10 place-content-center',
-					mainText: 'text-2xl pl-3 place-self-center',
+					mainIcon: 'h-8 lg:h-14 place-content-center',
+					mainText: 'lg:text-3xl text-2xl pl-3 place-self-center',
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
 					footText: 'hover:text-secondary-500',
@@ -140,42 +140,42 @@
 		onclick={() => {
 			isExpanded = true;
 		}}
-		class={['fixed top-5 right-5 z-1000 lg:hidden']}
+		class={['fixed h-12 top-5 right-5 z-1000 lg:hidden']}
 	>
-		<IconMenu size={60} colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }} />
+		<IconMenu size={100} colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }} />
 	</button>
 {/if}
 
-<!-- Sidebar Menu -->
+<!-- Sidebar -->
 <div
 	class={[
 		'bg-primary-500 transition-transition absolute z-200 h-full text-white duration-300',
 		cl(mode).menu
 	]}
 >
-	<!-- Expanding Menu -->
+	<!-- Menu -->
 	{#if mode !== 'full'}
 		<button
-			class={['absolute top-8 right-5',(mode=='open') ? 'lg:right-8': 'lg:right-3']}
+			class={['absolute top-5 right-5 lg:right-7']}
 			onclick={() => {
 				isExpanded = !isExpanded;
 			}}
 		>
 			{#if isExpanded}
 				<IconClose
-					size={60}
-					classes="fixed top-5 right-5 lg:hidden"
+					size={100}
+					classes="h-12 lg:hidden"
 					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 				/>
 				<IconChevronLeft
-					classes="hidden lg:block"
-					size={60}
+					classes="hidden h-12 lg:block"
+					size={100}
 					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 				/>
 			{:else}
 				<IconChevronRight
-					classes="hidden lg:block"
-					size={60}
+					classes="hidden h-12 lg:block"
+					size={100}
 					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 				/>
 			{/if}
@@ -187,7 +187,7 @@
 		<LightSwitch
 			bind:isDark
 			callback={closeMenu}
-			classes="fixed top-20 right-5 lg:top-4 lg:right-4"
+			classes="fixed h-12 top-20 right-5 lg:top-4 lg:right-4"
 			colors={{ bg: COLOR_BG_FLEX, w: COLOR_W_FLEX }}
 		/>
 	{/if}
@@ -214,8 +214,8 @@
 						>
 							<span class={['transition-transform duration-300', cl(mode).mainIcon]}
 								><page.icon
-									classes=""
-									size={60}
+									classes={[checkActive(page.slug) && 'hover:cursor-default', '']}
+									size={100}
 									isActive={checkActive(page.slug)}
 									colors={{
 										a: COLOR_ACTIVE_FIX,

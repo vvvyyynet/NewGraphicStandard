@@ -12,8 +12,8 @@
 <svg
 	class={classes}
 	xmlns="http://www.w3.org/2000/svg"
-	width="{size}px"
-	height="{size}px"
+	width="{size *0.95}%"
+	height="{size *0.95}%"
 	viewBox="0 0 46.200039 40.235164"
 	><path
 		style="fill: {figFill}; stroke: {figStroke}; strokeWidth: 1.2px;"

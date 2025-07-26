@@ -14,8 +14,8 @@
 <svg
 	class={classes}
 	xmlns="http://www.w3.org/2000/svg"
-	width="{size}px"
-	height="{size}px"
+	width="{size}%"
+	height="{size}%"
 	viewBox="0 0 50 50"
 	><circle style="fill: {circFill}; stroke: {circStroke};" cx="25" cy="25" r="24.5" /><path
 		style="fill: {figFill}; stroke: {figStroke};"

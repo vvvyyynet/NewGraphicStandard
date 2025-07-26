@@ -41,8 +41,8 @@
 	}}
 >
 	{#if isDark}
-		<IconLightswitch1 size={60} {colors} />
+		<IconLightswitch1 size={100} {colors} />
 	{:else}
-		<IconLightswitch2 size={60} {colors} />
+		<IconLightswitch2 size={100} {colors} />
 	{/if}
 </button>

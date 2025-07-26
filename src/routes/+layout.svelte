@@ -8,8 +8,6 @@
 	import IconChevronLeft from '$lib/icons/IconChevronLeft.svelte';
 	import IconMenu from '$lib/icons/IconMenu.svelte';
 	import IconClose from '$lib/icons/IconClose.svelte';
-	import IconLightswitch1 from '$lib/icons/IconLightswitch1.svelte';
-	import IconLightswitch2 from '$lib/icons/IconLightswitch2.svelte';
 	import IconAngebot from '$lib/icons/IconAngebot.svelte';
 	import IconFriends from '$lib/icons/IconFriends.svelte';
 	import IconInfo from '$lib/icons/IconInfo.svelte';
@@ -19,9 +17,8 @@
 	let isLargeScreen = $state();
 	$effect(() => {
 		isLargeScreen = window.matchMedia('(min-width: 1024px)').matches;
-		
 	});
-	
+
 	// function that will collapse the sidebar after interactions with links or lightswitch
 	// but not for large screens!
 	let closeMenu = $derived(() => {
@@ -60,11 +57,11 @@
 					menu: 'w-full p-6',
 					content: 'hidden w-0',
 					heading: 'text-5xl lg:text-8xl leading-tight',
-					mainNav: 'absolute top-48',
-					mainOl: 'flex flex-col gap-5 lg:flex lg:flex-row lg:gap-14',
-					mainItem: 'h-13 flex place-content-start hover:text-secondary-500',
-					mainIcon: 'h-13 w-13 lg:h-14 place-content-center',
-					mainText: 'text-2xl lg:text-3xl pl-6 place-self-center',
+					mainNav: 'absolute top-55 lg:top-48',
+					mainOl: 'flex flex-col gap-2 lg:gap-5 lg:flex lg:flex-row lg:gap-14',
+					mainItem: 'h-8 lg:h-14 flex place-content-start hover:text-secondary-500',
+					mainIcon: 'h-8 w-8 lg:h-14 lg:w-14 place-content-center',
+					mainText: 'text-lg lg:text-3xl pl-6 place-self-center',
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
 					footText: 'hover:text-secondary-500',
@@ -76,10 +73,10 @@
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
 					heading: 'text-4xl lg:text-5xl leading-tight',
-					mainNav: 'absolute top-48 lg:w-full',
-					mainOl: 'flex flex-col gap-5 place-content-center',
-					mainItem: 'h-13 flex hover:text-secondary-500',
-					mainIcon: 'h-13 w-13 flex flex-row place-content-start',
+					mainNav: 'absolute top-55 lg:top-48 lg:w-full',
+					mainOl: 'flex flex-col gap-2 lg:gap-5 place-content-center',
+					mainItem: 'h-8 lg:h-13 flex place-content-start hover:text-secondary-500',
+					mainIcon: 'h-8 w-8 lg:h-13 lg:w-13 flex flex-row place-content-start',
 					mainText: 'text-2xl lg:text-3xl pl-6 place-self-center text-left'.concat(
 						' ',
 						checkActive(slug) ? 'text-secondary-500' : ''
@@ -98,10 +95,10 @@
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
 					heading: 'lg:absolute lg:-left-[1000px] lg:text-white/0 lg:text-2xs leading-tight',
-					mainNav: 'absolute top-48',
-					mainOl: 'flex flex-col gap-5 place-content-center',
-					mainItem: 'h-13 flex place-content-start',
-					mainIcon: 'h-13 w-13 flex flex-row place-content-center',
+					mainNav: 'absolute top-55 lg:top-48',
+					mainOl: 'flex flex-col gap-2 lg:gap-5 place-content-center',
+					mainItem: 'h-8 lg:h-13 flex place-content-start',
+					mainIcon: 'h-8 w-8 lg:h-13 lg:w-13 flex flex-row place-content-start',
 					mainText: 'hidden',
 					footNav: 'hidden',
 					footOl: '',
@@ -258,16 +255,20 @@
 
 	<!-- CO2 Button -->
 	{#if mode == 'full'}
-		<a href="/co2" onclick={closeMenu} class={['z-210', cl(mode).co2]}><span>
-			<!-- <img src="/globe.gif" alt="🌍" class=""/> -->
-			🌍
-		</span></a>
+		<a href="/co2" onclick={closeMenu} class={['z-210', cl(mode).co2]}
+			><span>
+				<!-- <img src="/globe.gif" alt="🌍" class=""/> -->
+				🌍
+			</span></a
+		>
 		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:flex" />
 	{:else if route !== '/co2'}
-		<a href="/co2" onclick={closeMenu} class={['', cl(mode).co2]}><span>
-			<!-- <img src="/globe.gif" alt="🌍" class=""/> -->
-			🌍
-		</span></a>
+		<a href="/co2" onclick={closeMenu} class={['', cl(mode).co2]}
+			><span>
+				<!-- <img src="/globe.gif" alt="🌍" class=""/> -->
+				🌍
+			</span></a
+		>
 	{/if}
 </div>
 

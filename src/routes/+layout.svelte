@@ -142,7 +142,7 @@
 		onclick={() => {
 			isExpanded = true;
 		}}
-		class={['fixed top-5 right-5 h-9 lg:h-12 z-1000 lg:hidden']}
+		class={['fixed top-5 right-5 z-1000 h-9 lg:hidden lg:h-12']}
 	>
 		<IconMenu size={100} colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }} />
 	</button>
@@ -255,20 +255,26 @@
 
 	<!-- CO2 Button -->
 	{#if mode == 'full'}
-		<a href="/co2" onclick={closeMenu} class={['z-210', cl(mode).co2]}
-			><span>
-				<!-- <img src="/globe.gif" alt="🌍" class=""/> -->
-				🌍
-			</span></a
-		>
+		{@const rand = Math.floor(Math.random() * 3 + 1)}
+		<a href="/co2" onclick={closeMenu} class={['z-210', cl(mode).co2]}>
+			{#if rand == 1}<span>🌍</span>
+			{:else if rand == 2}<span>🌎</span>
+			{:else if rand == 3}<span>🌏</span>
+			{:else}
+				<span>{rand}</span>
+			{/if}
+		</a>
 		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:flex" />
 	{:else if route !== '/co2'}
-		<a href="/co2" onclick={closeMenu} class={['', cl(mode).co2]}
-			><span>
-				<!-- <img src="/globe.gif" alt="🌍" class=""/> -->
-				🌍
-			</span></a
-		>
+		{@const rand = Math.floor(Math.random() * 3 + 1)}
+		<a href="/co2" onclick={closeMenu} class={['', cl(mode).co2]}>
+			{#if rand == 1}<span>🌍</span>
+			{:else if rand == 2}<span>🌎</span>
+			{:else if rand == 3}<span>🌏</span>
+			{:else}
+				<span>{rand}</span>
+			{/if}
+		</a>
 	{/if}
 </div>
 

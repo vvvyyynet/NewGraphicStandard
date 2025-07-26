@@ -1,9 +1,9 @@
 <script>
 	let { size = 100, classes = '', colors } = $props();
 	let figFill = `fill-[${colors.bg}]`;
-	let figStroke = `stroke-[${colors.w}]`;
+	let figStroke = `stroke-[${colors.x}]`;
 	let circFill = `fill-[${colors.w}]`;
-	let circStroke = `stroke-[${colors.w}]`;
+	let circStroke = `stroke-[${colors.x}]`;
 </script>
 
 <svg

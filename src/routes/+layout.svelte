@@ -132,6 +132,7 @@
 	);
 	const COLOR_BG_FLEX = $derived(isDark ? 'var(--color-primary-500)' : 'var(--color-white)');
 	const COLOR_W_FLEX = $derived(isDark ? 'var(--color-white)' : 'var(--color-primary-500)');
+	const COLOR_W_FLEXFIX = $derived(isLargeScreen ? COLOR_W_FLEX : COLOR_W_FIX);
 
 	// Safelist to prevent treeshaking (add all possible combinations here!)
 	// fill-[var(--color-secondary-500)]
@@ -198,7 +199,7 @@
 			bind:isDark
 			callback={closeMenu}
 			classes="fixed h-9 top-18 right-5 lg:h-12 lg:top-4 lg:right-4"
-			colors={{ bg: COLOR_BG_FLEX, w: COLOR_W_FLEX }}
+			colors={{ bg: COLOR_BG_FLEX, w: COLOR_W_FLEX, x: COLOR_W_FLEXFIX }}
 		/>
 	{/if}
 

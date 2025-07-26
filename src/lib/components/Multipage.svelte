@@ -8,7 +8,7 @@
 		getMaxWidth = (rt) => {
 			return undefined;
 		},
-		parentRoute
+		parentRoute = ''
 	} = $props();
 
 	let route = $derived(page.url.pathname.split('/').pop());
@@ -27,24 +27,25 @@
 		<ul class="flex justify-center gap-2"> -->
 
 	<nav class="mx-auto mt-5 mb-10 block lg:mb-20">
-		<!-- {#if !noMenu} -->
-		<ul class="flex flex-wrap justify-center gap-2">
-			{#each sections as section}
-				<li class="">
-					<a
-						href="{parentRoute}/{section.slug}"
-						class={[
-							route == section.slug && 'bg-secondary-500 text-primary-500 hover:cursor-default',
-							route !== section.slug && 'dark:hover:border-secondary-500 dark:hover:text-secondary-500 hover:bg-secondary-500 dark:hover:bg-primary-500',
-							'flex min-w-30 justify-center rounded-full border p-0 text-lg'
-						]}
-					>
-						<span class="text-center">{section.title}</span>
-					</a>
-				</li>
-			{/each}
-		</ul>
-		<!-- {/if} -->
+		{#if !noMenu}
+			<ul class="flex flex-wrap justify-center gap-2">
+				{#each sections as section}
+					<li class="">
+						<a
+							href="{parentRoute}/{section.slug}"
+							class={[
+								route == section.slug && 'bg-secondary-500 text-primary-500 hover:cursor-default',
+								route !== section.slug &&
+									'dark:hover:border-secondary-500 dark:hover:text-secondary-500 hover:bg-secondary-500 dark:hover:bg-primary-500',
+								'flex min-w-30 justify-center rounded-full border p-0 text-lg'
+							]}
+						>
+							<span class="text-center">{section.title}</span>
+						</a>
+					</li>
+				{/each}
+			</ul>
+		{/if}
 	</nav>
 	<!-- Content -->
 	<div class={['prose-base md:text-md pb-20 lg:text-lg', maxWidthClass]}>

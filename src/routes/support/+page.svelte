@@ -6,6 +6,6 @@
 	let route = $derived(page.url.pathname.split('/').pop());
 </script>
 
-<Multipage title="Unterstütze uns!" {route}>
+<Multipage title="Unterstütze uns!" noMenu>
 	<Page />
 </Multipage>

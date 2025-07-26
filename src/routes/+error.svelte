@@ -6,6 +6,6 @@
 	let route = $derived(page.url.pathname.split('/').pop());
 </script>
 
-<Multipage title="404" {route}>
+<Multipage title="404" noMenu>
 	<Error />
 </Multipage>

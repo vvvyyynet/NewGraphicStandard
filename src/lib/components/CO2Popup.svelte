@@ -12,7 +12,9 @@
 			classes
 		]}
 	>
-		<a href="/co2" class="text-3xl">🌍</a>
+		<a href="/co2" class="text-3xl">
+			<img src="/globe.gif" alt="🌍" class="w-10 h-10 max-w-10 max-h-10" />
+		</a>
 		<p>
 			Diese Webseite hat einen CO<sub>2</sub>-Abdruck von ungefähr
 			<strong>{amount} CO<sub>2</sub>eq pro Seitenansicht.</strong>

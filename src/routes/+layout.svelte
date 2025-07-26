@@ -68,7 +68,7 @@
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
 					footText: 'hover:text-secondary-500',
-					co2: 'absolute bottom-5 right-5 lg:right-10 lg:bottom-10 lg:block text-3xl'
+					co2: 'absolute w-10 h-10 bottom-5 right-5 lg:right-10 lg:bottom-10 lg:block text-3xl'
 				};
 			case 'open':
 				return {
@@ -90,7 +90,7 @@
 						' ',
 						checkActive(slug) ? 'text-secondary-500' : ''
 					),
-					co2: 'absolute bottom-5 right-3 lg:right-8 lg:bottom-5 text-3xl'
+					co2: 'absolute w-10 h-10 bottom-5 right-3 lg:right-8 lg:bottom-5 text-3xl'
 				};
 			case 'closed':
 				return {
@@ -106,7 +106,7 @@
 					footNav: 'hidden',
 					footOl: '',
 					footText: '',
-					co2: 'absolute bottom-5 right-3 lg:left-8 lg:bottom-5 text-3xl'
+					co2: 'absolute w-10 h-10 bottom-5 right-3 lg:left-8 lg:bottom-5 text-3xl'
 				};
 			default:
 				return {
@@ -258,10 +258,16 @@
 
 	<!-- CO2 Button -->
 	{#if mode == 'full'}
-		<a href="/co2" onclick={closeMenu} class={['z-210', cl(mode).co2]}><span>🌍</span></a>
+		<a href="/co2" onclick={closeMenu} class={['z-210', cl(mode).co2]}><span>
+			<!-- <img src="/globe.gif" alt="🌍" class=""/> -->
+			🌍
+		</span></a>
 		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:flex" />
 	{:else if route !== '/co2'}
-		<a href="/co2" onclick={closeMenu} class={['', cl(mode).co2]}><span>🌍</span></a>
+		<a href="/co2" onclick={closeMenu} class={['', cl(mode).co2]}><span>
+			<!-- <img src="/globe.gif" alt="🌍" class=""/> -->
+			🌍
+		</span></a>
 	{/if}
 </div>
 

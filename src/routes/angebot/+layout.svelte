@@ -5,7 +5,7 @@
 
 	import type { LayoutProps } from './$types';
 	let { data, children }: LayoutProps = $props();
-	let parentRoute = '';
+	let parentRoute = $state('/');
 	onMount(() => {
 		parentRoute = page.url.pathname;
 	});

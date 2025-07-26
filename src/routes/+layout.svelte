@@ -57,14 +57,14 @@
 		switch (mode) {
 			case 'full':
 				return {
-					menu: 'w-full p-3',
+					menu: 'w-full p-6',
 					content: 'hidden w-0',
 					heading: 'text-5xl lg:text-8xl leading-tight',
-					mainNav: 'mt-10',
+					mainNav: 'absolute top-48',
 					mainOl: 'flex flex-col gap-5 lg:flex lg:flex-row lg:gap-14',
-					mainItem: 'flex place-content-start hover:text-secondary-500',
-					mainIcon: 'h-8 lg:h-14 place-content-center',
-					mainText: 'lg:text-3xl text-2xl pl-3 place-self-center',
+					mainItem: 'h-13 flex place-content-start hover:text-secondary-500',
+					mainIcon: 'h-13 w-13 lg:h-14 place-content-center',
+					mainText: 'text-2xl lg:text-3xl pl-6 place-self-center',
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
 					footText: 'hover:text-secondary-500',
@@ -75,12 +75,12 @@
 					menu: 'fixed w-full lg:w-[500px] p-6 lg:border-r-2 dark:lg:border-white lg:border-white',
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
-					heading: 'text-5xl leading-tight',
+					heading: 'text-4xl lg:text-5xl leading-tight',
 					mainNav: 'absolute top-48 lg:w-full',
 					mainOl: 'flex flex-col gap-5 place-content-center',
-					mainItem: 'h-10 flex hover:text-secondary-500',
-					mainIcon: 'h-full flex flex-row place-content-start',
-					mainText: 'text-2xl pl-10 text-3xl place-self-start text-left'.concat(
+					mainItem: 'h-13 flex hover:text-secondary-500',
+					mainIcon: 'h-13 w-13 flex flex-row place-content-start',
+					mainText: 'text-2xl lg:text-3xl pl-6 place-self-center text-left'.concat(
 						' ',
 						checkActive(slug) ? 'text-secondary-500' : ''
 					),
@@ -97,11 +97,11 @@
 					menu: 'fixed hidden lg:block md:w-[100px] p-6 lg:border-r-2 lg:dark:border-white lg:border-white',
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
-					heading: 'hidden',
+					heading: 'lg:absolute lg:-left-[1000px] lg:text-white/0 lg:text-2xs leading-tight',
 					mainNav: 'absolute top-48',
 					mainOl: 'flex flex-col gap-5 place-content-center',
-					mainItem: 'h-10 flex place-content-start',
-					mainIcon: 'w-full h-full flex flex-row place-content-center',
+					mainItem: 'h-13 flex place-content-start',
+					mainIcon: 'h-13 w-13 flex flex-row place-content-center',
 					mainText: 'hidden',
 					footNav: 'hidden',
 					footOl: '',
@@ -145,7 +145,7 @@
 		onclick={() => {
 			isExpanded = true;
 		}}
-		class={['fixed h-12 top-5 right-5 z-1000 lg:hidden']}
+		class={['fixed top-5 right-5 z-1000 h-12 lg:hidden']}
 	>
 		<IconMenu size={100} colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }} />
 	</button>

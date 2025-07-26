@@ -1,13 +1,13 @@
 <script>
-	let { size=30, classes="", active=false } = $props();
-	let figFill = 'red';
-	let figStroke = 'none';
-	let circFill = 'none';
-	let circStroke = 'red';
+	let { size = 30, classes = '', isActive = false, colors={a:'lightgreen', w:'white', bg:'blue'}  } = $props();
+	let figFill = $derived(isActive ? colors.bg : colors.w);
+	let figStroke = $derived(isActive ? 'none' : 'none');
+	let circFill = $derived(isActive ? colors.a : 'none');
+	let circStroke = $derived(isActive ? colors.a : colors.w);
 </script>
 
 <svg
-	id="Ebene_1"
+	class={classes}
 	xmlns="http://www.w3.org/2000/svg"
 	width="{size}px"
 	height="{size}px"

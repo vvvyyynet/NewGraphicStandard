@@ -1,7 +1,12 @@
 <script>
-	let { size = 30, classes = '', active = false } = $props();
-	let figFill = active ? 'red' : 'none';
-	let figStroke = active ? 'none' : 'red';
+	let {
+		size = 30,
+		classes = '',
+		isActive = false,
+		colors = { a: 'lightgreen', w: 'white', bg: 'blue' }
+	} = $props();
+	let figFill = $derived(isActive ? colors.a : 'none');
+	let figStroke = $derived(isActive ? 'none' : colors.w);
 </script>
 
 <svg

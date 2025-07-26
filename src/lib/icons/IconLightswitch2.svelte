@@ -1,18 +1,17 @@
 <script>
-	let { size = 30, classes = '', active = false } = $props();
-	let figFill = 'red';
+	let { size = 30, classes = '', colors = { a: 'lightgreen', w: 'white', bg: 'blue' } } = $props();
+	let figFill = colors.w;
 	let figStroke = 'none';
-	let circFill = 'none';
-	let circStroke = 'red';
+	let circFill = colors.bg;
+	let circStroke = colors.w;
 </script>
 
-<div class="absolute w-[{size}px] h-[{size}px]">
+<div class="w-[{size}px] h-[{size}px]">
 	<svg
-		id="Ebene_1"
 		class={classes}
 		xmlns="http://www.w3.org/2000/svg"
-		width="14.097917mm"
-		height="14.097918mm"
+		width="{size}px"
+		height="{size}px"
 		viewBox="0 0 39.962601 39.962603"
 		><circle
 			style="fill:{circFill}; stroke:{circStroke};"

@@ -15,9 +15,17 @@
 	import IconInfo from '$lib/icons/IconInfo.svelte';
 	import IconToolbox from '$lib/icons/IconToolbox.svelte';
 
+	// Special Things for large screens
 	let isLargeScreen = $state();
 	$effect(() => {
 		isLargeScreen = window.matchMedia('(min-width: 1024px)').matches;
+		
+	});
+	
+	// function that will collapse the sidebar after interactions with links or lightswitch
+	// but not for large screens!
+	let closeMenu = $derived(() => {
+		isExpanded = isLargeScreen ? isExpanded : false;
 	});
 
 	let isDark = $state(false);
@@ -118,10 +126,7 @@
 		}
 	});
 
-	const closeMenu = () => {
-		// on small screens set isExpanded to false
-		isExpanded = isLargeScreen ? isExpanded : false;
-	};
+	// COLORS
 	const COLOR_ACTIVE_FIX = 'var(--color-secondary-500)';
 	const COLOR_BG_FIX = 'var(--color-primary-500)';
 	const COLOR_W_FIX = 'white';
@@ -253,10 +258,10 @@
 
 	<!-- CO2 Button -->
 	{#if mode == 'full'}
-		<a href="/co2" class={['z-210', cl(mode).co2]}><span>🌍</span></a>
+		<a href="/co2" onclick={closeMenu} class={['z-210', cl(mode).co2]}><span>🌍</span></a>
 		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:flex" />
 	{:else if route !== '/co2'}
-		<a href="/co2" class={['', cl(mode).co2]}><span>🌍</span></a>
+		<a href="/co2" onclick={closeMenu} class={['', cl(mode).co2]}><span>🌍</span></a>
 	{/if}
 </div>
 

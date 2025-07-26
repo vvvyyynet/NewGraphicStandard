@@ -124,14 +124,22 @@
 	});
 
 	// COLORS
-	const COLOR_ACTIVE_FIX = 'var(--color-secondary-500)';
+	const COLOR_A_FIX = 'var(--color-secondary-500)';
 	const COLOR_BG_FIX = 'var(--color-primary-500)';
-	const COLOR_W_FIX = 'white';
-	const COLOR_ACTIVE_FLEX = $derived(
+	const COLOR_W_FIX = 'var(--color-white)';
+	const COLOR_A_FLEX = $derived(
 		isDark ? 'var(--color-secondary-500)' : 'var(--color-secondary-500)'
 	);
-	const COLOR_BG_FLEX = $derived(isDark ? 'var(--color-primary-500)' : 'white');
-	const COLOR_W_FLEX = $derived(isDark ? 'white' : 'var(--color-primary-500)');
+	const COLOR_BG_FLEX = $derived(isDark ? 'var(--color-primary-500)' : 'var(--color-white)');
+	const COLOR_W_FLEX = $derived(isDark ? 'var(--color-white)' : 'var(--color-primary-500)');
+
+	// Safelist to prevent treeshaking (add all possible combinations here!)
+	// fill-[var(--color-secondary-500)]
+	// fill-[var(--color-primary-500)]
+	// fill-[var(--color-white)]
+	// stroke-[var(--color-secondary-500)]
+	// stroke-[var(--color-primary-500)]
+	// stroke-[var(--color-white)]
 
 	$inspect(isDark);
 </script>
@@ -212,7 +220,12 @@
 						<a
 							href={`${base}${page.slug}`}
 							onclick={closeMenu}
-							class={['transition-transform duration-300', cl(mode).mainItem]}
+							class={[
+								'transition-transform duration-300',
+								!checkActive(page.slug) && `hover:[&_.circ]:stroke-[var(--color-secondary-500)]`,
+								!checkActive(page.slug) && `hover:[&_.fig]:fill-[var(--color-secondary-500)]`,
+								cl(mode).mainItem
+							]}
 						>
 							<span class={['transition-transform duration-300', cl(mode).mainIcon]}
 								><page.icon
@@ -220,7 +233,7 @@
 									size={100}
 									isActive={checkActive(page.slug)}
 									colors={{
-										a: COLOR_ACTIVE_FIX,
+										a: COLOR_A_FIX,
 										w: COLOR_W_FIX,
 										bg: COLOR_BG_FIX
 									}}

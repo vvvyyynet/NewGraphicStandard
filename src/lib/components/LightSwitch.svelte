@@ -4,12 +4,7 @@
 	import IconLightswitch1 from '$lib/icons/IconLightswitch1.svelte';
 	import IconLightswitch2 from '$lib/icons/IconLightswitch2.svelte';
 
-	let {
-		isDark = $bindable(false),
-		callback = () => {},
-		classes = '',
-		colors = undefined
-	} = $props();
+	let { isDark = $bindable(false), callback = () => {}, classes = '', colors } = $props();
 
 	let darkModeState = $derived(isDark ? 'dark' : 'light');
 

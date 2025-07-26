@@ -277,7 +277,7 @@
 				<span>{rand}</span>
 			{/if}
 		</a>
-		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:flex" />
+		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:block" />
 	{:else if route !== '/co2'}
 		{@const rand = Math.floor(Math.random() * 3 + 1)}
 		<a href="/co2" onclick={closeMenu} class={['', cl(mode).co2]}>

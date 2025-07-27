@@ -66,19 +66,22 @@ USAGE
 -->
 
 <script>
-    let {ncols=[1,1,1], gap=[10,10,10], classes="", children} = $props()
-    if (typeof ncols == "number") ncols = [ncols, ncols, ncols]
-    if (typeof gap == "number") gap = [gap, gap, gap]
+	let { ncols = [1, 1, 1], gap = [10, 10, 10], classes = '', children } = $props();
+	if (typeof ncols == 'number') ncols = [ncols, ncols, ncols];
+	if (typeof gap == 'number') gap = [gap, gap, gap];
 </script>
 
-<div class={[`grid lg:grid-cols-${ncols[0]} lg:gap-${gap[0]} gap-y-0`, classes]}>
-<!-- <div class={[
-    "grid" , 
-    `lg:grid-cols-${ncols[0]} lg:grid-cols-${ncols[1]} grid-cols-${ncols[2]}`, 
-    `lg:gap-${gap[0]} lg:gap-${gap[1]} gap-${gap[2]}`, 
-    "gap-y-0", 
-    classes]}> -->
-{@render children()}
+<!-- <div class={[`grid lg:grid-cols-${ncols[0]} lg:gap-${gap[0]} gap-y-0`, classes]}> -->
+<div
+	class={[
+		'grid',
+		`lg:grid-cols-${ncols[0]} lg:grid-cols-${ncols[1]} grid-cols-${ncols[2]}`,
+		`lg:gap-${gap[0]} lg:gap-${gap[1]} gap-${gap[2]}`,
+		'gap-y-0',
+		classes
+	]}
+>
+	{@render children()}
 </div>
 
 <!-- Safelists to prevent treeshaking -->

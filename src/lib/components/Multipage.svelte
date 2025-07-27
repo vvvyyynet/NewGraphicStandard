@@ -14,7 +14,7 @@
 	let route = $derived(page.url.pathname.split('/').pop());
 
 	// Obtain route-dependent custom maxwidth via callback or set to fallback.
-	const MAXWIDTHCLASS = 'max-w-[95%] md:max-w-[85%] lg:max-w-[70%] mx-auto';
+	const MAXWIDTHCLASS = 'max-w-[95%] md:max-w-[85%] lg:max-w-[70%] w-full mx-auto';
 	let maxWidthClass = $derived(getMaxWidth(route) ? getMaxWidth(route) : MAXWIDTHCLASS);
 </script>
 

@@ -16,6 +16,9 @@
 		font-weight: normal;
 		font-display: swap;
 	}
+	.prose-base a {
+		@apply underline;
+	  }
 }
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';

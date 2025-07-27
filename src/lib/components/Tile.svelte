@@ -5,28 +5,21 @@
 
 {#if hasContent}
 	<button
-		class="max-w-[90vw] lg:max-w-[30vw]"
+		class={[
+			'bg-primary-500 hover:bg-primary-100 dark:text-primary-500 hover:text-primary-500 border-primary-500 text-left text-white dark:border-white dark:bg-white',
+			classes
+		]}
 		onclick={() => {
 			goto(href);
 		}}
 	>
-		<div
-			class={[
-				'bg-primary-500 hover:bg-primary-100 dark:text-primary-500 hover:text-primary-500 border-primary-500 rounded-2xl border-2 p-5 text-white dark:border-white dark:bg-white',
-				classes
-			]}
-		>
+		<div class={['']}>
 			{@render children()}
 		</div>
 	</button>
 {:else}
-	<div class="max-w-[90vw] lg:max-w-[30vw]">
-		<div
-			class={[
-				'border-primary-500 text-primary-500 rounded-2xl border-2 p-5 dark:border-white dark:text-white',
-				classes
-			]}
-		>
+	<div class={['border-primary-500 text-primary-500 dark:border-white dark:text-white', classes]}>
+		<div class={['']}>
 			{@render children()}
 		</div>
 	</div>

@@ -6,7 +6,7 @@
 
 <Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
-<img src="/poster1.png" alt="Poster Handbook" class="mx-auto max-h-[60vh]"/>
+<img src="/img/poster1.png" alt="Poster Handbook" class="mx-auto max-h-[60vh]"/>
 
 # Handbook
 
@@ -20,7 +20,7 @@ Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Pa
 
 <Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
-<img src="/poster2.png" alt="Poster Faltplakat" class="mx-auto max-h-[60vh]"/>
+<img src="/img/poster2.png" alt="Poster Faltplakat" class="mx-auto max-h-[60vh]"/>
 
 # Faltplakat
 
@@ -34,7 +34,7 @@ Das Faltplakat soll als praktisches Nachschlagewerk und Leitfaden für Fachleut
 
 <Div classes='max-w-[80vw] md:max-w-[40vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
-<img src="/poster3.png" alt="Poster Merkblatt Entwurfsprozess" class="mx-auto max-h-[60vh]"/>
+<img src="/img/poster3.png" alt="Poster Merkblatt Entwurfsprozess" class="mx-auto max-h-[60vh]"/>
 
 # Merkblatt Entwurfsprozess
 
@@ -48,7 +48,7 @@ Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Pa
 
 <Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
-<img src="/poster4.png" alt="Poster Merkblatt Kommunikation" class="mx-auto max-h-[60vh]"/>
+<img src="/img/poster4.png" alt="Poster Merkblatt Kommunikation" class="mx-auto max-h-[60vh]"/>
 
 # Merkblatt Kommunikation
 

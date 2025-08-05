@@ -73,7 +73,7 @@
 </script>
 
 <!-- Filters -->
-<div class="dark:bg-primary-500 sticky top-0 mb-10 bg-white pt-1 pb-4">
+<div class="dark:bg-primary-500 sticky top-0 z-900 mb-10 bg-white pt-1 pb-4">
 	<h2 class="mb-2 text-sm">Nach Kategorie filtern</h2>
 	<div class="flex flex-wrap gap-2">
 		<div class="flex flex-wrap gap-2">

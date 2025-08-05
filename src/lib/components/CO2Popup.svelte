@@ -6,7 +6,7 @@
 </script>
 
 {#if showPopup}
-	<div class={['max-h-80 max-w-200 rounded-lg border bg-white text-3xl text-black ', classes]}>
+	<div class={['max-h-80 max-w-200 rounded-lg border bg-white text-2xl text-black ', classes]}>
 		<a href="/co2" class="absolute h-full w-full hover:cursor-pointer"> </a>
 		<div class="flex h-full w-full flex-row items-center justify-center gap-10 p-10">
 			<img src="/img/globe.gif" alt="🌍" class="h-10 max-h-10 w-10 max-w-10" />

@@ -56,45 +56,45 @@
 				return {
 					menu: 'w-full p-6',
 					content: 'hidden w-0',
-					heading: 'text-5xl lg:text-8xl leading-tight',
+					heading: 'text-4xl lg:text-8xl leading-tight',
 					mainNav: 'absolute top-55 lg:top-48',
 					mainOl: 'flex flex-col gap-2 lg:gap-5 lg:flex lg:flex-row lg:gap-14',
 					mainItem: 'h-8 lg:h-14 flex place-content-start hover:text-secondary-500',
 					mainIcon: 'h-8 w-8 lg:h-14 lg:w-14 place-content-center',
-					mainText: 'text-lg lg:text-3xl pl-6 place-self-center',
+					mainText: 'text-md lg:text-2xl pl-6 place-self-center',
 					footNav: 'absolute bottom-4',
-					footOl: 'flex flex-col text-lg',
+					footOl: 'flex flex-col text-md',
 					footText: 'hover:text-secondary-500',
-					co2: 'absolute w-10 h-10 bottom-5 right-5 lg:right-10 lg:bottom-10 lg:block text-3xl'
+					co2: 'absolute w-10 h-10 bottom-5 right-5 lg:right-10 lg:bottom-10 lg:block text-2xl'
 				};
 			case 'open':
 				return {
 					menu: 'fixed w-full lg:w-[500px] p-6 lg:border-r-2 dark:lg:border-white lg:border-white',
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
-					heading: 'text-4xl lg:text-5xl leading-tight',
+					heading: 'text-3xl lg:text-4xl leading-tight',
 					mainNav: 'absolute top-55 lg:top-48 lg:w-full',
 					mainOl: 'flex flex-col gap-2 lg:gap-5 place-content-center',
 					mainItem: 'h-8 lg:h-13 flex place-content-start hover:text-secondary-500',
 					mainIcon: 'h-8 w-8 lg:h-13 lg:w-13 flex flex-row place-content-start',
-					mainText: 'text-2xl lg:text-3xl pl-6 place-self-center text-left'.concat(
+					mainText: 'text-xl lg:text-2xl pl-6 place-self-center text-left'.concat(
 						' ',
 						checkActive(slug) ? 'text-secondary-500' : ''
 					),
 					footNav: 'absolute bottom-4',
-					footOl: 'flex flex-col gap-2 text-xl',
+					footOl: 'flex flex-col gap-2 text-lg',
 					footText: 'hover:text-secondary-500'.concat(
 						' ',
 						checkActive(slug) ? 'text-secondary-500' : ''
 					),
-					co2: 'absolute w-10 h-10 bottom-5 right-3 lg:right-8 lg:bottom-5 text-3xl'
+					co2: 'absolute w-10 h-10 bottom-5 right-3 lg:right-8 lg:bottom-5 text-2xl'
 				};
 			case 'closed':
 				return {
 					menu: 'fixed hidden lg:block md:w-[100px] p-6 lg:border-r-2 lg:dark:border-white lg:border-white',
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
-					heading: 'lg:absolute lg:-left-[1000px] lg:text-white/0 lg:text-2xs leading-tight',
+					heading: 'lg:absolute lg:-left-[1000px] lg:text-white/0 lg:text-3xs leading-tight',
 					mainNav: 'absolute top-55 lg:top-48',
 					mainOl: 'flex flex-col gap-2 lg:gap-5 place-content-center',
 					mainItem: 'h-8 lg:h-13 flex place-content-start',
@@ -103,14 +103,14 @@
 					footNav: 'hidden',
 					footOl: '',
 					footText: '',
-					co2: 'absolute w-10 h-10 bottom-5 right-3 lg:left-8 lg:bottom-5 text-3xl'
+					co2: 'absolute w-10 h-10 bottom-5 right-3 lg:left-8 lg:bottom-5 text-2xl'
 				};
 			default:
 				return {
 					menu: '',
 					content: '',
 					heading: '',
-					mainNav: 'absolute top-30 text-2xl',
+					mainNav: 'absolute top-30 text-xl',
 					mainOl: '',
 					mainItem: '',
 					mainText: '',

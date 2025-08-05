@@ -81,7 +81,7 @@
 				<button
 					onclick={() => toggleTag(tag)}
 					class={[
-						'border-primary-500 text-primary-500 hover:bg-secondary-500 hover:text-primary-500 rounded-full border-2 px-3 py-1 text-xs uppercase dark:border-white ',
+						'border-primary-500 text-primary-500 hover:bg-secondary-500 hover:text-primary-500 text-2xs rounded-full border-2 px-3 py-1 uppercase dark:border-white ',
 						allowedTags.includes(tag) &&
 							'bg-secondary-500 text-primary-500 hover:text-primary-500 hover:bg-transparent hover:dark:text-white',
 						!allowedTags.includes(tag) && 'dark:text-white'

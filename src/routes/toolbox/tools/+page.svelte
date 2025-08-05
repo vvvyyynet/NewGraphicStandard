@@ -1,11 +1,10 @@
 <script lang="ts">
-	import type { PageProps } from './$types';
 	import Tile from '$lib/components/Tile.svelte';
 	import { onMount } from 'svelte';
 	import Columns from '$lib/components/Columns.svelte';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 
-	let { data }: PageProps = $props();
+	let { data } = $props();
 
 	function splitToolsBySize(tools: Array<{ size: number }>) {
 		let toolsSet1: typeof tools = [];

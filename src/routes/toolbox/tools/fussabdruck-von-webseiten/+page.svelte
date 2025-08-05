@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Page from './Page.md';
-	let { data }: PageProps = $props();
+	let { data } = $props();
 	import { page } from '$app/state';
 	let route = $derived(page.url.pathname.split('/').pop());
 	let tags = $derived(data.tools.find((tool) => tool.folder == route)?.tags);

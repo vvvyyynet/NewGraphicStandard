@@ -27,7 +27,9 @@
 	// split by size (the size is set manually in 'tools-list.json')
 	let tools_filtered = $derived(
 		tools.filter((tool) => {
-			if (useAllTags) {
+			if (allowedTags.includes('all')) {
+				return true;
+			} else if (useAllTags) {
 				return allowedTags.every((tag) => tool.tags.includes(tag));
 			} else {
 				return allowedTags.some((tag) => tool.tags.includes(tag));
@@ -75,7 +77,7 @@
 	<h2 class="mb-2 text-sm">Nach Kategorie filtern</h2>
 	<div class="flex flex-wrap gap-2">
 		<div class="flex flex-wrap gap-2">
-			{#each Array.from(new Set(data.tools.flatMap((tool) => tool.tags))) as tag (tag)}
+			{#each Array.from(new Set(['all', ...data.tools.flatMap((tool) => tool.tags)])) as tag (tag)}
 				<button
 					onclick={() => toggleTag(tag)}
 					class={[

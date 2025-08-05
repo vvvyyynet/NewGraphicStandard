@@ -23,7 +23,7 @@
 	// Filter tools
 	let tools = [...data.tools].sort(() => Math.random() - 0.5);
 	let allowedTags = $state(['very serious']);
-	let useAllTags = $state(true);
+	let useAllTags = $state(false);
 	// split by size (the size is set manually in 'tools-list.json')
 	let tools_filtered = $derived(
 		tools.filter((tool) => {

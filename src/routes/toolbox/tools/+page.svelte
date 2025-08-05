@@ -128,7 +128,7 @@
 					>
 						<ul class="p-0">
 							{#each tool.tags as tag}
-								<li class="dark:text-secondary-500 mr-2 inline p-0 font-bold">#{tag}</li>
+								<li class="mr-2 inline p-0 font-bold">#{tag}</li>
 							{/each}
 						</ul>
 						<svelte:component this={Abstracts[tool.slug]} />

@@ -1,5 +1,4 @@
 <script>
-	import { goto } from '$app/navigation';
 	let { hasContent = false, classes = '', href = '', children } = $props();
 </script>
 

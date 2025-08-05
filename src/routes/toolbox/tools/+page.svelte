@@ -27,7 +27,7 @@
 	// split by size (the size is set manually in 'tools-list.json')
 	let tools_filtered = $derived(
 		tools.filter((tool) => {
-			if (allowedTags.includes('all')) {
+			if (allowedTags.includes('alle')) {
 				return true;
 			} else if (useAllTags) {
 				return allowedTags.every((tag) => tool.tags.includes(tag));
@@ -38,7 +38,7 @@
 	);
 	let isAboveLgScreen = $state(false);
 	let isAboveMdScreen = $state(false);
-	let nCols = $state(3);
+	let nCols = $state(1);
 	$inspect(nCols, isAboveLgScreen, isAboveMdScreen);
 
 	const handleResize = () => {
@@ -66,14 +66,14 @@
 
 	// Functions for Filters
 	const toggleTag = (tag) => {
-		if (allowedTags.includes('all')) {
-			allowedTags = allowedTags.filter((t) => t !== 'all');
+		if (allowedTags.includes('alle')) {
+			allowedTags = allowedTags.filter((t) => t !== 'alle');
 		}
 		allowedTags = allowedTags.includes(tag)
 			? allowedTags.filter((t) => t !== tag)
 			: [...allowedTags, tag];
-		if (allowedTags.includes('all')) {
-			allowedTags = ['all'];
+		if (allowedTags.includes('alle')) {
+			allowedTags = ['alle'];
 		}
 		console.log(allowedTags);
 	};
@@ -81,14 +81,14 @@
 
 <!-- Filters -->
 <div class="dark:bg-primary-500 sticky top-0 z-900 mb-10 bg-white pt-1 pb-4">
-	<h2 class="mb-2 text-sm">Nach Kategorie filtern</h2>
+	<p class="mb-2 text-sm">Nach Kategorien filtern</p>
 	<div class="flex flex-wrap gap-2">
 		<div class="flex flex-wrap gap-2">
-			{#each Array.from(new Set(['all', ...data.tools.flatMap((tool) => tool.tags)])) as tag (tag)}
+			{#each Array.from(new Set(['alle', ...data.tools.flatMap((tool) => tool.tags)])) as tag (tag)}
 				<button
 					onclick={() => toggleTag(tag)}
 					class={[
-						'border-primary-500 text-primary-500 hover:bg-secondary-500 hover:text-primary-500 text-2xs rounded-full border-2 px-3 py-1 uppercase dark:border-white ',
+						'border-primary-500 text-primary-500 hover:bg-secondary-500 hover:text-primary-500 text-2xs rounded-full border-1 px-3 dark:border-white',
 						allowedTags.includes(tag) &&
 							'bg-secondary-500 text-primary-500 hover:text-primary-500 hover:bg-transparent hover:dark:text-white',
 						!allowedTags.includes(tag) && 'dark:text-white'

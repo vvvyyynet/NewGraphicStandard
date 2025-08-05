@@ -1,4 +1,4 @@
-# Papier mit dem Blauen Engel
+## Papier mit dem Blauen Engel
 
 Um Inhalte im Web möglichst für viele barrierearm zugänglich zu machen, gibt es unzählige Guidelines. Folgende Links geben anschauliche Hilfestellungen und helfen, Webseiten möglichst ohne Hindernisse zu entwickeln:
 

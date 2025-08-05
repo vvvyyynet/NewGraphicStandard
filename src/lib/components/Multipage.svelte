@@ -23,9 +23,6 @@
 	<h1 class="h1 text-center">{@html title}</h1>
 
 	<!-- Menu Top -->
-	<!-- <nav class="mx-auto mt-5 mb-10 block w-full overflow-x-auto pr-5 pb-4 pl-10 lg:mb-20">
-		<ul class="flex justify-center gap-2"> -->
-
 	<nav class="mx-auto mt-5 mb-10 block lg:mb-20">
 		{#if !noMenu}
 			<ul class="flex flex-wrap justify-center gap-2">
@@ -38,7 +35,7 @@
 								page.url.pathname.includes(section.slug) && 'bg-secondary-500 text-primary-500',
 								!page.url.pathname.includes(section.slug) &&
 									'dark:hover:border-secondary-500 dark:hover:text-secondary-500 hover:bg-secondary-500 dark:hover:bg-primary-500',
-								'text-md flex min-w-30 justify-center rounded-full border p-0'
+								'flex min-w-30 justify-center rounded-full border p-0 text-lg'
 							]}
 						>
 							<span class="text-center">{section.title}</span>
@@ -48,8 +45,14 @@
 			</ul>
 		{/if}
 	</nav>
+
 	<!-- Content -->
-	<div class={['prose-base lg:text-md pb-20 md:text-xs', maxWidthClass]}>
+	<div
+		class={[
+			'prose-base md:text-md pb-20 text-xs !leading-snug lg:text-lg 2xl:text-2xl',
+			maxWidthClass
+		]}
+	>
 		{@render children()}
 	</div>
 </div>

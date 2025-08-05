@@ -54,44 +54,44 @@
 		switch (mode) {
 			case 'full':
 				return {
-					menu: 'w-full p-6',
+					menu: 'w-full p-4',
 					content: 'hidden w-0',
-					heading: 'text-4xl lg:text-8xl leading-tight',
+					heading: 'text-4xl lg:text-8xl -pt-1 p-0 m-0',
 					mainNav: 'absolute top-55 lg:top-48',
 					mainOl: 'flex flex-col gap-2 lg:gap-5 lg:flex lg:flex-row lg:gap-14',
 					mainItem: 'h-8 lg:h-14 flex place-content-start hover:text-secondary-500',
 					mainIcon: 'h-8 w-8 lg:h-14 lg:w-14 place-content-center',
-					mainText: 'text-md lg:text-2xl pl-6 place-self-center',
+					mainText: 'text-md lg:text-2xl pl-4 place-self-center',
 					footNav: 'absolute bottom-4',
-					footOl: 'flex flex-col text-md',
+					footOl: 'flex flex-col text-lg',
 					footText: 'hover:text-secondary-500',
-					co2: 'absolute w-10 h-10 bottom-5 right-5 lg:right-10 lg:bottom-10 lg:block text-2xl'
+					abdruck: 'absolute w-10 h-10 bottom-5 right-5 lg:right-10 lg:bottom-10 lg:block text-4xl'
 				};
 			case 'open':
 				return {
-					menu: 'fixed w-full lg:w-[500px] p-6 lg:border-r-2 dark:lg:border-white lg:border-white',
+					menu: 'fixed w-full lg:w-[500px] p-4 lg:border-r-2 dark:lg:border-white lg:border-white',
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
-					heading: 'text-3xl lg:text-4xl leading-tight',
+					heading: 'text-3xl lg:text-4xl',
 					mainNav: 'absolute top-55 lg:top-48 lg:w-full',
 					mainOl: 'flex flex-col gap-2 lg:gap-5 place-content-center',
 					mainItem: 'h-8 lg:h-13 flex place-content-start hover:text-secondary-500',
 					mainIcon: 'h-8 w-8 lg:h-13 lg:w-13 flex flex-row place-content-start',
-					mainText: 'text-xl lg:text-2xl pl-6 place-self-center text-left'.concat(
+					mainText: 'text-xl lg:text-2xl pl-4 place-self-center text-left'.concat(
 						' ',
 						checkActive(slug) ? 'text-secondary-500' : ''
 					),
 					footNav: 'absolute bottom-4',
-					footOl: 'flex flex-col gap-2 text-lg',
+					footOl: 'flex flex-col text-lg',
 					footText: 'hover:text-secondary-500'.concat(
 						' ',
 						checkActive(slug) ? 'text-secondary-500' : ''
 					),
-					co2: 'absolute w-10 h-10 bottom-5 right-3 lg:right-8 lg:bottom-5 text-2xl'
+					abdruck: 'absolute w-10 h-10 bottom-5 right-3 lg:right-8 lg:bottom-5 text-4xl'
 				};
 			case 'closed':
 				return {
-					menu: 'fixed hidden lg:block md:w-[100px] p-6 lg:border-r-2 lg:dark:border-white lg:border-white',
+					menu: 'fixed hidden lg:block md:w-[100px] p-4 lg:border-r-2 lg:dark:border-white lg:border-white',
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
 					heading: 'lg:absolute lg:-left-[1000px] lg:text-white/0 lg:text-3xs leading-tight',
@@ -103,7 +103,7 @@
 					footNav: 'hidden',
 					footOl: '',
 					footText: '',
-					co2: 'absolute w-10 h-10 bottom-5 right-3 lg:left-8 lg:bottom-5 text-2xl'
+					abdruck: 'absolute w-10 h-10 bottom-5 right-3 lg:left-8 lg:bottom-5 text-4xl'
 				};
 			default:
 				return {
@@ -118,7 +118,7 @@
 					footNav: '',
 					footOl: '',
 					footText: '',
-					co2: ''
+					abdruck: ''
 				};
 		}
 	});
@@ -251,7 +251,7 @@
 	</nav>
 
 	<!-- Footer Menu -->
-	<nav class={['transition-transform duration-300', cl(mode).footNav]}>
+	<nav class={['ml-2 transition-transform duration-300', cl(mode).footNav]}>
 		<ol class={['', cl(mode).footOl]}>
 			{#each pages as page}
 				{#if page.menu === 'footer'}
@@ -259,7 +259,7 @@
 						<a
 							href={`${base}${page.slug}`}
 							onclick={closeMenu}
-							class={['list-nav-item m-4 h-full', cl(mode, page.slug).footText]}>{page.name}</a
+							class={['list-nav-item h-full', cl(mode, page.slug).footText]}>{page.name}</a
 						>
 					</li>
 				{/if}
@@ -270,7 +270,7 @@
 	<!-- CO2 Button -->
 	{#if mode == 'full'}
 		{@const rand = Math.floor(Math.random() * 3 + 1)}
-		<a href="/co2" onclick={closeMenu} class={['z-210', cl(mode).co2]}>
+		<a href="/abdruck" onclick={closeMenu} class={['z-210', cl(mode).abdruck]}>
 			{#if rand == 1}<span>🌍</span>
 			{:else if rand == 2}<span>🌎</span>
 			{:else if rand == 3}<span>🌏</span>
@@ -279,9 +279,9 @@
 			{/if}
 		</a>
 		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:block" />
-	{:else if route !== '/co2'}
+	{:else if route !== '/abdruck'}
 		{@const rand = Math.floor(Math.random() * 3 + 1)}
-		<a href="/co2" onclick={closeMenu} class={['', cl(mode).co2]}>
+		<a href="/abdruck" onclick={closeMenu} class={['', cl(mode).abdruck]}>
 			{#if rand == 1}<span>🌍</span>
 			{:else if rand == 2}<span>🌎</span>
 			{:else if rand == 3}<span>🌏</span>

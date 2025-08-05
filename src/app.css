@@ -24,3 +24,7 @@
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
 @plugin '@tailwindcss/typography';
+
+h2 {
+	font-size: 23pt;
+}

@@ -6,24 +6,17 @@
 
 	let { data } = $props();
 
-	function splitToolsBySize(tools: Array<{ size: number }>) {
-		let toolsSet1: typeof tools = [];
-		let toolsSet2: typeof tools = [];
-
-		let sum1 = 0;
-		let sum2 = 0;
-
-		for (const tool of tools) {
-			// Add to the set with smaller current sum
-			if (sum1 <= sum2) {
-				toolsSet1.push(tool);
-				sum1 += tool.size;
-			} else {
-				toolsSet2.push(tool);
-				sum2 += tool.size;
-			}
-		}
-		return { toolsSet1, toolsSet2, sum1, sum2 };
+	function splitToolsBySize(tools: Array<{ size: number }>, nbins: number) {
+		let toolsSets = Array.from({ length: nbins }, () => []);
+		let sums = Array(nbins).fill(0);
+		// Add to the set with smallest current sum
+		tools.forEach((tool) => {
+			const idx = sums.indexOf(Math.min(...sums));
+			toolsSets[idx].push(tool);
+			sums[idx] += tool.size;
+		});
+		console.log(sums, toolsSets);
+		return { toolsSets, sums };
 	}
 
 	// Shuffle tools
@@ -41,7 +34,19 @@
 			}
 		})
 	);
-	let { toolsSet1, toolsSet2 } = $derived(splitToolsBySize(tools_filtered));
+	let isAboveLgScreen = $state(false);
+	let isAboveMdScreen = $state(false);
+	let nCols = $state(3);
+	$inspect(nCols, isAboveLgScreen, isAboveMdScreen);
+
+	const handleResize = () => {
+		isAboveLgScreen = window.matchMedia('(min-width: 1024px)').matches;
+		isAboveMdScreen = window.matchMedia('(min-width: 1000px)').matches;
+		nCols = isAboveLgScreen ? 3 : isAboveMdScreen ? 2 : 1;
+		// console.log('RESIZE', nCols, isAboveLgScreen, isAboveMdScreen, window.innerWidth);
+	};
+
+	let { toolsSets } = $derived(splitToolsBySize(tools_filtered, nCols));
 
 	// Load all Abstracts
 	let Abstracts: Record<string, any> = $state({});
@@ -50,6 +55,11 @@
 		for (const tool of tools) {
 			Abstracts[tool.slug] = (await import(`./${tool.folder}/Abstract.md`)).default;
 		}
+		window.addEventListener('resize', handleResize);
+		handleResize();
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
 	});
 
 	// Functions for Filters
@@ -95,16 +105,16 @@
 	</div>
 </div>
 
-<Columns ncols={[2, 2, 1]} gap={8} classes="mx-auto px-[5vw]">
+<Columns ncols={[3, 2, 1]} gap={8} classes="mx-auto px-[5vw]">
 	<!-- <div class="flex max-h-[200vh] flex-col gap-4 lg:flex-wrap"> -->
 	<!-- <div class="flex-width flex gap-4 lg:flex-wrap"> -->
-	{#each [toolsSet1, toolsSet2] as tools}
+	{#each toolsSets as tools}
 		<div class="my-4 flex flex-col gap-8">
 			{#each tools as tool}
 				{#if Abstracts[tool.slug]}
 					<Tile
 						hasContent={tool.hasContent}
-						classes="max-w-[90vw] rounded-2xl border-2 p-5 flex flex-col justify-start"
+						classes="max-w-[90vw] rounded-2xl border-2 p-5 flex flex-col justify-start "
 						href={`./tools/${tool.folder}`}
 					>
 						<ul class="p-0">

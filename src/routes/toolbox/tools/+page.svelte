@@ -66,9 +66,16 @@
 
 	// Functions for Filters
 	const toggleTag = (tag) => {
+		if (allowedTags.includes('all')) {
+			allowedTags = allowedTags.filter((t) => t !== 'all');
+		}
 		allowedTags = allowedTags.includes(tag)
 			? allowedTags.filter((t) => t !== tag)
 			: [...allowedTags, tag];
+		if (allowedTags.includes('all')) {
+			allowedTags = ['all'];
+		}
+		console.log(allowedTags);
 	};
 </script>
 

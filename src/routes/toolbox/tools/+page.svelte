@@ -88,10 +88,10 @@
 				<button
 					onclick={() => toggleTag(tag)}
 					class={[
-						'border-primary-500 text-primary-500 hover:bg-secondary-500 hover:text-primary-500 text-2xs rounded-full border-1 px-3 dark:border-white',
+						'border-primary-500 text-primary-500 hover:bg-secondary-500 hover:text-primary-500 rounded-full border-1 px-3 text-[18px] ',
 						allowedTags.includes(tag) &&
-							'bg-secondary-500 text-primary-500 hover:text-primary-500 hover:bg-transparent hover:dark:text-white',
-						!allowedTags.includes(tag) && 'dark:text-white'
+							'bg-secondary-500 text-primary-500 hover:text-primary-500 dark:border-secondary-500 hover:bg-transparent hover:dark:border-white hover:dark:text-white',
+						!allowedTags.includes(tag) && 'dark:border-white dark:text-white'
 					]}
 				>
 					{tag}

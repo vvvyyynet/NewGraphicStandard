@@ -55,7 +55,7 @@
 			case 'all':
 				return {
 					menu: 'min-w-[100px] bg-primary-500 transition-transition absolute z-200 h-full text-white duration-300',
-					content: 'z-100 h-full transition-all duration-300',
+					content: 'z-100 opacity-100 h-full transition-all duration-300',
 					heading: 'transition-all duration-300',
 					mainNav: 'transition-all duration-300 absolute',
 					mainOl: 'transition-all duration-300 flex flex-col gap-2 lg:gap-5 place-content-center',
@@ -72,7 +72,7 @@
 			case 'full':
 				return {
 					menu: 'w-full p-4',
-					content: 'hidden w-0',
+					content: '!opacity-0 w-0',
 					heading: 'text-4xl lg:text-8xl -pt-1 p-0 m-0',
 					mainNav: 'top-55 lg:top-48',
 					mainOl: 'lg:flex lg:flex-row lg:gap-14',
@@ -88,7 +88,7 @@
 				return {
 					menu: 'fixed w-full lg:w-[500px] p-4 lg:border-r-2 dark:lg:border-white lg:border-white',
 					content:
-						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
+						'!opacity-0 lg:!opacity-100 absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
 					heading: 'text-3xl lg:text-4xl',
 					mainNav: 'top-40 max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
 					mainOl: 'place-content-center',

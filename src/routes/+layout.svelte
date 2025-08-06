@@ -50,22 +50,39 @@
 	const circleClass = 'flex h-10 w-10 items-center justify-center rounded-full border-1';
 
 	// Classlists for each mode
-	let cl = $derived((mode: string, slug: string = '') => {
+	let cl = $derived((mode: string) => {
 		switch (mode) {
+			case 'all':
+				return {
+					menu: 'min-w-[100px] bg-primary-500 transition-transition absolute z-200 h-full text-white duration-300',
+					content: 'z-100 h-full transition-all duration-300',
+					heading: 'transition-all duration-300',
+					mainNav: 'transition-all duration-300 absolute',
+					mainOl: 'transition-all duration-300 flex flex-col gap-2 lg:gap-5 place-content-center',
+					mainItem:
+						'transition-transform duration-300 min-h-10 lg:min-h-14 h-10 lg:h-14 flex place-content-start hover:text-secondary-500',
+					mainIcon:
+						'transition-transform duration-300 p-[1px] min-w-10 lg:min-w-13 h-10 w-10 lg:h-13 lg:w-13',
+					mainText: 'transition-transform duration-300',
+					footNav: 'ml-2 transition-transform duration-300',
+					footOl: '',
+					footText: 'list-nav-item h-full hover:text-secondary-500',
+					abdruck: 'absolute w-10 h-10 bottom-5 text-4xl z-210'
+				};
 			case 'full':
 				return {
 					menu: 'w-full p-4',
 					content: 'hidden w-0',
 					heading: 'text-4xl lg:text-8xl -pt-1 p-0 m-0',
-					mainNav: 'absolute top-55 lg:top-48',
-					mainOl: 'flex flex-col gap-2 lg:gap-5 lg:flex lg:flex-row lg:gap-14',
-					mainItem: 'h-10 lg:h-14 flex place-content-start hover:text-secondary-500',
-					mainIcon: 'h-10 w-10 lg:h-14 lg:w-14 place-content-center',
+					mainNav: 'top-55 lg:top-48',
+					mainOl: 'lg:flex lg:flex-row lg:gap-14',
+					mainItem: 'lg:h-14',
+					mainIcon: 'lg:h-14 lg:w-14 place-content-center',
 					mainText: 'text-md lg:text-2xl pl-4 place-self-center',
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
-					footText: 'hover:text-secondary-500',
-					abdruck: 'absolute w-10 h-10 bottom-5 right-5 lg:right-10 lg:bottom-10 lg:block text-4xl'
+					footText: '',
+					abdruck: 'hidden'
 				};
 			case 'open':
 				return {
@@ -73,22 +90,15 @@
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
 					heading: 'text-3xl lg:text-4xl',
-					mainNav:
-						'absolute top-40 max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
-					mainOl: 'flex flex-col gap-2 lg:gap-5 place-content-center',
-					mainItem: 'h-10 lg:h-13 flex place-content-start hover:text-secondary-500',
-					mainIcon: 'h-10 w-10 lg:h-13 lg:w-13 flex flex-row place-content-start',
-					mainText: 'text-xl lg:text-2xl pl-4 place-self-center text-left'.concat(
-						' ',
-						checkActive(slug) ? 'text-secondary-500' : ''
-					),
+					mainNav: 'top-40 max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
+					mainOl: 'place-content-center',
+					mainItem: '',
+					mainIcon: 'flex flex-row place-content-start',
+					mainText: 'text-xl lg:text-2xl pl-4 place-self-center text-left',
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
-					footText: 'hover:text-secondary-500'.concat(
-						' ',
-						checkActive(slug) ? 'text-secondary-500' : ''
-					),
-					abdruck: 'absolute w-10 h-10 bottom-5 right-3 lg:right-8 lg:bottom-5 text-4xl'
+					footText: '',
+					abdruck: 'right-3 lg:right-8 lg:bottom-5'
 				};
 			case 'closed':
 				return {
@@ -96,31 +106,15 @@
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
 					heading: 'lg:absolute lg:-left-[1000px] lg:text-white/0 lg:text-3xs leading-tight',
-					mainNav:
-						'absolute top-40 max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
-					mainOl: 'flex flex-col gap-2 lg:gap-5 place-content-center',
-					mainItem: 'h-10 lg:h-13 flex place-content-start',
-					mainIcon: 'h-10 w-10 lg:h-13 lg:w-13 flex flex-row place-content-start',
+					mainNav: 'top-40 max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
+					mainOl: 'place-content-center',
+					mainItem: '',
+					mainIcon: 'flex flex-row place-content-start',
 					mainText: 'hidden',
 					footNav: 'hidden',
 					footOl: '',
 					footText: '',
-					abdruck: 'absolute w-10 h-10 bottom-5 right-3 lg:left-8 lg:bottom-5 text-4xl'
-				};
-			default:
-				return {
-					menu: '',
-					content: '',
-					heading: '',
-					mainNav: 'absolute top-30 text-xl',
-					mainOl: '',
-					mainItem: '',
-					mainText: '',
-					mainIcon: '',
-					footNav: '',
-					footOl: '',
-					footText: '',
-					abdruck: ''
+					abdruck: 'right-3 lg:left-8 lg:bottom-5'
 				};
 		}
 	});
@@ -160,14 +154,10 @@
 {/if}
 
 <!-- Sidebar -->
-<div
-	class={[
-		'bg-primary-500 transition-transition absolute z-200 h-full text-white duration-300',
-		cl(mode).menu
-	]}
->
+<div class={[cl('all').menu, cl(mode).menu]}>
 	<!-- Menu -->
 	{#if mode !== 'full'}
+		<!-- Chevron -->
 		<button
 			class={['absolute top-5 right-5 lg:right-7']}
 			onclick={() => {
@@ -208,15 +198,15 @@
 	<!-- Title -->
 	<div class="grid grid-cols-[auto_80px]">
 		<h1>
-			<a class={['transition-all duration-300', cl(mode).heading]} href="/"
+			<a class={[cl('all').heading, cl(mode).heading]} href="/"
 				>New Graphic{#if mode !== 'full'}<br />{/if} Standard</a
 			>
 		</h1>
 	</div>
 
 	<!-- Main Menu -->
-	<nav class={['transition-all duration-300', cl(mode).mainNav]}>
-		<ol class={['transition-all duration-300', cl(mode).mainOl]}>
+	<nav class={[cl('all').mainNav, cl(mode).mainNav]}>
+		<ol class={[cl('all').mainOl, cl(mode).mainOl]}>
 			{#each pages as page}
 				{#if page.menu === 'main'}
 					<li>
@@ -224,13 +214,13 @@
 							href={`${base}${page.slug}`}
 							onclick={closeMenu}
 							class={[
-								'transition-transform duration-300',
+								cl('all').mainItem,
+								cl(mode).mainItem,
 								!checkActive(page.slug) && `hover:[&_.circ]:stroke-[var(--color-secondary-500)]`,
-								!checkActive(page.slug) && `hover:[&_.fig]:fill-[var(--color-secondary-500)]`,
-								cl(mode).mainItem
+								!checkActive(page.slug) && `hover:[&_.fig]:fill-[var(--color-secondary-500)]`
 							]}
 						>
-							<span class={['transition-transform duration-300', cl(mode).mainIcon]}
+							<span class={[cl('all').mainIcon, cl(mode).mainIcon]}
 								><page.icon
 									classes={[checkActive(page.slug) && 'hover:cursor-default', '']}
 									size={100}
@@ -242,8 +232,12 @@
 									}}
 								/></span
 							>
-							<span class={['transition-transform duration-300', cl(mode, page.slug).mainText]}
-								>{page.name}</span
+							<span
+								class={[
+									cl('all').mainText,
+									cl(mode).mainText,
+									checkActive(page.slug) ? 'text-secondary-500' : ''
+								]}>{page.name}</span
 							>
 						</a>
 					</li>
@@ -253,15 +247,19 @@
 	</nav>
 
 	<!-- Footer Menu -->
-	<nav class={['ml-2 transition-transform duration-300', cl(mode).footNav]}>
-		<ol class={['', cl(mode).footOl]}>
+	<nav class={[cl('all').footNav, cl(mode).footNav]}>
+		<ol class={[cl('all').footOl, cl(mode).footOl]}>
 			{#each pages as page}
 				{#if page.menu === 'footer'}
 					<li>
 						<a
 							href={`${base}${page.slug}`}
 							onclick={closeMenu}
-							class={['list-nav-item h-full', cl(mode, page.slug).footText]}>{page.name}</a
+							class={[
+								cl('all').footText,
+								cl(mode).footText,
+								checkActive(page.slug) ? 'text-secondary-500' : ''
+							]}>{page.name}</a
 						>
 					</li>
 				{/if}
@@ -272,7 +270,7 @@
 	<!-- CO2 Button -->
 	{#if mode == 'full'}
 		{@const rand = Math.floor(Math.random() * 3 + 1)}
-		<a href="/abdruck" onclick={closeMenu} class={['z-210', cl(mode).abdruck]}>
+		<a href="/abdruck" onclick={closeMenu} class={[cl('all').abdruck, cl(mode).abdruck]}>
 			{#if rand == 1}<span>🌍</span>
 			{:else if rand == 2}<span>🌎</span>
 			{:else if rand == 3}<span>🌏</span>
@@ -283,7 +281,7 @@
 		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:block" />
 	{:else if route !== '/abdruck'}
 		{@const rand = Math.floor(Math.random() * 3 + 1)}
-		<a href="/abdruck" onclick={closeMenu} class={['', cl(mode).abdruck]}>
+		<a href="/abdruck" onclick={closeMenu} class={['', cl('all').abdruck, cl(mode).abdruck]}>
 			{#if rand == 1}<span>🌍</span>
 			{:else if rand == 2}<span>🌎</span>
 			{:else if rand == 3}<span>🌏</span>
@@ -294,6 +292,6 @@
 	{/if}
 </div>
 
-<div class={['z-100 h-full transition-all duration-300', cl(mode).content]}>
+<div class={[cl('all').content, cl(mode).content]}>
 	{@render children()}
 </div>

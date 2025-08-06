@@ -59,8 +59,8 @@
 					heading: 'text-4xl lg:text-8xl -pt-1 p-0 m-0',
 					mainNav: 'absolute top-55 lg:top-48',
 					mainOl: 'flex flex-col gap-2 lg:gap-5 lg:flex lg:flex-row lg:gap-14',
-					mainItem: 'h-8 lg:h-14 flex place-content-start hover:text-secondary-500',
-					mainIcon: 'h-8 w-8 lg:h-14 lg:w-14 place-content-center',
+					mainItem: 'h-10 lg:h-14 flex place-content-start hover:text-secondary-500',
+					mainIcon: 'h-10 w-10 lg:h-14 lg:w-14 place-content-center',
 					mainText: 'text-md lg:text-2xl pl-4 place-self-center',
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
@@ -73,10 +73,11 @@
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
 					heading: 'text-3xl lg:text-4xl',
-					mainNav: 'absolute top-55 lg:top-48 lg:w-full',
+					mainNav:
+						'absolute top-40 max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
 					mainOl: 'flex flex-col gap-2 lg:gap-5 place-content-center',
-					mainItem: 'h-8 lg:h-13 flex place-content-start hover:text-secondary-500',
-					mainIcon: 'h-8 w-8 lg:h-13 lg:w-13 flex flex-row place-content-start',
+					mainItem: 'h-10 lg:h-13 flex place-content-start hover:text-secondary-500',
+					mainIcon: 'h-10 w-10 lg:h-13 lg:w-13 flex flex-row place-content-start',
 					mainText: 'text-xl lg:text-2xl pl-4 place-self-center text-left'.concat(
 						' ',
 						checkActive(slug) ? 'text-secondary-500' : ''
@@ -95,10 +96,11 @@
 					content:
 						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
 					heading: 'lg:absolute lg:-left-[1000px] lg:text-white/0 lg:text-3xs leading-tight',
-					mainNav: 'absolute top-55 lg:top-48',
+					mainNav:
+						'absolute top-40 max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
 					mainOl: 'flex flex-col gap-2 lg:gap-5 place-content-center',
-					mainItem: 'h-8 lg:h-13 flex place-content-start',
-					mainIcon: 'h-8 w-8 lg:h-13 lg:w-13 flex flex-row place-content-start',
+					mainItem: 'h-10 lg:h-13 flex place-content-start',
+					mainIcon: 'h-10 w-10 lg:h-13 lg:w-13 flex flex-row place-content-start',
 					mainText: 'hidden',
 					footNav: 'hidden',
 					footOl: '',

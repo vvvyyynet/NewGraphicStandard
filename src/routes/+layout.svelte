@@ -12,12 +12,9 @@
 	import IconFriends from '$lib/icons/IconFriends.svelte';
 	import IconInfo from '$lib/icons/IconInfo.svelte';
 	import IconToolbox from '$lib/icons/IconToolbox.svelte';
+	import { onMount } from 'svelte';
 
-	// Special Things for large screens
 	let isLargeScreen = $state();
-	$effect(() => {
-		isLargeScreen = window.matchMedia('(min-width: 1024px)').matches;
-	});
 
 	// function that will collapse the sidebar after interactions with links or lightswitch
 	// but not for large screens!
@@ -54,31 +51,32 @@
 		switch (mode) {
 			case 'all':
 				return {
-					menu: 'min-w-[100px] bg-primary-500 transition-transition absolute z-200 h-full text-white duration-300',
-					content: 'z-100 opacity-100 h-full transition-all duration-300',
+					menu: 'transition-transition duration-300 min-w-[100px] bg-primary-500 absolute z-200 h-full text-white',
+					content:
+						'transition-all duration-300 z-100 opacity-100 h-full absolute lg:px-15 py-5 px-5 left-0 w-full',
 					heading: 'transition-all duration-300',
-					mainNav: 'transition-all duration-300 absolute',
+					mainNav: 'transition-all duration-300 absolute top-40',
 					mainOl: 'transition-all duration-300 flex flex-col gap-2 lg:gap-5 place-content-center',
 					mainItem:
 						'transition-transform duration-300 min-h-10 lg:min-h-14 h-10 lg:h-14 flex place-content-start hover:text-secondary-500',
 					mainIcon:
 						'transition-transform duration-300 p-[1px] min-w-10 lg:min-w-13 h-10 w-10 lg:h-13 lg:w-13',
-					mainText: 'transition-transform duration-300',
-					footNav: 'ml-2 transition-transform duration-300',
+					mainText: 'transition-transform duration-300 text-xl lg:text-2xl pl-4 place-self-center',
+					footNav: 'transition-transform duration-300 ml-2',
 					footOl: '',
 					footText: 'list-nav-item h-full hover:text-secondary-500',
 					abdruck: 'absolute w-10 h-10 bottom-5 text-4xl z-210'
 				};
 			case 'full':
 				return {
-					menu: 'w-full p-4',
+					menu: 'fixed w-full p-4',
 					content: '!opacity-0 w-0',
 					heading: 'text-4xl lg:text-8xl -pt-1 p-0 m-0',
-					mainNav: 'top-55 lg:top-48',
+					mainNav: 'lg:top-48',
 					mainOl: 'lg:flex lg:flex-row lg:gap-14',
 					mainItem: 'lg:h-14',
 					mainIcon: 'lg:h-14 lg:w-14 place-content-center',
-					mainText: 'text-md lg:text-2xl pl-4 place-self-center',
+					mainText: '',
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
 					footText: '',
@@ -87,14 +85,13 @@
 			case 'open':
 				return {
 					menu: 'fixed w-full lg:w-[500px] p-4 lg:border-r-2 dark:lg:border-white lg:border-white',
-					content:
-						'!opacity-0 lg:!opacity-100 absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[500px] lg:w-[calc(100vw-500px)]',
+					content: '!opacity-0 lg:!opacity-100 lg:left-[500px] lg:w-[calc(100vw-500px)]',
 					heading: 'text-3xl lg:text-4xl',
-					mainNav: 'top-40 max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
+					mainNav: 'max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
 					mainOl: 'place-content-center',
 					mainItem: '',
 					mainIcon: 'flex flex-row place-content-start',
-					mainText: 'text-xl lg:text-2xl pl-4 place-self-center text-left',
+					mainText: 'text-left',
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
 					footText: '',
@@ -103,10 +100,9 @@
 			case 'closed':
 				return {
 					menu: 'fixed hidden lg:block md:w-[100px] p-4 lg:border-r-2 lg:dark:border-white lg:border-white',
-					content:
-						'absolute lg:px-15 py-5 px-5 left-0 w-full lg:left-[100px] lg:w-[calc(100vw-100px)]',
+					content: 'lg:left-[100px] lg:w-[calc(100vw-100px)]',
 					heading: 'lg:absolute lg:-left-[1000px] lg:text-white/0 lg:text-3xs leading-tight',
-					mainNav: 'top-40 max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
+					mainNav: 'max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
 					mainOl: 'place-content-center',
 					mainItem: '',
 					mainIcon: 'flex flex-row place-content-start',
@@ -138,7 +134,18 @@
 	// stroke-[var(--color-primary-500)]
 	// stroke-[var(--color-white)]
 
-	$inspect(isDark);
+	onMount(() => {
+		function updateScreenSize() {
+			isLargeScreen = window.matchMedia('(min-width: 1024px)').matches;
+			console.log('isLargeScreen:', isLargeScreen); // For debugging
+		}
+		isLargeScreen = updateScreenSize();
+		// update screensize did not work with $effect, so I'm attaching a listener
+		window.addEventListener('resize', updateScreenSize);
+		return () => {
+			window.removeEventListener('resize', updateScreenSize);
+		};
+	});
 </script>
 
 <!-- Hamburger Trigger -->

@@ -3,7 +3,8 @@
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
 	import LightSwitch from '$lib/components/LightSwitch.svelte';
-	import Co2Popup from '$lib/components/CO2Popup.svelte';
+	import Co2Popup from './CO2Popup.svelte';
+	import Globe from '$lib/components/Globe.svelte';
 	import IconChevronRight from '$lib/icons/IconChevronRight.svelte';
 	import IconChevronLeft from '$lib/icons/IconChevronLeft.svelte';
 	import IconMenu from '$lib/icons/IconMenu.svelte';
@@ -65,7 +66,8 @@
 					footNav: 'transition-transform duration-300 ml-2',
 					footOl: '',
 					footText: 'list-nav-item h-full hover:text-secondary-500',
-					abdruck: 'absolute w-10 h-10 bottom-5 text-4xl z-210'
+					globe:
+						'absolute right-3 lg:left-5 lg:bottom-5 h-[42.5pt] max-h-[42.5pt] w-[42.5pt] max-w-[42.5pt] z-210'
 				};
 			case 'full':
 				return {
@@ -80,7 +82,7 @@
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
 					footText: '',
-					abdruck: 'hidden'
+					globe: 'hidden'
 				};
 			case 'open':
 				return {
@@ -95,7 +97,7 @@
 					footNav: 'absolute bottom-4',
 					footOl: 'flex flex-col text-lg',
 					footText: '',
-					abdruck: 'right-3 lg:right-8 lg:bottom-5'
+					globe: ''
 				};
 			case 'closed':
 				return {
@@ -110,7 +112,7 @@
 					footNav: 'hidden',
 					footOl: '',
 					footText: '',
-					abdruck: 'right-3 lg:left-8 lg:bottom-5'
+					globe: ''
 				};
 		}
 	});
@@ -223,8 +225,9 @@
 							class={[
 								cl('all').mainItem,
 								cl(mode).mainItem,
-								!checkActive(page.slug) && `hover:[&_.circ]:stroke-[var(--color-secondary-500)]`,
-								!checkActive(page.slug) && `hover:[&_.fig]:fill-[var(--color-secondary-500)]`
+								!checkActive(page.slug) &&
+									`hover:[&_.circ]:stroke-[var(--color-secondary-500)] 
+									 hover:[&_.fig]:fill-[var(--color-secondary-500)]`
 							]}
 						>
 							<span class={[cl('all').mainIcon, cl(mode).mainIcon]}
@@ -276,25 +279,13 @@
 
 	<!-- CO2 Button -->
 	{#if mode == 'full'}
-		{@const rand = Math.floor(Math.random() * 3 + 1)}
-		<a href="/abdruck" onclick={closeMenu} class={[cl('all').abdruck, cl(mode).abdruck]}>
-			{#if rand == 1}<span>🌍</span>
-			{:else if rand == 2}<span>🌎</span>
-			{:else if rand == 3}<span>🌏</span>
-			{:else}
-				<span>{rand}</span>
-			{/if}
+		<a href="/abdruck" onclick={closeMenu} class={[cl('all').globe, cl(mode).globe]}>
+			<Globe isTurning={false} />
 		</a>
 		<Co2Popup classes="fixed right-6 bottom-6 z-220 hidden lg:block" />
 	{:else if route !== '/abdruck'}
-		{@const rand = Math.floor(Math.random() * 3 + 1)}
-		<a href="/abdruck" onclick={closeMenu} class={['', cl('all').abdruck, cl(mode).abdruck]}>
-			{#if rand == 1}<span>🌍</span>
-			{:else if rand == 2}<span>🌎</span>
-			{:else if rand == 3}<span>🌏</span>
-			{:else}
-				<span>{rand}</span>
-			{/if}
+		<a href="/abdruck" onclick={closeMenu} class={['', cl('all').globe, cl(mode).globe]}>
+			<Globe isTurning={false} />
 		</a>
 	{/if}
 </div>

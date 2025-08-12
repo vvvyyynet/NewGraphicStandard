@@ -6,7 +6,7 @@
 	class={[
 		'border-primary-500 relative text-left',
 		hasContent &&
-			'bg-primary-500 hover:bg-secondary-500 dark:text-primary-500 hover:text-primary-500 text-white dark:border-white dark:bg-white',
+			'bg-primary-500 hover:bg-secondary-500 hover:border-secondary-500 dark:text-primary-500 hover:text-primary-500 text-white dark:border-white dark:bg-white',
 		!hasContent &&
 			'text-primary-500 dark:bg-primary-500 bg-white dark:border-white dark:text-white',
 		classes

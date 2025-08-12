@@ -40,8 +40,10 @@
 	let mode = $derived(route === '/' ? 'full' : isExpanded ? 'open' : 'closed');
 
 	// Classlists for active routes
-	let checkActive = $derived((slug: string) => {
-		return route.includes(slug) ? true : false;
+	let checkActive = $derived((slug: string, type: string = 'loose') => {
+		const check = type == 'strict' ? route === slug : route.includes(slug);
+		if (type == 'strict') console.log(check, slug, route);
+		return check ? true : false;
 	});
 
 	// Class for circular buttons

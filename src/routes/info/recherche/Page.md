@@ -3,7 +3,7 @@ title: Recherche
 abstract:
 ---
 
-Unsere fortlaufende Recherchearbeit widmet sich der umfassenden Analyse und Bewertung der gängigen Materialien und Produktionsverfahren und erarbeitet Alternativen. WIR SIND SO FLEISSIG!!
+Unsere fortlaufende Recherchearbeit widmet sich der umfassenden Analyse und Bewertung der gängigen Materialien und Produktionsverfahren und erarbeitet Alternativen. WIR SIND Nicht SO FLEISSIG!!
 
 Wir setzen uns kritisch mit gängigen Materialien auseinander und hinterfragen übliche Produktionsprozesse. Konkret beleuchten und analysieren wir alle Stationen eines Grafikprodukts auf dem Weg zur Herstellung -- von der Idee über das Konzept, die Gestaltung, Produktion und Materialwahl bis hin zur Entsorgung. Dies gilt sowohl für Print- als für digitale Publikationsformate. 
 

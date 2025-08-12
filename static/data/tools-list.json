@@ -3,6 +3,7 @@
 {"size":3 ,"slug": "barriere", "tags":["very serious", "digital", "testing fägt"], "hasContent":false, "folder":"barrierefreie-webseiten"},
 {"size":2 ,"slug": "font", "tags":["very serious", "typografie"],"hasContent":true, "folder":"font-diversity"},
 {"size":4 ,"slug": "engel", "tags":["very serious", "papier"], "hasContent":false, "folder":"papier-mit-blauem-engel"},
+{"size":4 ,"slug": "foo", "tags":["very serious", "papier", "hyper"], "hasContent":false, "folder":"foo"},
 
 {"size":2 ,"slug": "fuss", "tags":["lückenfüller", "digital"], "hasContent":true, "folder":"fussabdruck-von-webseiten"},
 {"size":2 ,"slug": "fuss", "tags":["lückenfüller", "digital"], "hasContent":true, "folder":"fussabdruck-von-webseiten"},

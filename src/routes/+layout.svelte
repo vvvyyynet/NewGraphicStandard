@@ -70,7 +70,7 @@
 					footOl: '',
 					footText: 'list-nav-item h-full hover:text-secondary-500',
 					globe:
-						'absolute right-3 lg:left-5 lg:bottom-5 h-[42.5pt] max-h-[42.5pt] w-[42.5pt] max-w-[42.5pt] z-210'
+						'absolute right-5 bottom-5 h-9 max-h-9 w-9 max-w-9  lg:h-[42.5pt] lg:max-h-[42.5pt] lg:w-[42.5pt] lg:max-w-[42.5pt] z-210'
 				};
 			case 'full':
 				return {

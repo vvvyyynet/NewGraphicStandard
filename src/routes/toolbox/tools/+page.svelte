@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Tile from '$lib/components/Tile.svelte';
 	import { onMount } from 'svelte';
-	import Columns from '$lib/components/Columns.svelte';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 
 	let { data } = $props();
@@ -75,12 +74,11 @@
 		if (allowedTags.includes('alle')) {
 			allowedTags = ['alle'];
 		}
-		console.log(allowedTags);
 	};
 </script>
 
 <!-- Filters -->
-<div class="dark:bg-primary-500 sticky top-0 z-900 mb-10 bg-white pt-1 pb-4">
+<div class="dark:bg-primary-500 top-0 z-900 mb-10 bg-white pt-1 pb-4 lg:sticky">
 	<p class="mb-2 text-sm">Nach Kategorien filtern</p>
 	<div class="flex flex-wrap gap-2">
 		<div class="flex flex-wrap gap-2">
@@ -114,28 +112,33 @@
 	</div>
 </div>
 
-<Columns ncols={[3, 2, 1]} gap={8} classes="mx-auto px-[5vw]">
-	<!-- <div class="flex max-h-[200vh] flex-col gap-4 lg:flex-wrap"> -->
-	<!-- <div class="flex-width flex gap-4 lg:flex-wrap"> -->
-	{#each toolsSets as tools}
-		<div class="my-4 flex flex-col gap-8">
-			{#each tools as tool}
-				{#if Abstracts[tool.slug]}
-					<Tile
-						hasContent={tool.hasContent}
-						classes="max-w-[90vw] rounded-2xl border-2 p-5 flex flex-col justify-start "
-						href={`./tools/${tool.folder}`}
-					>
-						<ul class="p-0">
-							{#each tool.tags as tag}
-								<li class="mr-2 inline p-0 font-bold">#{tag}</li>
-							{/each}
-						</ul>
-						<svelte:component this={Abstracts[tool.slug]} />
-					</Tile>
-				{/if}
-			{/each}
-		</div>
-	{/each}
-	<!-- </div> -->
-</Columns>
+<div class="@container h-full w-full">
+	<div
+		class={[
+			'mx-auto grid grid-cols-1 gap-10 gap-y-0 px-[5vw] @md:grid-cols-2 @lg:grid-cols-3 @xl:grid-cols-4'
+		]}
+	>
+		<!-- <div class="flex max-h-[200vh] flex-col gap-4 lg:flex-wrap"> -->
+		<!-- <div class="flex-width flex gap-4 lg:flex-wrap"> -->
+		{#each toolsSets as tools}
+			<div class="my-4 flex flex-col gap-8">
+				{#each tools as tool}
+					{#if Abstracts[tool.slug]}
+						<Tile
+							hasContent={tool.hasContent}
+							classes="rounded-2xl border-2 p-5 flex flex-col justify-start "
+							href={`./tools/${tool.folder}`}
+						>
+							<ul class="p-0">
+								{#each tool.tags as tag}
+									<li class="mr-2 inline p-0 font-bold">#{tag}</li>
+								{/each}
+							</ul>
+							<svelte:component this={Abstracts[tool.slug]} />
+						</Tile>
+					{/if}
+				{/each}
+			</div>
+		{/each}
+	</div>
+</div>

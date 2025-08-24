@@ -15,7 +15,7 @@
 	import IconToolbox from '$lib/icons/IconToolbox.svelte';
 	import { onMount } from 'svelte';
 
-	let isLargeScreen = $state();
+	let isLargeScreen = $state(true);
 
 	// function that will collapse the sidebar after interactions with links or lightswitch
 	// but not for large screens!
@@ -124,12 +124,10 @@
 	const COLOR_A_FIX = 'var(--color-secondary-500)';
 	const COLOR_BG_FIX = 'var(--color-primary-500)';
 	const COLOR_W_FIX = 'var(--color-white)';
-	const COLOR_A_FLEX = $derived(
-		isDark ? 'var(--color-secondary-500)' : 'var(--color-secondary-500)'
-	);
-	const COLOR_BG_FLEX = $derived(isDark ? 'var(--color-primary-500)' : 'var(--color-white)');
-	const COLOR_W_FLEX = $derived(isDark ? 'var(--color-white)' : 'var(--color-primary-500)');
-	const COLOR_W_FLEXFIX = $derived(isLargeScreen ? COLOR_W_FLEX : COLOR_W_FIX);
+	let COLOR_A_FLEX = $derived(isDark ? 'var(--color-secondary-500)' : 'var(--color-secondary-500)');
+	let COLOR_BG_FLEX = $derived(isDark ? 'var(--color-primary-500)' : 'var(--color-white)');
+	let COLOR_W_FLEX = $derived(isDark ? 'var(--color-white)' : 'var(--color-primary-500)');
+	let COLOR_W_FLEXFIX = $derived(isLargeScreen ? COLOR_W_FLEX : COLOR_W_FIX);
 
 	// Safelist to prevent treeshaking (add all possible combinations here!)
 	// fill-[var(--color-secondary-500)]
@@ -139,19 +137,16 @@
 	// stroke-[var(--color-primary-500)]
 	// stroke-[var(--color-white)]
 
+	function updateScreenSize() {
+		isLargeScreen = window.matchMedia('(min-width: 1024px)').matches;
+		console.log('isLargeScreen:', isLargeScreen); // For debugging
+	}
 	onMount(() => {
-		function updateScreenSize() {
-			isLargeScreen = window.matchMedia('(min-width: 1024px)').matches;
-			console.log('isLargeScreen:', isLargeScreen); // For debugging
-		}
-		isLargeScreen = updateScreenSize();
-		// update screensize did not work with $effect, so I'm attaching a listener
-		window.addEventListener('resize', updateScreenSize);
-		return () => {
-			window.removeEventListener('resize', updateScreenSize);
-		};
+		updateScreenSize();
 	});
 </script>
+
+<svelte:window onresize={updateScreenSize} />
 
 <!-- Hamburger Trigger -->
 {#if mode === 'closed'}

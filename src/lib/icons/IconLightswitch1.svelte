@@ -1,5 +1,5 @@
 <script>
-	let { size = 100, classes = '', isActive = false, colors } = $props();
+	let { size = 100, classes = '', colors } = $props();
 	let figFill = `fill-[${colors.w}]`;
 	let figStroke = `stroke-[${colors.w}]`;
 	let circFill = `fill-[${colors.bg}]`;

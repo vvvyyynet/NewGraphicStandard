@@ -171,7 +171,7 @@
 	{#if mode !== 'full'}
 		<!-- Chevron -->
 		<button
-			class={['absolute top-5 right-5 lg:right-7']}
+			class={['absolute top-5 right-5 lg:right-4']}
 			onclick={() => {
 				isExpanded = !isExpanded;
 			}}

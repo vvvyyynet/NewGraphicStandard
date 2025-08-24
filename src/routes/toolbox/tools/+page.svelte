@@ -133,7 +133,7 @@
 								classes="rounded-2xl border-2 p-5 flex flex-col justify-start"
 								href={`./tools/${tool.folder}`}
 							>
-								<ul class="flex flex-wrap gap-4 gap-y-0 p-0">
+								<ul class="flex flex-wrap gap-2 gap-y-0 p-0">
 									{#each tool.tags as tag}
 										<li class="!m-1 inline p-0 font-bold">#{tag}</li>
 									{/each}

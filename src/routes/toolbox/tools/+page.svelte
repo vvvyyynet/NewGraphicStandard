@@ -14,14 +14,13 @@
 			toolsSets[idx].push(tool);
 			sums[idx] += tool.size;
 		});
-		console.log(sums, toolsSets);
 		return { toolsSets, sums };
 	}
 
 	// Shuffle tools
 	// Filter tools
 	let tools = [...data.tools].sort(() => Math.random() - 0.5);
-	let allowedTags = $state(['very serious']);
+	let allowedTags = $state(['alle']);
 	let useAllTags = $state(false);
 	// split by size (the size is set manually in 'tools-list.json')
 	let tools_filtered = $derived(
@@ -38,14 +37,29 @@
 	let isAboveLgScreen = $state(false);
 	let isAboveMdScreen = $state(false);
 	let nCols = $state(1);
-	$inspect(nCols, isAboveLgScreen, isAboveMdScreen);
 
-	const handleResize = () => {
-		isAboveLgScreen = window.matchMedia('(min-width: 1024px)').matches;
-		isAboveMdScreen = window.matchMedia('(min-width: 1000px)').matches;
-		nCols = isAboveLgScreen ? 3 : isAboveMdScreen ? 2 : 1;
-		// console.log('RESIZE', nCols, isAboveLgScreen, isAboveMdScreen, window.innerWidth);
-	};
+	let elToolsContainer;
+	function observeWidth(element) {
+		const resizeObserver = new ResizeObserver((entries) => {
+			for (let entry of entries) {
+				const width = entry.contentRect.width;
+				if (width >= 110 * 16) {
+					nCols = 4;
+				} else if (width >= 75 * 16) {
+					nCols = 3;
+				} else if (width >= 45 * 16) {
+					nCols = 2;
+				} else {
+					nCols = 1;
+				}
+			}
+		});
+
+		resizeObserver.observe(element);
+
+		// Cleanup observer on component destroy
+		return () => resizeObserver.disconnect();
+	}
 
 	let { toolsSets } = $derived(splitToolsBySize(tools_filtered, nCols));
 
@@ -53,14 +67,16 @@
 	let Abstracts: Record<string, any> = $state({});
 
 	onMount(async () => {
+		// mount width observer for nCols in tools
+		const cleanupObserveWidth = observeWidth(elToolsContainer);
+
+		// import Abstracts of tools
 		for (const tool of tools) {
 			Abstracts[tool.slug] = (await import(`./${tool.folder}/Abstract.md`)).default;
 		}
-		window.addEventListener('resize', handleResize);
-		handleResize();
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
+
+		// cleanup
+		return cleanupObserveWidth;
 	});
 
 	// Functions for Filters
@@ -78,7 +94,7 @@
 </script>
 
 <!-- Filters -->
-<div class="dark:bg-primary-500 top-0 z-900 mb-10 bg-white pt-1 pb-4 lg:sticky">
+<div class="dark:bg-primary-500 top-0 z-900 mb-10 bg-white pt-1 pb-4 lg:sticky lg:-mx-10">
 	<p class="mb-2 text-sm">Nach Kategorien filtern</p>
 	<div class="flex flex-wrap gap-2">
 		<div class="flex flex-wrap gap-2">
@@ -112,29 +128,30 @@
 	</div>
 </div>
 
-<div class="@container h-full w-full">
+<div bind:this={elToolsContainer} class="@container h-full w-full">
 	<div
 		class={[
-			'mx-auto grid grid-cols-1 gap-10 gap-y-0 px-[5vw] @md:grid-cols-2 @lg:grid-cols-3 @xl:grid-cols-4'
+			'-mx-2 grid grid-cols-1 gap-5 p-0 lg:-mx-10 @md:grid-cols-2 @lg:grid-cols-3 @xl:grid-cols-4'
 		]}
 	>
 		<!-- <div class="flex max-h-[200vh] flex-col gap-4 lg:flex-wrap"> -->
 		<!-- <div class="flex-width flex gap-4 lg:flex-wrap"> -->
 		{#each toolsSets as tools}
-			<div class="my-4 flex flex-col gap-8">
+			<div class="flex flex-col gap-5">
 				{#each tools as tool}
 					{#if Abstracts[tool.slug]}
+						{@const Abstract = Abstracts[tool.slug]}
 						<Tile
 							hasContent={tool.hasContent}
-							classes="rounded-2xl border-2 p-5 flex flex-col justify-start "
+							classes="rounded-2xl border-2 p-5 flex flex-col justify-start"
 							href={`./tools/${tool.folder}`}
 						>
-							<ul class="p-0">
+							<ul class="flex flex-wrap gap-4 gap-y-0 p-0">
 								{#each tool.tags as tag}
-									<li class="mr-2 inline p-0 font-bold">#{tag}</li>
+									<li class="!m-1 inline p-0 font-bold">#{tag}</li>
 								{/each}
 							</ul>
-							<svelte:component this={Abstracts[tool.slug]} />
+							<Abstract />
 						</Tile>
 					{/if}
 				{/each}

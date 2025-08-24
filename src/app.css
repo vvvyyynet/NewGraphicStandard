@@ -18,7 +18,7 @@
 	}
 	.prose-base a {
 		@apply underline;
-	  }
+	}
 }
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
@@ -29,6 +29,17 @@ h2 {
 	font-size: 23pt;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: normal;
+}
+
+@theme {
+	--container-xl: 110rem;
+	--container-lg: 70rem;
+	--container-md: 55rem;
 }

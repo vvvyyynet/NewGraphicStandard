@@ -61,9 +61,9 @@
 					mainNav: 'transition-all duration-300 absolute portrait:top-40 landscape:bottom-4',
 					mainOl: 'transition-all duration-300 flex flex-col gap-2 lg:gap-5 place-content-center',
 					mainItem:
-						'transition-transform duration-300 min-h-10 lg:min-h-14 h-10 lg:h-14 flex place-content-start hover:text-secondary-500',
+						'transition-transform duration-300 min-h-10 lg:min-h-14 h-10 lg:h-14 flex justify-content-start align-content-center hover:text-secondary-500',
 					mainIcon:
-						'transition-transform duration-300 p-[1px] min-w-10 lg:min-w-13 h-10 w-10 lg:h-13 lg:w-13',
+						'transition-transform duration-300 p-[1px] min-w-10 lg:min-w-13 min-h-10 lg:min-h-13 h-10 w-10 lg:h-13 lg:w-13',
 					mainText: 'transition-transform duration-300 text-xl lg:text-2xl pl-4 place-self-center',
 					footNav:
 						'transition-transform duration-300 ml-2 absolute bottom-2 landscape:bottom-4 left-4 lg:landscape:left-4 landscape:left-[55%]',
@@ -95,7 +95,7 @@
 					mainNav: 'portrait:max-h-80% overflow-y-auto lg:top-[25vh] lg:w-full',
 					mainOl: 'place-content-center',
 					mainItem: '',
-					mainIcon: 'flex flex-row place-content-start',
+					mainIcon: 'flex flex-row place-content-center',
 					mainText: 'text-left',
 					footNav: '',
 					footOl: 'flex flex-col text-lg',
@@ -110,7 +110,7 @@
 					mainNav: 'max-h-[calc(100vh-200px)] overflow-y-auto lg:top-[25vh] lg:w-full',
 					mainOl: 'place-content-center',
 					mainItem: '',
-					mainIcon: 'flex flex-row place-content-start',
+					mainIcon: 'flex flex-row place-content-center',
 					mainText: 'hidden',
 					footNav: 'hidden',
 					footOl: '',

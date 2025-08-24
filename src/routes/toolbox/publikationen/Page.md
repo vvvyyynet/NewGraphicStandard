@@ -1,4 +1,5 @@
 <script>
+    import DownloadModal from '$lib/components/DownloadModal.svelte'
     import Div from '$lib/components/Div.svelte'
 </script>
 
@@ -12,9 +13,13 @@
 
 Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Papierherstellung und optimierten Einsatz von Material sowie grundlegende Theorien und Konzepte umweltbewusster Gestaltung. Sie bietet einen Überblick über wichtige ökologische Zusammenhänge, Informationen und Anleitungen für den täglichen Gebrauch und einen zeitgemässen Umgang mit Ressourcen.
 
-→ <a href="#changeme" class="underline">Print-PDF zum Download</a>
+<Div classes='flex flex-col'>
+    
+<DownloadModal href={undefined}>Print-PDF zum Download</DownloadModal>
 
-→ <a href="#changeme" class="underline">E-PDF zum Download</a>
+<DownloadModal href={undefined}>E-PDF zum Download</DownloadModal>
+
+</Div>
 
 </Div>
 
@@ -26,9 +31,13 @@ Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Pa
 
 Das Faltplakat soll als praktisches Nachschlagewerk und Leitfaden für Fachleute dienen, die in den Bereichen Grafik, Illustration, Druck, Verlagswesen, Kommunikation und Marketing tätig sind. Sie kann ebenso als Hilfsmittel für Ausbildungszwecke verwendet werden.
 
-→ <a href="#changeme" class="underline">Print-PDF zum Download</a>
+<Div classes='flex flex-col'>
+    
+<DownloadModal href={undefined}>Print-PDF zum Download</DownloadModal>
 
-→ <a href="#changeme" class="underline">E-PDF zum Download</a>
+<DownloadModal href={undefined}>E-PDF zum Download</DownloadModal>
+
+</Div>
 
 </Div>
 
@@ -40,9 +49,13 @@ Das Faltplakat soll als praktisches Nachschlagewerk und Leitfaden für Fachleut
 
 Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Papierherstellung und optimierten Einsatz von Material sowie grundlegende Theorien und Konzepte umweltbewusster Gestaltung. Sie bietet einen Überblick über wichtige ökologische Zusammenhänge, Informationen und Anleitungen für den täglichen Gebrauch und einen zeitgemässen Umgang mit Ressourcen.
 
-→ <a href="#changeme" class="underline">Print-PDF zum Download</a>
+<Div classes='flex flex-col'>
+    
+    <DownloadModal href={undefined}>Print-PDF zum Download</DownloadModal>
+    
+    <DownloadModal href={undefined}>E-PDF zum Download</DownloadModal>
 
-→ <a href="#changeme" class="underline">E-PDF zum Download</a>
+</Div>
 
 </Div>
 
@@ -54,9 +67,13 @@ Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Pa
 
 Das Faltplakat soll als praktisches Nachschlagewerk und Leitfaden für Fachleute dienen, die in den Bereichen Grafik, Illustration, Druck, Verlagswesen, Kommunikation und Marketing tätig sind. Sie kann ebenso als Hilfsmittel für Ausbildungszwecke verwendet werden.
 
-→ <a href="#changeme" class="underline">Print-PDF zum Download</a>
+<Div classes='flex flex-col'>
+    
+    <DownloadModal href={undefined}>Print-PDF zum Download</DownloadModal>
+    
+    <DownloadModal href={undefined}>E-PDF zum Download</DownloadModal>
 
-→ <a href="#changeme" class="underline">E-PDF zum Download</a>
+</Div>
 
 </Div>
 

@@ -154,7 +154,7 @@
 		onclick={() => {
 			isExpanded = true;
 		}}
-		class={['fixed top-5 right-5 z-1000 h-9 lg:hidden lg:h-12']}
+		class={['fixed top-5 right-5 z-900 h-9 lg:hidden lg:h-12']}
 	>
 		<IconMenu size={100} colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }} />
 	</button>

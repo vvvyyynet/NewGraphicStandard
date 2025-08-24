@@ -34,49 +34,29 @@
 			}
 		})
 	);
-	let isAboveLgScreen = $state(false);
-	let isAboveMdScreen = $state(false);
 	let nCols = $state(1);
-
 	let elToolsContainer;
-	function observeWidth(element) {
-		const resizeObserver = new ResizeObserver((entries) => {
-			for (let entry of entries) {
-				const width = entry.contentRect.width;
-				if (width >= 110 * 16) {
-					nCols = 4;
-				} else if (width >= 75 * 16) {
-					nCols = 3;
-				} else if (width >= 45 * 16) {
-					nCols = 2;
-				} else {
-					nCols = 1;
-				}
-			}
-		});
+	let withToolsContainer = $state();
 
-		resizeObserver.observe(element);
-
-		// Cleanup observer on component destroy
-		return () => resizeObserver.disconnect();
+	function nCol_from_width(width) {
+		if (width >= 110 * 16) {
+			return 4;
+		} else if (width >= 75 * 16) {
+			return 3;
+		} else if (width >= 45 * 16) {
+			return 2;
+		} else {
+			return 1;
+		}
 	}
-
-	let { toolsSets } = $derived(splitToolsBySize(tools_filtered, nCols));
-
 	// Load all Abstracts
 	let Abstracts: Record<string, any> = $state({});
 
 	onMount(async () => {
-		// mount width observer for nCols in tools
-		const cleanupObserveWidth = observeWidth(elToolsContainer);
-
 		// import Abstracts of tools
 		for (const tool of tools) {
 			Abstracts[tool.slug] = (await import(`./${tool.folder}/Abstract.md`)).default;
 		}
-
-		// cleanup
-		return cleanupObserveWidth;
 	});
 
 	// Functions for Filters
@@ -128,34 +108,43 @@
 	</div>
 </div>
 
-<div bind:this={elToolsContainer} class="@container h-full w-full">
-	<div
-		class={[
-			'-mx-2 grid grid-cols-1 gap-5 p-0 lg:-mx-10 @md:grid-cols-2 @lg:grid-cols-3 @xl:grid-cols-4'
-		]}
-	>
-		<!-- <div class="flex max-h-[200vh] flex-col gap-4 lg:flex-wrap"> -->
-		<!-- <div class="flex-width flex gap-4 lg:flex-wrap"> -->
-		{#each toolsSets as tools}
-			<div class="flex flex-col gap-5">
-				{#each tools as tool}
-					{#if Abstracts[tool.slug]}
-						{@const Abstract = Abstracts[tool.slug]}
-						<Tile
-							hasContent={tool.hasContent}
-							classes="rounded-2xl border-2 p-5 flex flex-col justify-start"
-							href={`./tools/${tool.folder}`}
-						>
-							<ul class="flex flex-wrap gap-4 gap-y-0 p-0">
-								{#each tool.tags as tag}
-									<li class="!m-1 inline p-0 font-bold">#{tag}</li>
-								{/each}
-							</ul>
-							<Abstract />
-						</Tile>
-					{/if}
-				{/each}
-			</div>
-		{/each}
-	</div>
+<div
+	bind:this={elToolsContainer}
+	bind:clientWidth={withToolsContainer}
+	class="@container h-full w-full"
+>
+	{#snippet columns(width: number)}
+		{@const nCol = nCol_from_width(width)}
+		{@const toolsSets2 = splitToolsBySize(tools_filtered, nCol).toolsSets}
+		<div
+			class={[
+				'-mx-2 grid grid-cols-1 gap-5 p-0 lg:-mx-10 @md:grid-cols-2 @lg:grid-cols-3 @xl:grid-cols-4'
+			]}
+		>
+			<!-- <div class="flex max-h-[200vh] flex-col gap-4 lg:flex-wrap"> -->
+			<!-- <div class="flex-width flex gap-4 lg:flex-wrap"> -->
+			{#each toolsSets2 as tools}
+				<div class="flex flex-col gap-5">
+					{#each tools as tool}
+						{#if Abstracts[tool.slug]}
+							{@const Abstract = Abstracts[tool.slug]}
+							<Tile
+								hasContent={tool.hasContent}
+								classes="rounded-2xl border-2 p-5 flex flex-col justify-start"
+								href={`./tools/${tool.folder}`}
+							>
+								<ul class="flex flex-wrap gap-4 gap-y-0 p-0">
+									{#each tool.tags as tag}
+										<li class="!m-1 inline p-0 font-bold">#{tag}</li>
+									{/each}
+								</ul>
+								<Abstract />
+							</Tile>
+						{/if}
+					{/each}
+				</div>
+			{/each}
+		</div>
+	{/snippet}
+	{@render columns(withToolsContainer)}
 </div>

@@ -1,11 +1,12 @@
 <script>
 	import { Modal } from '@skeletonlabs/skeleton-svelte';
-	import { X } from 'lucide-svelte';
+	import IconClose from '$lib/icons/IconClose.svelte';
+	import { isDark, isLargeScreen } from '$lib/store/stores.svelte';
+
 	let { href, children } = $props();
 	if (!href) {
 		href = '/pdf/test.pdf';
 	}
-
 	let openState = $state(false);
 </script>
 
@@ -13,7 +14,7 @@
 	open={openState}
 	onOpenChange={(e) => (openState = e.open)}
 	backdropClasses="backdrop-blur-sm"
-	backdropBackground="bg-primary-100/70"
+	backdropBackground="bg-primary-100/80 dark:bg-primary-800/80"
 >
 	{#snippet trigger()}
 		<span class="leading-loose underline">{@render children()}</span>
@@ -25,10 +26,16 @@
 			class="absolute top-5 right-5 h-10 w-10"
 			onclick={() => {
 				openState = false;
-			}}><X class="text-white" size={40} /></button
+			}}
 		>
+			<IconClose
+				size={isLargeScreen.val ? 125 : 100}
+				classes="-mt-1 -ml-1"
+				colors={{ w: isDark.val ? 'var(--color-white)' : 'var(--color-primary-500)', bg: null }}
+			/>
+		</button>
 		<div
-			class="lg:text-md absolute top-10 left-0 my-5 flex h-[93vh] w-full flex-col gap-7 overflow-y-auto p-10 pb-20 text-sm lg:top-0 lg:left-1/4 lg:w-3/5"
+			class="lg:text-md absolute top-10 left-0 mx-auto my-5 flex h-[93vh] w-full flex-col gap-7 overflow-y-auto p-10 pb-20 text-sm md:left-1/5 md:w-3/5 lg:top-0 lg:left-2/7 lg:w-3/7"
 		>
 			<div class="flex items-center justify-center gap-5">
 				<img src="/img/coffee.png" alt="Kaffeetasse" class="h-10 w-10" />
@@ -49,12 +56,12 @@
 			<!-- <p class="">Download-Optionen</p> -->
 			<div class="flex flex-wrap items-center justify-center gap-4">
 				<a
-					class="dark:hover:border-secondary-500 dark:hover:text-secondary-500 hover:bg-secondary-500 dark:hover:bg-primary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg"
+					class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg"
 					{href}
 					target="_blank">Download E-PDF</a
 				>
 				<a
-					class="dark:hover:border-secondary-500 dark:hover:text-secondary-500 hover:bg-secondary-500 dark:hover:bg-primary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg"
+					class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg"
 					{href}
 					target="_blank">Download PDF für Print</a
 				>

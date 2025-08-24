@@ -1,7 +1,7 @@
 <script>
 	let { size = 100, classes = '', colors } = $props();
-	let figFill = `fill-[${colors.bg}]`;
-	let figStroke = `stroke-[${colors.w}]`;
+	let figFill = colors.bg ? `fill-[${colors.bg}]` : 'fill-none';
+	let figStroke = colors.w ? `stroke-[${colors.w}]` : 'stroke-none';
 </script>
 
 <svg

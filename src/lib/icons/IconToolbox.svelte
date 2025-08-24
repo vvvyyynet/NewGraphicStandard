@@ -1,7 +1,7 @@
 <script>
 	let { size = 100, classes = '', isActive = false, colors } = $props();
 	let figFill = $derived(isActive ? `fill-[${colors.bg}]` : `fill-[${colors.w}]`);
-	let figStroke = $derived(isActive ? `stroke-[${colors.bg}]` : `stroke-[${colors.bg}]`);
+	let figStroke = $derived(isActive ? `stroke-[${colors.a}]` : `stroke-[${colors.bg}]`);
 	let circFill = $derived(isActive ? `fill-[${colors.a}]` : `fill-[${colors.bg}]`);
 	let circStroke = $derived(isActive ? `stroke-[${colors.a}]` : `stroke-[${colors.w}]`);
 </script>

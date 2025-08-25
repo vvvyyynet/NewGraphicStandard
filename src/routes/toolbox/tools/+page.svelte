@@ -19,7 +19,7 @@
 
 	// Shuffle tools
 	// Filter tools
-	let tools = [...data.tools].sort(() => Math.random() - 0.5);
+	let tools = data.tools;
 	let allowedTags = $state(['alle']);
 	let useAllTags = $state(false);
 	// split by size (the size is set manually in 'tools-list.json')

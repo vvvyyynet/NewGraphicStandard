@@ -118,7 +118,7 @@
 		{@const toolsSets2 = splitToolsBySize(tools_filtered, nCol).toolsSets}
 		<div
 			class={[
-				'-mx-2 grid grid-cols-1 gap-5 p-0 lg:-mx-10 @md:grid-cols-2 @lg:grid-cols-3 @xl:grid-cols-4'
+				'-mx-2 grid grid-cols-1 gap-5 p-0 lg:-mx-5 @md:grid-cols-2 @lg:grid-cols-3 @xl:grid-cols-4'
 			]}
 		>
 			<!-- <div class="flex max-h-[200vh] flex-col gap-4 lg:flex-wrap"> -->

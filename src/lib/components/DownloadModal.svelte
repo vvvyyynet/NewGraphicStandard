@@ -48,7 +48,7 @@
 
 			<div class="flex flex-wrap items-end gap-5">
 				<img src="/img/qr-twint.png" alt="QR Code für Twint" class="h-30 w-30" />
-				<p class="">Oder: IBAN CH85 0076 9441 4721 0200 1</p>
+				<p class="text-lg">Oder: IBAN CH85 0076 9441 4721 0200 1</p>
 			</div>
 			<!-- <p class="">Download-Optionen</p> -->
 			<div class="flex flex-wrap items-center justify-center gap-4">

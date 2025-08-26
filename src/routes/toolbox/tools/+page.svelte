@@ -36,7 +36,7 @@
 	);
 	let nCols = $state(1);
 	let elToolsContainer;
-	let withToolsContainer = $state();
+	let widthToolsContainer = $state();
 
 	function nCol_from_width(width) {
 		if (width >= 110 * 16) {
@@ -110,7 +110,7 @@
 
 <div
 	bind:this={elToolsContainer}
-	bind:clientWidth={withToolsContainer}
+	bind:clientWidth={widthToolsContainer}
 	class="@container h-full w-full"
 >
 	{#snippet columns(width: number)}
@@ -146,5 +146,5 @@
 			{/each}
 		</div>
 	{/snippet}
-	{@render columns(withToolsContainer)}
+	{@render columns(widthToolsContainer)}
 </div>

@@ -86,7 +86,7 @@
 				return {
 					menu: 'fixed w-full lg:w-[500px] p-4 lg:border-r-2 dark:lg:border-white lg:border-white',
 					content: '!opacity-0 lg:!opacity-100 lg:left-[500px] lg:w-[calc(100vw-500px)]',
-					heading: 'text-3xl lg:text-4xl',
+					heading: 'text-3xl lg:text-5xl',
 					mainNav: 'portrait:max-h-80% overflow-y-auto lg:top-[25vh] lg:w-full',
 					mainOl: 'place-content-center',
 					mainItem: '',

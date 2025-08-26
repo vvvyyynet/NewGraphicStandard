@@ -144,6 +144,13 @@
 					{/each}
 				</div>
 			{/each}
+			{#if !tools_filtered.some((tool) => {
+				return !tool.length;
+			})}
+				<p class="col-span-10">
+					Keine passenden Tools gefunden. Verändere die Filter, um Tools anzuzeigen.
+				</p>
+			{/if}
 		</div>
 	{/snippet}
 	{@render columns(widthToolsContainer)}

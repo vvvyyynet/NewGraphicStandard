@@ -33,9 +33,9 @@ Das Faltplakat soll als praktisches Nachschlagewerk und Leitfaden für Fachleut
 
 <Div classes='flex flex-col'>
     
-<a href="/pdf/test.pdf" target="_blank">Print-PDF zum Download</a>
+<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">Print-PDF zum Download</a>
 
-<a href="/pdf/test.pdf" target="_blank">E-PDF zum Download</a>
+<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">E-PDF zum Download</a>
 
 </Div>
 
@@ -51,9 +51,9 @@ Die Publikation beleuchtet umweltgerechte Druckverfahren, ressourcenschonende Pa
 
 <Div classes='flex flex-col'>
     
-<a href="/pdf/test.pdf" target="_blank">Print-PDF zum Download</a>
+<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">Print-PDF zum Download</a>
 
-<a href="/pdf/test.pdf" target="_blank">E-PDF zum Download</a>
+<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">E-PDF zum Download</a>
 
 </Div>
 
@@ -69,9 +69,9 @@ Das Faltplakat soll als praktisches Nachschlagewerk und Leitfaden für Fachleut
 
 <Div classes='flex flex-col'>
     
-<a href="/pdf/test.pdf" target="_blank">Print-PDF zum Download</a>
+<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">Print-PDF zum Download</a>
 
-<a href="/pdf/test.pdf" target="_blank">E-PDF zum Download</a>
+<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">E-PDF zum Download</a>
 
 </Div>
 

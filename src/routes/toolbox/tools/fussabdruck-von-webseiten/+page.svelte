@@ -6,7 +6,7 @@
 	let tags = $derived(data.tools.find((tool) => tool.folder == route)?.tags);
 </script>
 
-<div class={['prose-base lg:text-md h-full w-full min-w-[100%] pb-20 md:text-xs']}>
+<div class={['prose-base h-full w-full min-w-[100%] pb-20 md:text-xs lg:text-lg']}>
 	<ul class="p-0">
 		{#each tags as tag}
 			<li class="dark:text-secondary-500 mr-2 inline p-0 font-bold">#{tag}</li>

@@ -318,7 +318,7 @@
 		}
 		:global(.safarifix_chevronLeft) {
 			-webkit-transform: translateZ(0);
-			right: -100px !important;
+			right: -110px !important;
 		}
 		:global(.safarifix_chevronRight) {
 			-webkit-transform: translateZ(0);
@@ -333,7 +333,7 @@
 		}
 		:global(.safarifix_chevronLeft) {
 			-webkit-transform: translateZ(0);
-			right: -100px !important;
+			right: -110px !important;
 		}
 		:global(.safarifix_chevronRight) {
 			-webkit-transform: translateZ(0);

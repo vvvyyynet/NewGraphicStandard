@@ -24,15 +24,20 @@ jobs:
       - name: Build the app
         run: npm run build
 
+      - name: Check for lftp installation
+        run: |
+          if ! command -v lftp &> /dev/null; then
+            echo "lftp not found, installing..."
+            sudo apt update && sudo apt install -y lftp
+          else
+            echo "lftp is already installed."
+          fisudo apt update && sudo apt install -y lftp
+
       - name: Deploy to Webhost
         env:
           WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
           WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
         run: |
-          # Install lftp for FTP deployment
-          sudo apt update && sudo apt install -y lftp
-
-          # Deploy using lftp
           lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch <<EOF
           mirror -R ./build/ ftps://ftp.newgraphicstandard.ch/pages
           bye

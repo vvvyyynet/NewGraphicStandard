@@ -57,11 +57,11 @@
 					{href}
 					target="_blank">Download E-PDF</a
 				>
-				<a
+				<!-- <a
 					class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg"
 					{href}
 					target="_blank">Download PDF für Print</a
-				>
+				> -->
 			</div>
 		</div>
 	{/snippet}

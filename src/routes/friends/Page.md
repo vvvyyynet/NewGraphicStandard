@@ -3,7 +3,7 @@ title: Friends
 abstract:
 ---
 
-Expert*innen
+## Expert*innen
 * Iris Becher, Christoph Merian Verlag
 * Cilgia Gremper, Gremper AG
 * Axel Fischer, INGEDE
@@ -17,7 +17,7 @@ Expert*innen
 * Cornelia Stettler, Carbotech AG
 
 
-Mitdenker*innen
+## Mitdenker*innen
 * Ephraim Ebertshäuser
 * Pia Fleischmann
 * Marina Gärtner
@@ -35,9 +35,9 @@ Mitdenker*innen
 * Sarah Wolfsberger
 
 
-Unterstützer*innen
-Kultur Basel Stadt
-![BS_Logo_Kultur_pos](https://github.com/user-attachments/assets/384da8e2-280f-44ea-a32e-7b513ba8bf17)
+## Unterstützer*innen
+Kultur Basel-Stadt
+<img src="/img/BS_Logo_Kultur.jpg" alt="Logo Kultur Basel-Stadt" class="mx-auto max-h-[60vh]"/>
   
 Swisslos Fonds
-![swissfondsbssw1](https://github.com/user-attachments/assets/2072bd11-67b6-44f1-8cb8-2b985459d804)
+<img src="/img/swissfondsbs.jpg" alt="Logo Swisslosfonds Basel-Stadt" class="mx-auto max-h-[60vh]"/>

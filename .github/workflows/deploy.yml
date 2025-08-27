@@ -33,12 +33,16 @@ jobs:
             echo "lftp is already installed."
           fi
 
+    - name: Test connection
+        env:
+          WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
+          WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
+        run: |
+          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.mysite.ch -e "bye"
+
       - name: Deploy to Webhost
         env:
           WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
           WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
         run: |
-          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch <<EOF
-          mirror -R ./build/ ftps://ftp.newgraphicstandard.ch/pages
-          bye
-          EOF
+          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD -e "mirror -R ./build/ /pages; bye" ftps://ftp.mysite.ch -v

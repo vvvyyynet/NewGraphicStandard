@@ -1,19 +1,7 @@
 [
-{"slug": "fuss", "size":2, "tags":["very serious", "digital"], "hasContent":true, "folder":"fussabdruck-von-webseiten"},
-{"slug": "barriere", "size":4, "tags":["very serious", "digital", "testing fägt"], "hasContent":false, "folder":"barrierefreie-webseiten"},
-{"slug": "font", "size":4, "tags":["very serious", "typografie"],"hasContent":true, "folder":"font-diversity"},
-{"slug": "engel", "size":4, "tags":["very serious", "papier"], "hasContent":false, "folder":"papier-mit-blauem-engel"},
-{"slug": "foo", "size":2, "tags":["very serious", "papier", "hyper"], "hasContent":false, "folder":"foo"},
+{"slug": "fuss", "size":2, "tags":["digital"], "hasContent":true, "folder":"fussabdruck-von-webseiten"},
+{"slug": "barriere", "size":4, "tags":["digital"], "hasContent":false, "folder":"barrierefreie-webseiten"},
+{"slug": "font", "size":4, "tags":["typografie"],"hasContent":true, "folder":"font-diversity"},
+{"slug": "engel", "size":4, "tags":["label", "papier"], "hasContent":false, "folder":"papier-mit-blauem-engel"},
 
-{"slug": "fuss", "size":2, "tags":["lückenfüller", "digital"], "hasContent":true, "folder":"fussabdruck-von-webseiten"},
-{"slug": "fuss", "size":2, "tags":["lückenfüller", "digital"], "hasContent":true, "folder":"fussabdruck-von-webseiten"},
-{"slug": "font", "size":2, "tags":["lückenfüller", "typografie"],"hasContent":true, "folder":"font-diversity"},
-{"slug": "font", "size":2, "tags":["lückenfüller", "typografie"],"hasContent":true, "folder":"font-diversity"},
-{"slug": "barriere", "size":4, "tags":["lückenfüller", "digital"], "hasContent":false, "folder":"barrierefreie-webseiten"},
-{"slug": "barriere", "size":4, "tags":["lückenfüller", "digital"], "hasContent":false, "folder":"barrierefreie-webseiten"},
-{"slug": "engel", "size":4, "tags":["lückenfüller", "spannend", "papier"], "hasContent":false, "folder":"papier-mit-blauem-engel"},
-{"slug": "engel", "size":4, "tags":["lückenfüller", "papier"], "hasContent":false, "folder":"papier-mit-blauem-engel"},
-{"slug": "engel", "size":4, "tags":["lückenfüller", "papier"], "hasContent":false, "folder":"papier-mit-blauem-engel"},
-{"slug": "engel", "size":4, "tags":["lückenfüller", "papier"], "hasContent":false, "folder":"papier-mit-blauem-engel"},
-{"slug": "engel", "size":4, "tags":["lückenfüller", "papier"], "hasContent":false, "folder":"papier-mit-blauem-engel"}
 ]

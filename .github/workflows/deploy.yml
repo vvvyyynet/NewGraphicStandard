@@ -38,11 +38,11 @@ jobs:
           WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
           WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
         run: |
-          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicdesign.ch -e "bye"
+          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch -e "bye"
 
       - name: Deploy
         env:
           WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
           WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
         run: |
-          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD -e "mirror -R ./build/ /pages; bye" ftps://ftp.newgraphicdesign.ch -v
+          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD -e "mirror -R ./build/ /pages; bye" ftps://ftp.newgraphicstandard.ch -v

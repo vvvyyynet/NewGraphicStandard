@@ -43,3 +43,7 @@ h6 {
 	--container-lg: 75rem;
 	--container-md: 45rem;
 }
+
+* {
+	box-sizing: border-box;
+  }

@@ -151,42 +151,62 @@
 		onclick={() => {
 			isExpanded = true;
 		}}
-		class={['fixed top-5 right-5 z-900 h-9 lg:hidden lg:h-12']}
+		class={['safarifix_right fixed top-5 right-5 z-900 h-9 lg:hidden lg:h-12']}
 	>
-		<IconMenu size={100} colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }} />
+		<IconMenu
+			size={100}
+			classes="safarifix_right"
+			colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }}
+		/>
 	</button>
 {/if}
 
 <!-- Sidebar -->
 <div class={[cl('all').menu, cl(mode).menu]}>
-	<!-- Menu -->
+	<!-- Menu and Chevrons -->
 	{#if mode !== 'full'}
-		<!-- Chevron -->
-		<button
-			class={['absolute top-5 right-5 lg:right-4']}
-			onclick={() => {
-				isExpanded = !isExpanded;
-			}}
-		>
+		{#if isLargeScreen.val}
 			{#if isExpanded}
-				<IconClose
-					size={100}
-					classes="h-9 lg:h-12 lg:hidden"
-					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
-				/>
-				<IconChevronLeft
-					classes="hidden h-9 lg:h-12 lg:block"
-					size={100}
-					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
-				/>
+				<button
+					class={['safarifix_chevronLeft absolute top-5 right-5 lg:right-4']}
+					onclick={() => {
+						isExpanded = !isExpanded;
+					}}
+				>
+					<IconChevronLeft
+						classes="hidden h-9 lg:h-12 lg:block"
+						size={100}
+						colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
+					/>
+				</button>
 			{:else}
-				<IconChevronRight
-					classes="hidden h-9 lg:h-12 lg:block"
+				<button
+					class={['safarifix_chevronRight absolute top-5 right-5 lg:right-4']}
+					onclick={() => {
+						isExpanded = !isExpanded;
+					}}
+				>
+					<IconChevronRight
+						classes="hidden h-9 lg:h-12 lg:block"
+						size={100}
+						colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
+					/>
+				</button>
+			{/if}
+		{:else}
+			<button
+				class={['safarifix_right absolute top-5 right-5 lg:right-4']}
+				onclick={() => {
+					isExpanded = !isExpanded;
+				}}
+			>
+				<IconClose
+					classes="h-9 lg:h-12 lg:hidden"
 					size={100}
 					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 				/>
-			{/if}
-		</button>
+			</button>
+		{/if}
 	{/if}
 
 	<!-- Light Switch -->
@@ -194,7 +214,7 @@
 		<LightSwitch
 			bind:isDark={isDark.val}
 			callback={closeMenu}
-			classes="fixed h-9 top-18 right-5 lg:h-12 lg:top-4 lg:right-4"
+			classes="safarifix_right fixed h-9 top-18 right-5 lg:h-12 lg:top-4 lg:right-4"
 			colors={{ bg: COLOR_BG_FLEX, w: COLOR_W_FLEX, x: COLOR_W_FLEXFIX }}
 		/>
 	{/if}
@@ -288,3 +308,36 @@
 <div class={[cl('all').content, cl(mode).content]}>
 	{@render children()}
 </div>
+
+<style>
+	/* Fix for Safari for fixed elements */
+	@supports (-webkit-touch-callout: none) {
+		:global(.safarifix_right) {
+			-webkit-transform: translateZ(0);
+			right: -110px !important;
+		}
+		:global(.safarifix_chevronLeft) {
+			-webkit-transform: translateZ(0);
+			right: -100px !important;
+		}
+		:global(.safarifix_chevronRight) {
+			-webkit-transform: translateZ(0);
+			right: 0px !important;
+		}
+	}
+
+	@supports (-webkit-backdrop-filter: blur(10px)) {
+		:global(.safarifix_right) {
+			-webkit-transform: translateZ(0);
+			right: -110px !important;
+		}
+		:global(.safarifix_chevronLeft) {
+			-webkit-transform: translateZ(0);
+			right: -100px !important;
+		}
+		:global(.safarifix_chevronRight) {
+			-webkit-transform: translateZ(0);
+			right: 0px !important;
+		}
+	}
+</style>

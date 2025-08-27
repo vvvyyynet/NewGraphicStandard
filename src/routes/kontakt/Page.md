@@ -3,4 +3,5 @@ title: Kontakt
 abstract:
 ---
 
-Unsere telefonischen Öffnungszeiten geben wir dir gerne per Email bekannt.
+↗ [mail@newgraphicstandard.ch](mailto:mail@newgraphicstandard.ch)
+<br> ↗ [Instagram](https://www.instagram.com/newgraphicstandard/)

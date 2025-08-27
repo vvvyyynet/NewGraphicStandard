@@ -1,7 +1,3 @@
 ## Font\*Diversity
 
-Schriften sind auch ein Abbild von dominanten Vorstellungen. Was als gute Schrift gilt, ist stark geprägt von Normen. Klassische europäische Schriften wie die Times oder die Helvetica werden gerne als «neutrale» Schriftarten bezeichnet, doch sie reproduzieren ein vorwiegend eurozentrisch und männlich geprägtes Verständnis von Typografie.
-
-### Sammlungen
-
-Sammlungen wie [flin\*type](#) oder [Libre Fonts by Womxn](#) möchten die Diversität von Schriften und Schriftgestalter\*innen aus der ganzen Welt zugänglich machen. Dadurch sollen marginalisierte Designer:innen unterstützt, sichtbar und neu in die Geschichte eingeschrieben werden.
+Typografische Diversität Schriften sind auch ein Abbild dominanter Vorstellungen. Was als «gute» Schrift gilt, ist stark geprägt von Normen. Klassische europäische Schriften wie die Times oder die Helvetica werden gerne als «neutrale» Schriftarten bezeichnet, doch sie reproduzieren ein vorwiegend eurozentrisches und maskulin geprägtes Verständnis von Typografie. Sammlungen wie ↗ [flin*type](https://www.flintype.com/) oder ↗ [Libre Fonts by Womxn](https://www.design-research.be/by-womxn/) möchten die Diversität von Schriften und Schriftgestalter\*innen aus der ganzen Welt zugänglich machen. Dadurch sollen marginalisierte Designerinnen unterstützt, sichtbar gemacht und neu in die Geschichte eingeschrieben werden.

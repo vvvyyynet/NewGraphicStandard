@@ -37,7 +37,7 @@
 		<div
 			class="lg:text-md absolute top-10 left-0 mx-auto my-5 flex h-[93vh] w-full flex-col gap-7 overflow-y-auto p-2 pb-20 text-sm md:left-1/5 md:w-3/5 lg:top-0 lg:left-1/7 lg:w-5/7 xl:left-2/7 xl:w-3/7"
 		>
-			<h1 class="h1">Nur ganz kurz...</h1>
+			<h1 class="h1 text-center">Nur ganz kurz...</h1>
 			<p class="text-lg">
 				In dieses Handbook wurde sehr viel Arbeit auf freiwilliger Basis investiert. Da wir möchten,
 				dass es allen zur Verfügung steht, unabhängig vom Einkommen, haben wir uns gegen einen fixen

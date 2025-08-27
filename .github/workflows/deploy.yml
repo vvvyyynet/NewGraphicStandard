@@ -33,7 +33,7 @@ jobs:
             echo "lftp is already installed."
           fi
 
-    - name: Test connection
+      - name: Test connection
         env:
           WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
           WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}

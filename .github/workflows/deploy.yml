@@ -1,0 +1,39 @@
+name: Deploy Svelte App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the app
+        run: npm run build
+
+      - name: Deploy to Webhost
+        env:
+          WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
+          WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
+        run: |
+          # Install lftp for FTP deployment
+          sudo apt-get install -y lftp
+
+          # Deploy using lftp
+          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch <<EOF
+          mirror -R ./build/ ftps://ftp.newgraphicstandard.ch/pages
+          bye
+          EOF

@@ -23,7 +23,7 @@ Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder z
 
 <Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
-<img src="/img/poster2.png" alt="Poster Faltplakat" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
+<img src="/img/Faltplakat.png" alt="Faltplakat" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
 ## Faltplakat
 
@@ -33,7 +33,7 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wie können wir ökologisches un
 
 <Div classes='flex flex-col'>
     
-<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">Download</a>
+<a class="leading-loose underline" href="/pdf/Faltplakat_A2.pdf" target="_blank">Download</a>
 
 </Div>
 
@@ -41,7 +41,7 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wie können wir ökologisches un
 
 <Div classes='max-w-[80vw] md:max-w-[40vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
-<img src="/img/poster3.png" alt="Poster Merkblatt Entwurfsprozess" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
+<img src="/img/Checkliste_Nachhaltigkeit.png" alt="Checkliste Nachhaltigkeit" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
 ## Merkblatt 1/4 — Nachhaltigkeit
 
@@ -49,7 +49,7 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wir haben die wichtigsten Aspekt
 
 <Div classes='flex flex-col'>
     
-<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">Download</a>
+<a class="leading-loose underline" href="/pdf/Checkliste_Nachhaltigkeit_A4.pdf" target="_blank">Download</a>
 
 </Div>
 
@@ -57,7 +57,7 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wir haben die wichtigsten Aspekt
 
 <Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
-<img src="/img/poster4.png" alt="Poster Merkblatt Kommunikation" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
+<img src="/img/Checkliste_Kommunikation.png" alt="Checkliste Kommunikation" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
 ## Merkblatt 2/4 – Kommunikation
 
@@ -65,7 +65,7 @@ Nachhaltig(keit) kommunizieren, aber wie? Wir haben die wichtigsten Aspekte in e
 
 <Div classes='flex flex-col'>
     
-<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">Download</a>
+<a class="leading-loose underline" href="/pdf/Checkliste_Kommunikation_A4.pdf" target="_blank">Download</a>
 
 </Div>
 
@@ -75,7 +75,7 @@ Nachhaltig(keit) kommunizieren, aber wie? Wir haben die wichtigsten Aspekte in e
 
 <Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
-<img src="/img/poster4.png" alt="Poster Merkblatt Kommunikation" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
+<img src="/img/Checkliste_Entwurfsprozess.png" alt="Checkliste Entwurfsprozess" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
 ## Merkblatt 3/4 – Entwurfsprozess
 
@@ -83,7 +83,7 @@ Wie sieht ein umweltbewusster Entwurfsprozess aus? Wir haben die wichtigsten Asp
 
 <Div classes='flex flex-col'>
     
-<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">Download</a>
+<a class="leading-loose underline" href="/pdf/Checkliste_Entwurfsprozess_A4.pdf" target="_blank">Download</a>
 
 </Div>
 
@@ -93,7 +93,7 @@ Wie sieht ein umweltbewusster Entwurfsprozess aus? Wir haben die wichtigsten Asp
 
 <Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
-<img src="/img/poster4.png" alt="Poster Merkblatt Kommunikation" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
+<img src="/img/Checkliste_Herstellung.png" alt="Checkliste Herstellung" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
 ## Merkblatt 4/4 – Herstellung
 
@@ -101,7 +101,7 @@ Papier, Druck und Digitale Alternativen unter der Lupe. Wir haben die wichtigste
 
 <Div classes='flex flex-col'>
     
-<a class="leading-loose underline" href="/pdf/test.pdf" target="_blank">Download</a>
+<a class="leading-loose underline" href="/pdf/Checkliste_Herstellung_A4.pdf" target="_blank">Download</a>
 
 </Div>
 

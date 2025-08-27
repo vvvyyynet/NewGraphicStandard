@@ -45,4 +45,4 @@ jobs:
           WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
           WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
         run: |
-          lftp -v -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch -e "mirror -R ./build/ /pages; bye"
+          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch -e "mirror -R ./build/ /pages; bye"

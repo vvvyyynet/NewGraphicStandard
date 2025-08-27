@@ -57,4 +57,4 @@ jobs:
           username: ${{ secrets.WEBHOST_USERNAME }}
           password: ${{ secrets.WEBHOST_PASSWORD }}
           protocol: ftps
-          port: 22
+          port: 21

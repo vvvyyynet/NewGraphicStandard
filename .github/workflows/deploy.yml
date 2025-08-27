@@ -40,7 +40,7 @@ jobs:
         run: |
           lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.mysite.ch -e "bye"
 
-      - name: Deploy to Webhost
+      - name: Deploy
         env:
           WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
           WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}

@@ -27,9 +27,9 @@ Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder z
 
 ## Faltplakat
 
-Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wie können wir ökologisches und soziales Verantwortungsbewusstsein in unseren Berufsalltag integrieren? Wir haben die wichtigsten Aspekte kompakt als praktisches Faltplakat zum Download aufbereitet.  
+Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wie können wir ökologisches und soziales Verantwortungsbewusstsein in unseren Berufsalltag integrieren? Wir haben die wichtigsten Aspekte kompakt als praktisches Faltplakat zum Download aufbereitet. 
 
-👉🏻 Werde selbst aktiv: Druck das Plakat aus, häng es sichtbar auf oder gib die Merkblätter an Kolleg*innen weiter. So wird klimaschonendes Handeln zum Teil unserer Gestaltungspraxis
+👉🏻 Werde selbst aktiv: Druck das Plakat aus, häng es sichtbar auf oder gib die Merkblätter an Kolleg\*innen weiter. So wird klimaschonendes Handeln zum Teil unserer Gestaltungspraxis
 
 <Div classes='flex flex-col'>
     
@@ -45,7 +45,7 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wie können wir ökologisches un
 
 ## Merkblatt 1/4 — Nachhaltigkeit
 
-Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet. 
+Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
 <Div classes='flex flex-col'>
     
@@ -61,13 +61,11 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wir haben die wichtigsten Aspekt
 
 ## Merkblatt 2/4 – Kommunikation
 
-Nachhaltig(keit) kommunizieren, aber wie? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet. 
+Nachhaltig(keit) kommunizieren, aber wie? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
 <Div classes='flex flex-col'>
     
 <a class="leading-loose underline" href="/pdf/Checkliste_Kommunikation_A4.pdf" target="_blank">Download</a>
-
-</Div>
 
 </Div>
 
@@ -79,13 +77,11 @@ Nachhaltig(keit) kommunizieren, aber wie? Wir haben die wichtigsten Aspekte in e
 
 ## Merkblatt 3/4 – Entwurfsprozess
 
-Wie sieht ein umweltbewusster Entwurfsprozess aus? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet. 
+Wie sieht ein umweltbewusster Entwurfsprozess aus? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
 <Div classes='flex flex-col'>
     
 <a class="leading-loose underline" href="/pdf/Checkliste_Entwurfsprozess_A4.pdf" target="_blank">Download</a>
-
-</Div>
 
 </Div>
 
@@ -97,7 +93,7 @@ Wie sieht ein umweltbewusster Entwurfsprozess aus? Wir haben die wichtigsten Asp
 
 ## Merkblatt 4/4 – Herstellung
 
-Papier, Druck und Digitale Alternativen unter der Lupe. Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet. 
+Papier, Druck und Digitale Alternativen unter der Lupe. Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
 <Div classes='flex flex-col'>
     

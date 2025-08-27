@@ -5,15 +5,15 @@ abstract:
 
 ## Kontakt
 Verein New Graphic Standard 
-<br>[mail@newgraphicstandard.ch](mailto:mail@newgraphicstandard.ch)
+<br>↗ [mail@newgraphicstandard.ch](mailto:mail@newgraphicstandard.ch)
 <br>4053 Basel
 
 ## Grafikdesign
-Katharina Scheller, [katharinascheller.ch](https://katharinascheller.ch/)
-<br>Ladina Ingold, [ladinaingold.ch](https://ladinaingold.ch/)
+Katharina Scheller, ↗ [katharinascheller.ch](https://katharinascheller.ch/)
+<br>Ladina Ingold, ↗ [ladinaingold.ch](https://ladinaingold.ch/)
 
 ## Code
-Levyn Bürki, [vvvyyy.net](https://vvvyyy.net/)
+Levyn Bürki, ↗ [vvvyyy.net](https://vvvyyy.net/)
 
 ## Haftungsausschluss
 Die Autor\*innen übernehmen keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen.

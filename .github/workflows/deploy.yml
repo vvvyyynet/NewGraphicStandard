@@ -51,7 +51,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ftp.newgraphicstandard.ch
-          username: ${{ secrets.WEBHOST_USERNAME }}
+          username: foobar
           password: ${{ secrets.WEBHOST_PASSWORD }}
           protocol: ftps
           port: 22

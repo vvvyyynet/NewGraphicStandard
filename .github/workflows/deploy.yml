@@ -48,10 +48,13 @@ jobs:
       #     lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch -e "mirror -R ./build/ /pages; bye"
 
       - name: 📂 Sync files
+        env:
+          WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
+          WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ftp.newgraphicstandard.ch
-          username: foobar
+          username: ${{ secrets.WEBHOST_USERNAME }}
           password: ${{ secrets.WEBHOST_PASSWORD }}
           protocol: ftps
           port: 22

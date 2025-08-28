@@ -6,13 +6,16 @@ abstract:
 ## Kontakt
 
 Verein New Graphic Standard
-<br>↗ [mail@newgraphicstandard.ch](mailto:mail@newgraphicstandard.ch)
-<br>4053 Basel
+<br>
+↗ [mail@newgraphicstandard.ch](mailto:mail@newgraphicstandard.ch)
+<br>
+4053 Basel
 
 ## Grafikdesign
 
 Katharina Scheller, ↗ [katharinascheller.ch](https://katharinascheller.ch/)
-<br>Ladina Ingold, ↗ [ladinaingold.ch](https://ladinaingold.ch/)
+<br>
+Ladina Ingold, ↗ [ladinaingold.ch](https://ladinaingold.ch/)
 
 ## Code
 

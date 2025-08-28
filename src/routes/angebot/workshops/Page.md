@@ -12,7 +12,7 @@ In unserem Workshop lernen die Teilnehmer\*innen, wie nachhaltiges Grafikdesign 
 Gerne kommen wir zu euch in die Agentur, ins Büro oder in die Schule und bieten Workshops und Kurse zum Thema nachhaltiges Grafikdesign an.
 Wichtig ist, dass ihr einen Raum mit der entsprechenden Infrastruktur organisiert, den Rest bringen wir mit.
 
-<Div classes="bg-primary-100 p-1 rounded-3xl">
+<Div classes="border-1 border-secondary p-1 text-center rounded-3xl">
 
       Kosten Kurspauschale: 400.– / ca. 2–3h + Spesen / mind. 3, max. 20 Teilnehmer*innen
 

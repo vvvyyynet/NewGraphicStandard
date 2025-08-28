@@ -15,7 +15,7 @@ Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder z
 
 <Div classes='flex flex-col'>
     
-↘ <DownloadModal href={undefined}>E-PDF zum Download</DownloadModal>
+<DownloadModal href={undefined}>E-PDF zum Download</DownloadModal>
 
 </Div>
 

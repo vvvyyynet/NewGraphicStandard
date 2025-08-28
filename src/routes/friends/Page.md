@@ -19,7 +19,7 @@ abstract:
 
 ## Mitdenker\*innen
 
-– Levyn Bürki
+- Levyn Bürki
 - Ephraim Ebertshäuser
 - Pia Fleischmann
 - Marina Gärtner
@@ -39,7 +39,7 @@ abstract:
 ## Unterstützer\*innen
 
 Kultur Basel-Stadt
-<img src="/img/BS_Logo_Kultur.jpg" alt="Logo Kultur Basel-Stadt" class="mx-auto max-h-[60vh]"/>
+<img src="/img/BS_Logo_Kultur.jpg" alt="Logo Kultur Basel-Stadt" class="mx-auto max-w-[50%]"/>
 
 Swisslos Fonds
-<img src="/img/swissfondsbs.jpg" alt="Logo Swisslosfonds Basel-Stadt" class="mx-auto max-h-[60vh]"/>
+<img src="/img/swissfondsbs.jpg" alt="Logo Swisslosfonds Basel-Stadt" class="mx-auto max-w-[50%]"/>

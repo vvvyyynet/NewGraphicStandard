@@ -7,7 +7,7 @@ abstract:
     import Div from '$lib/components/Div.svelte';
 </script>
 
-## Pro Besuch dieser Webseite werden nur <mark style="background-color: #d2ff20;">0,03 g CO2</mark> erzeugt.
+## Pro Besuch dieser Webseite werden nur <mark style="background-color: #d2ff20; color: default;">0,03 g CO2</mark> erzeugt.
 
 Unsere Webseite erreicht damit eine CO<sub>2</sub>-Bewertung von <mark style="background-color: #d2ff20; color: #4f40ce;">A+</mark> und ist sauberer als <mark style="background-color: #d2ff20; color: #4f40ce;">94 %</mark> aller Webseiten weltweit!
 

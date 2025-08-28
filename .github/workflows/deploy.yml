@@ -53,6 +53,7 @@ jobs:
         with:
           server: ftp.newgraphicstandard.ch
           server-dir: public_html/www/pages/
+          local-dir: ./build/
           username: ${{ secrets.WEBHOST_USERNAME }}
           password: ${{ secrets.WEBHOST_PASSWORD }}
           protocol: ftps

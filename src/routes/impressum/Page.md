@@ -5,8 +5,8 @@ abstract:
 
 ## Kontakt
 
-Verein New Graphic Standard
-↗ [mail@newgraphicstandard.ch](mailto:mail@newgraphicstandard.ch)
+Verein New Graphic Standard <br>
+↗ [mail@newgraphicstandard.ch](mailto:mail@newgraphicstandard.ch) <br>
 4053 Basel
 
 ## Grafikdesign

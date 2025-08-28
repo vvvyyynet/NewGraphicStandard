@@ -19,6 +19,7 @@ abstract:
 
 ## Mitdenker\*innen
 
+– Levyn Bürki
 - Ephraim Ebertshäuser
 - Pia Fleischmann
 - Marina Gärtner

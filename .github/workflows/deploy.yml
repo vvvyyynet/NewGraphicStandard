@@ -25,21 +25,21 @@ jobs:
       - name: Build the app
         run: npm run build
 
-      - name: Check for lftp installation
-        run: |
-          if ! command -v lftp &> /dev/null; then
-            echo "lftp not found, installing..."
-            sudo apt update && sudo apt install -y lftp
-          else
-            echo "lftp is already installed."
-          fi
+      # - name: Check for lftp installation
+      #   run: |
+      #     if ! command -v lftp &> /dev/null; then
+      #       echo "lftp not found, installing..."
+      #       sudo apt update && sudo apt install -y lftp
+      #     else
+      #       echo "lftp is already installed."
+      #     fi
 
-      - name: Test connection
-        env:
-          WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
-          WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
-        run: |
-          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch -e "bye"
+      # - name: Test connection
+      #   env:
+      #     WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
+      #     WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
+      #   run: |
+      #     lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch -e "bye"
 
       # - name: Deploy
       #   env:

@@ -14,8 +14,7 @@ Wichtig ist, dass ihr einen Raum mit der entsprechenden Infrastruktur organisier
 
 <Div classes="border-1 border-secondary p-1 text-center rounded-3xl">
 
-      Kosten Kurspauschale: 400.– / ca. 2–3h <br>
-      + Spesen <br>
+      Kosten Kurspauschale: 400.– / ca. 2–3h + Spesen <br>
       mind. 3, max. 20 Teilnehmer*innen
 
 </Div>

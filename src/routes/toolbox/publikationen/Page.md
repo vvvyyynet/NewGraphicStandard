@@ -7,9 +7,9 @@
 
 <Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
-<img src="/img/poster1.png" alt="Poster Handbook" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
+<img src="/img/Handbook_Cover.png" alt="Poster Handbook" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
-## Handbook: New Graphic Standard A—Z
+## Handbook: <br>New Graphic Standard A—Z
 
 Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder zum selbst ausdrucken (empfohlene Druckanwendung: zwei Seiten pro A4-Seite, doppelseitig).
 

@@ -55,5 +55,5 @@ jobs:
           server-dir: public_html/www/pages/
           username: ${{ secrets.WEBHOST_USERNAME }}
           password: ${{ secrets.WEBHOST_PASSWORD }}
-          protocol: ftps
+          protocol: sftp
           port: 22

@@ -9,7 +9,7 @@ abstract:
 
 Zum Thema "Nachhaltigkeit im Grafikdesign" im Allgemeinen oder zu spezifischen Themen aus den Bereichen Print oder Digitale Nachhaltigkeit bieten wir Kurzreferate und umfassendere Inputvorträge.
 
-<Div classes="border-2 border-secondary p-1 text-center rounded-2xl">
+<Div classes="border-1 border-secondary p-1 text-center rounded-3xl">
 
     Kosten: 250.– / Stunde + Spesen
 

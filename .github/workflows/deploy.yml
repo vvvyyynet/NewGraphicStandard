@@ -51,7 +51,8 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp.newgraphicstandard.ch/pages
+          server: ftp.newgraphicstandard.ch
+          server-dir: public_html/www/pages
           username: ${{ secrets.WEBHOST_USERNAME }}
           password: ${{ secrets.WEBHOST_PASSWORD }}
           protocol: ftps

@@ -9,7 +9,7 @@ abstract:
 
 ## Pro Besuch dieser Webseite werden nur <mark style="background-color: #d2ff20;">0,03 g CO2</mark> erzeugt.
 
-Unsere Webseite erreicht damit eine CO<sub>2</sub>-Bewertung von <mark style="background-color: #d2ff20; color: var(--base-font-color);">A+</mark> und ist sauberer als <mark style="background-color: #d2ff20; color: var(--base-font-color);">94 %</mark> aller Webseiten weltweit!
+Unsere Webseite erreicht damit eine CO<sub>2</sub>-Bewertung von <mark style="background-color: #d2ff20; color: #4f40ce;">A+</mark> und ist sauberer als <mark style="background-color: #d2ff20; color: #4f40ce;">94 %</mark> aller Webseiten weltweit!
 
 Die Berechnungen stammen vom ↗ [Website Carbon Calculator](https://www.websitecarbon.com/)
 

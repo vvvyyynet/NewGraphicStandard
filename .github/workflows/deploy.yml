@@ -8,7 +8,7 @@ on:
 jobs:
   web-deploy:
     name: build and deploy
-    environment: newgraphicstandard
+    # environment: newgraphicstandard
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -41,18 +41,18 @@ jobs:
         run: |
           lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch -e "bye"
 
-      - name: Deploy
-        env:
-          WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
-          WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
-        run: |
-          lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch -e "mirror -R ./build/ /pages; bye"
+      # - name: Deploy
+      #   env:
+      #     WEBHOST_USERNAME: ${{ secrets.WEBHOST_USERNAME }}
+      #     WEBHOST_PASSWORD: ${{ secrets.WEBHOST_PASSWORD }}
+      #   run: |
+      #     lftp -u $WEBHOST_USERNAME,$WEBHOST_PASSWORD ftps://ftp.newgraphicstandard.ch -e "mirror -R ./build/ /pages; bye"
 
-      # - name: 📂 Sync files
-      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-      #   with:
-      #     server: ftp.newgraphicstandard.ch/pages
-      #     username: ${{ secrets.WEBHOST_USERNAME }}
-      #     password: ${{ secrets.WEBHOST_PASSWORD }}
-      #     protocol: ftps
-      #     port: 22
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ftp.newgraphicstandard.ch/pages
+          username: ${{ secrets.WEBHOST_USERNAME }}
+          password: ${{ secrets.WEBHOST_PASSWORD }}
+          protocol: ftps
+          port: 22

@@ -2,6 +2,6 @@
 {"slug": "fuss", "size":2, "tags":["digital"], "hasContent":true, "folder":"fussabdruck-von-webseiten"},
 {"slug": "barriere", "size":4, "tags":["digital"], "hasContent":false, "folder":"barrierefreie-webseiten"},
 {"slug": "font", "size":4, "tags":["typografie"],"hasContent":true, "folder":"font-diversity"},
-{"slug": "engel", "size":4, "tags":["label", "papier"], "hasContent":false, "folder":"papier-mit-blauem-engel"}
+{"slug": "engel", "size":4, "tags":["label", "papier"], "hasContent":false, "folder":"papier-mit-blauem-engel"},
 {"slug": "handbok", "size":4, "tags":["news"], "hasContent":true, "folder":"handbook"}
 ]

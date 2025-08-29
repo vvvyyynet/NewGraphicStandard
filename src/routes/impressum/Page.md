@@ -18,6 +18,10 @@ Ladina Ingold, ↗ [ladinaingold.ch](https://ladinaingold.ch/)
 
 Levyn Bürki, ↗ [vvvyyy.net](https://vvvyyy.net/)
 
+## Technischer Support
+
+Lazar Jeremić
+
 ## Haftungsausschluss
 
 Die Autor\*innen übernehmen keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen.

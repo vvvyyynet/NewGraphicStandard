@@ -14,6 +14,8 @@
 Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder zum selbst ausdrucken (empfohlene Druckanwendung: zwei Seiten pro A4-Seite, doppelseitig).
 
 <Div classes='flex flex-col'>
+
+<a class="leading-loose underline" href="/toolbox/tools/handbook">Preview</a>
     
 <DownloadModal href={undefined}>E-PDF zum Download</DownloadModal>
 

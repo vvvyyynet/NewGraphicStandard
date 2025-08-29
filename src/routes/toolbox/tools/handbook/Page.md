@@ -9,3 +9,13 @@ Dieses Handbuch liefert Inspiration und Impulse, ungewohnte Pfade zu beschreiten
 
 Download unter: Publikationen
 
+
+<img src="/img/Handbook_Spreads_1.png" alt="Handbook Spreads" class="mx-auto"/>
+
+<img src="/img/Handbook_Spreads_2.png" alt="Handbook Spreads" class="mx-auto"/>
+
+<img src="/img/Handbook_Spreads_3.png" alt="Handbook Spreads" class="mx-auto"/>
+
+<img src="/img/Handbook_Spreads_4.png" alt="Handbook Spreads" class="mx-auto"/>
+
+<img src="/img/Handbook_Spreads_5.png" alt="Handbook Spreads" class="mx-auto"/>

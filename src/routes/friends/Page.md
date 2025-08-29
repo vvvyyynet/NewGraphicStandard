@@ -11,6 +11,7 @@ abstract:
 - Hansjörg Kunz, Hochschule für Gestaltung und Kunst Basel
 - Marion Fink, Hochschule für Gestaltung und Kunst Basel
 - Kerstin Foster, Triest Verlag
+- Lazar Jeremić
 - Pieter Poldervaart, Verein Ecopaper
 - Barbara Spielmann, Buchzentrum
 - Marcel Spinnler, Druckform
@@ -25,7 +26,6 @@ abstract:
 - Marina Gärtner
 - Sarah-Lea Hipp
 - Simone Hörler
-- Lazar Jeremić
 - Beat Keusch
 - Ahjin Kim
 - Lena Lüem

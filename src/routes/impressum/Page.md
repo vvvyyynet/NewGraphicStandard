@@ -20,7 +20,7 @@ Levyn Bürki, ↗ [vvvyyy.net](https://vvvyyy.net/)
 
 ## Technischer Support
 
-Lazar Jeremić
+Lazar Jeremić ↗ [lazar.ch](https://lazar.ch/)
 
 ## Haftungsausschluss
 

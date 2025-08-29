@@ -1,3 +1,7 @@
+<script>
+    import DownloadModal from '$lib/components/DownloadModal.svelte'
+    import Div from '$lib/components/Div.svelte'
+</script>
 
 ## New Graphic Standard A—Z
 

@@ -38,8 +38,6 @@ abstract:
 
 ## Unterstützer\*innen
 
-Kultur Basel-Stadt
 <img src="/img/BS_Logo_Kultur.jpg" alt="Logo Kultur Basel-Stadt" class="max-w-[50%]"/>
 
-Swisslos Fonds
 <img src="/img/swissfondsbs.jpg" alt="Logo Swisslosfonds Basel-Stadt" class="max-w-[50%]"/>

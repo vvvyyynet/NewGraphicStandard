@@ -37,7 +37,7 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wie können wir ökologisches un
 
 <Div>
 
-<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" href={undefined} style="text-decoration:none;">Download</a>
+<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" href={undefined} style="text-decoration:none;">Download</a>
     
 <a class="leading-loose underline" href="/pdf/Faltplakat_A2.pdf" target="_blank">Download</a>
 

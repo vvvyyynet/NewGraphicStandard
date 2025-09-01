@@ -14,7 +14,7 @@ Dieses Handbuch liefert Inspiration und Impulse, ungewohnte Pfade zu beschreiten
 <DownloadModal href={undefined}>Download</DownloadModal>
 
 <DownloadModal>
-<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" href={undefined}>Download</a>
+<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none" href={undefined}>Download</a>
 </DownloadModal>
 
 <img src="/img/Handbook_Spreads_1.png" alt="Handbook Spreads" class="mx-auto"/>

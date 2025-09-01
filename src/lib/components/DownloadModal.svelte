@@ -41,7 +41,7 @@
 			<p class="text-lg">
 				In dieses Handbook wurde sehr viel Arbeit auf freiwilliger Basis investiert. Da wir möchten,
 				dass es allen zur Verfügung steht, unabhängig vom Einkommen, haben wir uns gegen einen fixen
-				Kaufpreis entschieden. Dennoch sind wir auf Zustupfe angewiesen, um unsere Arbeit und die
+				Kaufpreis entschieden. Dennoch sind wir auf Zustupf angewiesen, um unsere Arbeit und die
 				unserer Partner*innen zu gewährleisten. Vielen Dank, dass du unser Handbook mit einer Spende
 				deiner Wahl unterstützt.
 			</p>

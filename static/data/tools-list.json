@@ -3,5 +3,5 @@
 {"slug": "barriere", "size":4, "tags":["digital"], "hasContent":false, "folder":"barrierefreie-webseiten"},
 {"slug": "font", "size":4, "tags":["typografie"],"hasContent":true, "folder":"font-diversity"},
 {"slug": "papierrechner", "size":2, "tags":["papier"],"hasContent":false, "folder":"papierrechner"},
-{"slug": "handbok", "size":4, "tags":["news"], "hasContent":true, "folder":"handbook"}
+{"slug": "handbook", "size":4, "tags":["news"], "hasContent":true, "folder":"handbook"}
 ]

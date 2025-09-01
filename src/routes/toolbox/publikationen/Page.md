@@ -13,9 +13,9 @@
 
 Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder zum selbst ausdrucken (empfohlene Druckanwendung: zwei Seiten pro A4-Seite, doppelseitig).
 
-<Div classes='flex flex-col'>
+<Div classes='flex flex-wrap gap-5'>
 
-<a class="leading-loose underline" href="/toolbox/tools/handbook">Preview</a>
+<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/toolbox/tools/handbook">Preview</a>
     
 <DownloadModal style="text-decoration:none;">
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" href={undefined} style="text-decoration:none;">Download</a>
@@ -51,9 +51,9 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wie können wir ökologisches un
 
 Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
-<Div classes='flex flex-col'>
-    
-<a class="leading-loose underline" href="/pdf/Checkliste_Nachhaltigkeit_A4.pdf" target="_blank">Download</a>
+<Div classes='flex flex-wrap gap-5'>
+
+<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Nachhaltigkeit_A4.pdf" target="_blank">Download</a>
 
 </Div>
 
@@ -83,9 +83,9 @@ Nachhaltig(keit) kommunizieren, aber wie? Wir haben die wichtigsten Aspekte in e
 
 Wie sieht ein umweltbewusster Entwurfsprozess aus? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
-<Div classes='flex flex-col'>
-    
-<a class="leading-loose underline" href="/pdf/Checkliste_Entwurfsprozess_A4.pdf" target="_blank">Download</a>
+<Div classes='flex flex-wrap gap-5'>
+
+<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Entwurfsprozess_A4.pdf" target="_blank">Download</a>
 
 </Div>
 
@@ -99,9 +99,9 @@ Wie sieht ein umweltbewusster Entwurfsprozess aus? Wir haben die wichtigsten Asp
 
 Papier, Druck und Digitale Alternativen unter der Lupe. Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
-<Div classes='flex flex-col'>
-    
-<a class="leading-loose underline" href="/pdf/Checkliste_Herstellung_A4.pdf" target="_blank">Download</a>
+<Div classes='flex flex-wrap gap-5'>
+
+<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Herstellung_A4.pdf" target="_blank">Download</a>
 
 </Div>
 

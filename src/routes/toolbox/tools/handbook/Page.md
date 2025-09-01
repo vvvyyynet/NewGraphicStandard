@@ -11,8 +11,8 @@ Das A bis Z für verantwortungsbewusste Gestaltung ist ein Werkzeugkasten für
 
 Dieses Handbuch liefert Inspiration und Impulse, ungewohnte Pfade zu beschreiten und neue Standards für grafisches Gestalten zu setzen: nachhaltig, offen, inklusiv, verantwortungsvoll und im besten Sinne vielfältig. Als Nachschlagewerk bringt es relevante Begriffe und Perspektiven zusammen, orientiert am gesamten Designprozess: von der Kontextualisierung über Gestaltung und Produktion bis zur Entsorgung des Endprodukts. 
 
-<DownloadModal>
-<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" href={undefined}  style="text-decoration:none">Download</a>
+<DownloadModal style="text-decoration:none">
+<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" href={undefined} style="text-decoration:none">Download</a>
 </DownloadModal>
 
 <img src="/img/Handbook_Spreads_1.png" alt="Handbook Spreads" class="mx-auto"/>

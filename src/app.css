@@ -38,6 +38,10 @@ h6 {
 	font-weight: normal;
 }
 
+ul {
+	list-style-type: disc;
+}
+
 @theme {
 	--container-xl: 110rem;
 	--container-lg: 75rem;

@@ -17,7 +17,7 @@
 	backdropBackground="bg-primary-100/80 dark:bg-primary-800/80"
 >
 	{#snippet trigger()}
-		<span class="leading-loose underline">{@render children()}</span>
+		<span class="leading-loose">{@render children()}</span>
 	{/snippet}
 
 	{#snippet content()}

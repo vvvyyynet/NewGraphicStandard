@@ -4,9 +4,9 @@ export const load: LayoutLoad = () => {
 	return {
 		title: "Info",
 		sections: [
-			{ slug: 'recherche', title: 'Verein' },
-			{ slug: 'ueber', title: 'Recherche' },
-			{ slug: 'verein', title: 'Über uns' }
+			{ slug: 'verein', title: 'Verein' },
+			{ slug: 'recherche', title: 'Recherche' },
+			{ slug: 'ueber', title: 'Über uns' }
 		]
 	};
 };

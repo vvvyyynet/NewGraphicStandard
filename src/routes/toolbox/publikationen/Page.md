@@ -13,12 +13,12 @@
 
 Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder zum selbst ausdrucken (empfohlene Druckanwendung: zwei Seiten pro A4-Seite, doppelseitig).
 
-<Div classes='flex flex-wrap gap-5'>
+<Div classes='flex flex-wrap gap-2'>
 
 <a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/toolbox/tools/handbook">Preview</a>
     
-<DownloadModal style="text-decoration:none;">
-<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" href={undefined} style="text-decoration:none;">Download</a>
+<DownloadModal>
+<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" href={undefined}>Download</a>
 </DownloadModal>
 
 </Div>

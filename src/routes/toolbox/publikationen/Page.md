@@ -17,7 +17,7 @@ Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder z
 
 <a class="leading-loose underline" href="/toolbox/tools/handbook">Preview</a>
     
-<DownloadModal href={undefined}>E-PDF zum Download</DownloadModal>
+<DownloadModal href={undefined}>Download</DownloadModal>
 
 </Div>
 

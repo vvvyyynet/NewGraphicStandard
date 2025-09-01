@@ -18,7 +18,7 @@ Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder z
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 min-h-5 justify-center rounded-full border p-0 text-lg" style="text-decoration:none;" href="/toolbox/tools/handbook">Preview</a>
 
 <DownloadModal>
-<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 text-lg" href={undefined}>Download</a>
+<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 text-lg" href={undefined}>Download</a>
 </DownloadModal>
 
 </Div>
@@ -37,7 +37,7 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wie können wir ökologisches un
 
 <Div classes='flex flex-wrap gap-5'>
 
-<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Faltplakat_A2.pdf" target="_blank">Download</a>
+<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Faltplakat_A2.pdf" target="_blank">Download</a>
 
 </Div>
 
@@ -53,7 +53,7 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wir haben die wichtigsten Aspekt
 
 <Div classes='flex flex-wrap gap-5'>
 
-<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Nachhaltigkeit_A4.pdf" target="_blank">Download</a>
+<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Nachhaltigkeit_A4.pdf" target="_blank">Download</a>
 
 </Div>
 
@@ -69,7 +69,7 @@ Nachhaltig(keit) kommunizieren, aber wie? Wir haben die wichtigsten Aspekte in e
 
 <Div classes='flex flex-wrap gap-5'>
 
-<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Kommunikation_A4.pdf" target="_blank">Download</a>
+<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Kommunikation_A4.pdf" target="_blank">Download</a>
 
 </Div>
 
@@ -85,7 +85,7 @@ Wie sieht ein umweltbewusster Entwurfsprozess aus? Wir haben die wichtigsten Asp
 
 <Div classes='flex flex-wrap gap-5'>
 
-<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Entwurfsprozess_A4.pdf" target="_blank">Download</a>
+<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Entwurfsprozess_A4.pdf" target="_blank">Download</a>
 
 </Div>
 
@@ -101,7 +101,7 @@ Papier, Druck und Digitale Alternativen unter der Lupe. Wir haben die wichtigste
 
 <Div classes='flex flex-wrap gap-5'>
 
-<a class="leading-loose dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Herstellung_A4.pdf" target="_blank">Download</a>
+<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Herstellung_A4.pdf" target="_blank">Download</a>
 
 </Div>
 

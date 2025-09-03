@@ -1,12 +1,10 @@
-# Rewrite non  requests to 
+# Enable rewrite engine
+RewriteEngine On
+RewriteBase /
 
-RewriteCond %{REQUEST_URI} !^
+# If the request is for an existing file or directory, serve it directly
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
 
-RewriteRule ^(.*)$ $1 [L]
-
-# Rewrite requests to non-existing files/dirs to /app/build/index.html
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteRule ^(.*)$ index.html [L]
+# Otherwise rewrite everything to index.html so the client router can handle it
+RewriteRule ^ index.html [L]

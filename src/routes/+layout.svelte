@@ -153,11 +153,7 @@
 		}}
 		class={['safarifix_right fixed top-5 right-5 z-900 h-9 lg:hidden lg:h-12']}
 	>
-		<IconMenu
-			size={100}
-			classes="safarifix_right"
-			colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }}
-		/>
+		<IconMenu size={99} classes="safarifix_right" colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }} />
 	</button>
 {/if}
 
@@ -175,7 +171,7 @@
 				>
 					<IconChevronLeft
 						classes="hidden h-9 lg:h-12 lg:block"
-						size={100}
+						size={99}
 						colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 					/>
 				</button>
@@ -188,7 +184,7 @@
 				>
 					<IconChevronRight
 						classes="hidden h-9 lg:h-12 lg:block"
-						size={100}
+						size={99}
 						colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 					/>
 				</button>
@@ -202,7 +198,7 @@
 			>
 				<IconClose
 					classes="h-9 lg:h-12 lg:hidden"
-					size={100}
+					size={99}
 					colors={{ w: COLOR_W_FIX, bg: COLOR_BG_FIX }}
 				/>
 			</button>
@@ -215,6 +211,7 @@
 			bind:isDark={isDark.val}
 			callback={closeMenu}
 			classes="safarifix_right fixed h-9 top-18 right-5 lg:h-12 lg:top-4 lg:right-4"
+			size={99}
 			colors={{ bg: COLOR_BG_FLEX, w: COLOR_W_FLEX, x: COLOR_W_FLEXFIX }}
 		/>
 	{/if}
@@ -248,7 +245,7 @@
 							<span class={[cl('all').mainIcon, cl(mode).mainIcon]}
 								><page.icon
 									classes={[checkActive(page.slug) && 'hover:cursor-default', '']}
-									size={100}
+									size={99}
 									isActive={checkActive(page.slug)}
 									colors={{
 										a: COLOR_A_FIX,

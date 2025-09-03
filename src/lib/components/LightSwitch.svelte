@@ -4,7 +4,13 @@
 	import IconLightswitch1 from '$lib/icons/IconLightswitch1.svelte';
 	import IconLightswitch2 from '$lib/icons/IconLightswitch2.svelte';
 
-	let { isDark = $bindable(false), callback = () => {}, classes = '', colors } = $props();
+	let {
+		isDark = $bindable(false),
+		callback = () => {},
+		classes = '',
+		size = 99,
+		colors
+	} = $props();
 
 	let darkModeState = $derived(isDark ? 'dark' : 'light');
 
@@ -34,8 +40,8 @@
 	}}
 >
 	{#if isDark}
-		<IconLightswitch1 size={100} {colors} />
+		<IconLightswitch1 {size} {colors} />
 	{:else}
-		<IconLightswitch2 size={100} {colors} />
+		<IconLightswitch2 {size} {colors} />
 	{/if}
 </button>

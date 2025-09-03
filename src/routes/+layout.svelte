@@ -72,7 +72,7 @@
 					menu: 'fixed w-full p-4',
 					content: '!opacity-0 w-0',
 					heading: 'text-5xl lg:text-8xl -pt-1 p-0 m-0',
-					mainNav: 'lg:top-48',
+					mainNav: 'lg:top-36',
 					mainOl: 'lg:flex lg:flex-row lg:gap-14',
 					mainItem: 'lg:h-14',
 					mainIcon: 'lg:h-14 lg:w-14 place-content-center',

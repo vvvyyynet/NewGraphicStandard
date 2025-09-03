@@ -1,13 +1,12 @@
-Header set X-HTACCESS-OK "yes"
+# Rewrite non /app/build/ requests to /app/build/
 
-# Enable rewrite engine
-RewriteEngine On
-RewriteBase /
+RewriteCond %{REQUEST_URI} !^/app/build/
 
-# If the request is for an existing file or directory, serve it directly
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
+RewriteRule ^(.*)$ /app/build/$1 [L]
 
-# Otherwise rewrite everything to index.html so the client router can handle it
-RewriteRule ^ index.html [L]
+# Rewrite requests to non-existing files/dirs to /app/build/index.html
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ /app/build/index.html [L]

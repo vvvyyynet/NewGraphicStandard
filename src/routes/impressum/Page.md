@@ -3,6 +3,10 @@ title: Impressum
 abstract:
 ---
 
+<script>
+    import LinkNewTab from '$lib/components/LinkNewTab.svelte';
+</script>
+
 ## Kontakt
 
 Verein New Graphic Standard <br>
@@ -11,16 +15,16 @@ Verein New Graphic Standard <br>
 
 ## Grafikdesign
 
-Katharina Scheller, ↗ [katharinascheller.ch](https://katharinascheller.ch/) <br>
-Ladina Ingold, ↗ [ladinaingold.ch](https://ladinaingold.ch/)
+Katharina Scheller, ↗ <LinkNewTab href="https://katharinascheller.ch/">katharinascheller.ch</LinkNewTab> <br>
+Ladina Ingold, ↗ <LinkNewTab href="https://ladinaingold.ch/">ladinaingold.ch</LinkNewTab>
 
 ## Code
 
-Levyn Bürki, ↗ [vvvyyy.net](https://vvvyyy.net/)
+Levyn Bürki, ↗ <LinkNewTab href="https://vvvyyy.net/">vvvyyy.net</LinkNewTab>
 
 ## Technischer Support
 
-Lazar Jeremić ↗ [lazar.ch](https://lazar.ch/)
+Lazar Jeremić ↗ <LinkNewTab href="https://lazar.ch/">lazar.ch</LinkNewTab>
 
 ## Haftungsausschluss
 
@@ -39,6 +43,6 @@ Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Da
 ## Datenschutz
 
 Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und die datenschutzrechtlichen Bestimmungen des Bundes (Datenschutzgesetz, DSG) hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Wir sind bestrebt diese Bestimmungen einzuhalten. Es werden weder persönlichen Daten gespeichert noch an Dritte weiter gegeben.
-Unser Hosting-Provider cyon bemüht sich, die gehosteten Daten so gut wie möglich vor fremden Zugriffen, Verlusten, Missbrauch oder vor Fälschung zu schützen, siehe: https://www.cyon.ch/ueber-cyon/datenschutz
+Unser Hosting-Provider cyon bemüht sich, die gehosteten Daten so gut wie möglich vor fremden Zugriffen, Verlusten, Missbrauch oder vor Fälschung zu schützen, siehe: <LinkNewTab href="https://www.cyon.ch/ueber-cyon/datenschutz">cyon.ch -> Datenschutz</LinkNewTab>
 
-Beim Zugriff auf unsere Webseite werden aufgrund Statistiken des Hostings (cyon) folgende Daten in Logfiles gespeichert: IP-Adresse, Datum, Uhrzeit, Browser-Anfrage und allg. übertragene Informationen zum Betriebssystem resp. Browser. Siehe: https://www.cyon.ch/support/a/raw-logs
+Beim Zugriff auf unsere Webseite werden aufgrund Statistiken des Hostings (cyon) folgende Daten in Logfiles gespeichert: IP-Adresse, Datum, Uhrzeit, Browser-Anfrage und allg. übertragene Informationen zum Betriebssystem resp. Browser. Siehe: <LinkNewTab href="https://www.cyon.ch/support/a/raw-logs">cyon.ch -> Raw Logs</LinkNewTab>

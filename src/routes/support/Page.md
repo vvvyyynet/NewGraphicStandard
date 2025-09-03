@@ -12,4 +12,4 @@ Verein New Graphic Standard <br>
 4053 Basel
 
 Bezahlung per TWINT: <br>
-<img src="/img/qr-IBAN.png" alt="QR Code für E-Banking" class="h-30 w-30" />
+<img src="/img/qr-TWINT.png" alt="QR Code für E-Banking" class="h-30 w-30" />

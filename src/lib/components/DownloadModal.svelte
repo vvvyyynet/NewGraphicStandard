@@ -46,10 +46,13 @@
 				deiner Wahl unterstützt.
 			</p>
 
-			<div class="flex flex-wrap items-center justify-center gap-5">
+			<div class="flex flex-wrap items-center gap-5">
 				<img src="/img/qr-IBAN.png" alt="QR Code für E-Banking" class="h-30 w-30" />
-				<p class="text-lg">Bezahlung per Banküberweisung: IBAN CH85 0076 9441 4721 0200 1</p>
-				<p class="text-lg">Oder: Bezahlung per TWINT unter diesem ↗ <a href="https://go.twint.ch/1/e/tw?tw=acq.sGZu1zkzT0aZyvZ233nYMU8Xp1puBm-itMl-a5b6zPbGD4K0aIFr1dHETMT5592P." style="text-decoration: underline;" target="_blank">Link</a></p>
+				<p class="text-lg">Bezahlung per Banküberweisung: <br> IBAN CH85 0076 9441 4721 0200 1</p>
+			</div>
+			<div class="flex flex-wrap items-center gap-5">
+				<img src="/img/qr-TWINT.png" alt="QR Code für E-Banking" class="h-30 w-30" />
+				<p class="text-lg">Bezahlung per TWINT <br> (auch unter diesem ↗ <a href="https://go.twint.ch/1/e/tw?tw=acq.sGZu1zkzT0aZyvZ233nYMU8Xp1puBm-itMl-a5b6zPbGD4K0aIFr1dHETMT5592P." style="text-decoration: underline;" target="_blank">Link</a>)</p>
 			</div>
 			<!-- <p class="">Download-Optionen</p> -->
 			<div class="flex flex-wrap items-center justify-center gap-4">

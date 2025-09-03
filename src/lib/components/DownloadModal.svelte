@@ -46,11 +46,11 @@
 				deiner Wahl unterstützt.
 			</p>
 
-			<div class="flex flex-wrap justify-center gap-5">
+			<div class="flex flex-wrap items-center gap-5">
 				<img src="/img/qr-IBAN.png" alt="QR Code für E-Banking" class="h-30 w-30" />
 				<p class="text-lg">Bezahlung per Banküberweisung: <br> IBAN CH85 0076 9441 4721 0200 1</p>
 			</div>
-			<div class="flex flex-wrap justify-center gap-5">
+			<div class="flex flex-wrap items-center gap-5">
 				<img src="/img/qr-TWINT.png" alt="QR Code für E-Banking" class="h-30 w-30" />
 				<p class="text-lg">Bezahlung per TWINT</p>
 			</div>

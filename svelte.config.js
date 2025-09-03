@@ -18,11 +18,11 @@ const config = {
 	],
 	kit: {
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: "index.html",
-			precompress: false,
-			strict: true
+			// pages: 'build',
+			// assets: 'build',
+			// fallback: "index.html",
+			// precompress: false,
+			// strict: true
 		}),
 		prerender: {
 			handleMissingId: 'ignore',

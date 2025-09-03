@@ -12,5 +12,5 @@ Verein New Graphic Standard <br>
 4053 Basel
 
 Bezahlung per TWINT:
-<img src="/img/qr-TWINT.png" alt="QR Code für E-Banking" class="h-30 w-30 p-0" sstyle="margin:0;" />
+<img src="/img/qr-TWINT.png" alt="QR Code für E-Banking" class="h-30 w-30 p-0" style="margin:0;" />
 oder unter diesem ↗ <a href="https://go.twint.ch/1/e/tw?tw=acq.sGZu1zkzT0aZyvZ233nYMU8Xp1puBm-itMl-a5b6zPbGD4K0aIFr1dHETMT5592P." style="text-decoration: underline;" target="_blank">Link</a>

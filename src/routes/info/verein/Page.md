@@ -8,4 +8,4 @@ Ziel ist es, dieses Knowhow zurück in die grafische Designpraxis fliessen zu la
 
 Weiter ist der Verein stetig im Austausch mit Grafiker\*innen und anderen Partner\*innen aus der Branche. Aktuell pflegen wir eine Kooperation mit dem Verein Ecopaper, der sich für einen nachhaltigen Umgang mit Papier engagiert.
 
-Zurzeit nimmt der Verein noch keine weitere Mitglieder\*innen auf.
+Zurzeit nimmt der Verein noch keine weiteren Mitglieder auf.

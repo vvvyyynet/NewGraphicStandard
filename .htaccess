@@ -1,12 +1,12 @@
-# Rewrite non /app/build/ requests to /app/build/
+# Rewrite non  requests to 
 
-RewriteCond %{REQUEST_URI} !^/app/build/
+RewriteCond %{REQUEST_URI} !^
 
-RewriteRule ^(.*)$ /app/build/$1 [L]
+RewriteRule ^(.*)$ $1 [L]
 
 # Rewrite requests to non-existing files/dirs to /app/build/index.html
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^(.*)$ /app/build/index.html [L]
+RewriteRule ^(.*)$ index.html [L]

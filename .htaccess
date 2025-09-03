@@ -1,10 +1,11 @@
 # Enable rewrite engine
 RewriteEngine On
+RewriteBase /
 
 # If the request is for an existing file or directory, serve it directly
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Otherwise rewrite everything to index.html
+# Otherwise rewrite everything to index.html so the client router can handle it
 RewriteRule ^ index.html [L]

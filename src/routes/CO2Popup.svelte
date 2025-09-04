@@ -13,7 +13,7 @@
 			<Globe isTurning={true} classes="max-h-9 " />
 			<p>
 				Diese Webseite hat einen CO<sub>2</sub>-Abdruck von ungefähr
-				0,03 g CO<sub>2</sub> pro Seitenaufruf. Erfahre
+				0,03 g CO<sub>2</sub>eq pro Seitenaufruf. Erfahre
 				<a href="/abdruck" class="underline">hier</a> mehr dazu.
 			</p>
 		</div>

@@ -19,7 +19,7 @@
 	let { children } = $props();
 
 	let route = $derived(page.url.pathname);
-	let isExpanded = $state(true);
+	let isExpanded = $state(isLargeScreen.val ? true : false);
 
 	// function that will collapse the sidebar after interactions with links or lightswitch
 	// but not for large screens!
@@ -141,6 +141,7 @@
 
 	onMount(() => {
 		updateScreenSize();
+		isExpanded = isLargeScreen.val ? true : false;
 	});
 </script>
 

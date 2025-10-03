@@ -16,14 +16,21 @@
 	import { onMount } from 'svelte';
 	import { isDark, isLargeScreen } from '$lib/store/stores.svelte';
 
+	let { children } = $props();
+
+	let route = $derived(page.url.pathname);
+	let isExpanded = $state(true);
+
 	// function that will collapse the sidebar after interactions with links or lightswitch
 	// but not for large screens!
 	let closeMenu = $derived(() => {
 		isExpanded = isLargeScreen.val ? isExpanded : false;
 	});
 
-	let { children } = $props();
-	let route = $derived(page.url.pathname);
+	function updateScreenSize() {
+		isLargeScreen.val = window.matchMedia('(min-width: 1024px)').matches;
+	}
+
 	const pages = [
 		{ menu: 'main', name: 'Info', slug: '/info', icon: IconInfo },
 		{ menu: 'main', name: 'Angebot', slug: '/angebot', icon: IconAngebot },
@@ -34,9 +41,6 @@
 		{ menu: 'footer', name: 'Impressum', slug: '/impressum', icon: null }
 	];
 
-	let isExpanded = $state(true);
-	let mode = $derived(route === '/' ? 'full' : isExpanded ? 'open' : 'closed');
-
 	// Classlists for active routes
 	let checkActive = $derived((slug: string, type: string = 'loose') => {
 		const check = type == 'strict' ? route === slug : route.includes(slug);
@@ -45,6 +49,7 @@
 	});
 
 	// Classlists for each mode
+	let mode = $derived(route === '/' ? 'full' : isExpanded ? 'open' : 'closed');
 	let cl = $derived((mode: string) => {
 		switch (mode) {
 			case 'all':
@@ -134,10 +139,6 @@
 	// stroke-[var(--color-primary-500)]
 	// stroke-[var(--color-white)]
 
-	function updateScreenSize() {
-		isLargeScreen.val = window.matchMedia('(min-width: 1024px)').matches;
-		console.log('isLargeScreen:', isLargeScreen.val); // For debugging
-	}
 	onMount(() => {
 		updateScreenSize();
 	});

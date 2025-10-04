@@ -110,7 +110,7 @@
 			thumbActive="bg-primary-500 dark:bg-white"
 			onCheckedChange={(e) => (useAllTags = e.checked)}
 		>
-			{useAllTags ? 'Alle' : 'Einige'}
+			{useAllTags ? 'Strikt' : 'Locker'}
 		</Switch>
 	</div>
 </div>

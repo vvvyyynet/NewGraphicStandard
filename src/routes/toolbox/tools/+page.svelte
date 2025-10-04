@@ -20,12 +20,13 @@
 	// Shuffle tools
 	// Filter tools
 	let tools = data.tools;
-	let allowedTags = $state(['alle']);
+	let allowedTags = $state([]);
+	$inspect(allowedTags);
 	let useAllTags = $state(false);
 	// split by size (the size is set manually in 'tools-list.json')
 	let tools_filtered = $derived(
 		tools.filter((tool) => {
-			if (allowedTags.includes('alle')) {
+			if (allowedTags.length === 0) {
 				return true;
 			} else if (useAllTags) {
 				return allowedTags.every((tag) => tool.tags.includes(tag));
@@ -61,16 +62,12 @@
 
 	// Functions for Filters
 	const toggleTag = (tag) => {
-		if (allowedTags.includes('alle')) {
-			allowedTags = allowedTags.filter((t) => t !== 'alle');
-		}
 		allowedTags = allowedTags.includes(tag)
 			? allowedTags.filter((t) => t !== tag)
 			: [...allowedTags, tag];
-		if (allowedTags.includes('alle')) {
-			allowedTags = ['alle'];
-		}
 	};
+
+	let fresh = $state('');
 </script>
 
 <!-- Filters -->
@@ -78,14 +75,23 @@
 	<p class="mb-2 text-sm">Nach Kategorien filtern</p>
 	<div class="flex flex-wrap gap-2">
 		<div class="flex flex-wrap gap-2">
-			{#each Array.from(new Set(['alle', ...data.tools.flatMap((tool) => tool.tags)])) as tag (tag)}
+			{#each Array.from(new Set([...data.tools.flatMap((tool) => tool.tags)])) as tag (tag)}
 				<button
-					onclick={() => toggleTag(tag)}
+					onclick={() => {
+						toggleTag(tag);
+						fresh = tag;
+					}}
+					onpointerleave={() => {
+						fresh = '';
+					}}
 					class={[
-						'border-primary-500 text-primary-500 hover:bg-secondary-500 hover:text-primary-500 rounded-full border-1 px-3 text-[18px] ',
-						allowedTags.includes(tag) &&
-							'bg-secondary-500 text-primary-500 hover:text-primary-500 dark:border-secondary-500 hover:bg-transparent hover:dark:border-white hover:dark:text-white',
-						!allowedTags.includes(tag) && 'dark:border-white dark:text-white'
+						'text-primary-500 rounded-full border-1 px-3 text-[18px]',
+						((!allowedTags.includes(tag) && fresh !== tag) ||
+							(allowedTags.includes(tag) && fresh === tag)) &&
+							'border-primary-500 hover:bg-secondary-500 bg-transparent dark:border-white dark:text-white  ',
+						((allowedTags.includes(tag) && fresh !== tag) ||
+							(!allowedTags.includes(tag) && fresh === tag)) &&
+							'bg-secondary-500 dark:border-secondary-500 hover:bg-transparent hover:dark:border-white hover:dark:text-white'
 					]}
 				>
 					{tag}

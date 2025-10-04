@@ -21,7 +21,6 @@
 	// Filter tools
 	let tools = data.tools;
 	let allowedTags = $state([]);
-	$inspect(allowedTags);
 	let useAllTags = $state(false);
 	// split by size (the size is set manually in 'tools-list.json')
 	let tools_filtered = $derived(
@@ -67,7 +66,13 @@
 			: [...allowedTags, tag];
 	};
 
-	let fresh = $state('');
+	let justToggled = $state('');
+	function clearJustToggled(e) {
+		try {
+			e?.currentTarget?.releasePointerCapture?.(e.pointerId);
+		} catch {}
+		justToggled = '';
+	}
 </script>
 
 <!-- Filters -->
@@ -77,23 +82,36 @@
 		<div class="flex flex-wrap gap-2">
 			{#each Array.from(new Set([...data.tools.flatMap((tool) => tool.tags)])) as tag (tag)}
 				<button
-					onclick={() => {
+					onpointerdown={(e) => {
 						toggleTag(tag);
-						fresh = tag;
+						justToggled = tag;
+						try {
+							e.currentTarget.setPointerCapture(e.pointerId);
+						} catch {}
 					}}
-					onpointerleave={() => {
-						fresh = '';
+					onpointermove={(e) => {
+						if (e.pointerType !== 'mouse') {
+							const el = document.elementFromPoint(e.clientX, e.clientY);
+							if (!el || !e.currentTarget.contains(el)) justToggled = '';
+						}
 					}}
+					onpointerup={(e) => {
+						if (e.pointerType !== 'mouse') clearJustToggled(e);
+					}}
+					onpointercancel={clearJustToggled}
+					onpointerleave={clearJustToggled}
+					ontouchend={clearJustToggled}
+					ontouchcancel={clearJustToggled}
 					class={[
 						'text-primary-500 rounded-full border-1 px-3 text-[18px]',
 						!allowedTags.includes(tag) &&
-							fresh !== tag &&
+							justToggled !== tag &&
 							'border-primary-500 hover:border-primary-500 hover:bg-secondary-500 hover:text-primary-500 dark:hover:text-secondary-500 dark:hover:bg-primary-500 dark:hover:border-secondary-500 bg-transparent dark:border-white dark:text-white',
 						allowedTags.includes(tag) &&
-							fresh === tag &&
+							justToggled === tag &&
 							'border-primary-500 dark:hover:border-secondary-500 hover:bg-secondary-500  hover:text-primary-500 bg-transparent dark:border-white dark:text-white',
-						((allowedTags.includes(tag) && fresh !== tag) ||
-							(!allowedTags.includes(tag) && fresh === tag)) &&
+						((allowedTags.includes(tag) && justToggled !== tag) ||
+							(!allowedTags.includes(tag) && justToggled === tag)) &&
 							'bg-secondary-500 dark:border-secondary-500 hover:bg-transparent dark:hover:border-white dark:hover:text-white'
 					]}
 				>

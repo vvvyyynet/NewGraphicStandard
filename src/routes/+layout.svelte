@@ -150,10 +150,11 @@
 <!-- Hamburger Trigger -->
 {#if mode === 'closed'}
 	<button
+		class={['safarifix_right fixed top-5 right-5 z-900 h-9 lg:hidden lg:h-12']}
+		aria-roledescription="Menu öffnen"
 		onclick={() => {
 			isExpanded = true;
 		}}
-		class={['safarifix_right fixed top-5 right-5 z-900 h-9 lg:hidden lg:h-12']}
 	>
 		<IconMenu size={99} classes="safarifix_right" colors={{ w: COLOR_W_FLEX, bg: COLOR_BG_FLEX }} />
 	</button>
@@ -166,6 +167,7 @@
 		{#if isLargeScreen.val}
 			{#if isExpanded}
 				<button
+					aria-roledescription="Menu einklappen"
 					class={['safarifix_chevronLeft absolute top-5 right-5 lg:right-4']}
 					onclick={() => {
 						isExpanded = !isExpanded;
@@ -179,6 +181,7 @@
 				</button>
 			{:else}
 				<button
+					aria-roledescription="Menu ausklappen"
 					class={['safarifix_chevronRight absolute top-5 right-5 lg:right-4']}
 					onclick={() => {
 						isExpanded = !isExpanded;
@@ -193,6 +196,7 @@
 			{/if}
 		{:else}
 			<button
+				aria-roledescription="Menu schliessen"
 				class={['safarifix_right absolute top-5 right-5 lg:right-4']}
 				onclick={() => {
 					isExpanded = !isExpanded;

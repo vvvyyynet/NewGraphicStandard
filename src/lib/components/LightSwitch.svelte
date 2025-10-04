@@ -34,6 +34,7 @@
 </script>
 
 <button
+	aria-roledescription={isDark ? 'zum hellen Modus' : 'zum dunklen Modus'}
 	class={classes}
 	onclick={(ev) => {
 		onCheckedChange();

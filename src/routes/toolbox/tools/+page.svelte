@@ -83,6 +83,9 @@
 		<div class="flex flex-wrap gap-2">
 			{#each Array.from(new Set([...data.tools.flatMap((tool) => tool.tags)])) as tag (tag)}
 				<button
+					aria-roledescription={allowedTags.includes(tag)
+						? `Turn off filter for ${tag}`
+						: `Turn on filter for ${tag}`}
 					onpointerdown={(e) => {
 						toggleTag(tag);
 						justToggled = tag;

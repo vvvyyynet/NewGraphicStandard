@@ -101,6 +101,7 @@
 		<Switch
 			checked={useAllTags}
 			classes="ml-5"
+			labelClasses="text-lg"
 			controlClasses="border border-primary-500 dark:border-white"
 			controlActive="bg-white dark:bg-primary-500"
 			controlInactive="bg-white dark:bg-primary-500"
@@ -109,7 +110,7 @@
 			thumbActive="bg-primary-500 dark:bg-white"
 			onCheckedChange={(e) => (useAllTags = e.checked)}
 		>
-			{useAllTags ? 'Strikt' : 'Locker'}
+			{useAllTags ? 'Alle' : 'Einige'}
 		</Switch>
 	</div>
 </div>

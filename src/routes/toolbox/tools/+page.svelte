@@ -86,12 +86,15 @@
 					}}
 					class={[
 						'text-primary-500 rounded-full border-1 px-3 text-[18px]',
-						((!allowedTags.includes(tag) && fresh !== tag) ||
-							(allowedTags.includes(tag) && fresh === tag)) &&
-							'border-primary-500 hover:bg-secondary-500 bg-transparent dark:border-white dark:text-white  ',
+						!allowedTags.includes(tag) &&
+							fresh !== tag &&
+							'border-primary-500 hover:border-primary-500 hover:bg-secondary-500 hover:text-primary-500 dark:hover:text-secondary-500 dark:hover:bg-primary-500 dark:hover:border-secondary-500 bg-transparent dark:border-white dark:text-white',
+						allowedTags.includes(tag) &&
+							fresh === tag &&
+							'border-primary-500 dark:hover:border-secondary-500 hover:bg-secondary-500  hover:text-primary-500 bg-transparent dark:border-white dark:text-white',
 						((allowedTags.includes(tag) && fresh !== tag) ||
 							(!allowedTags.includes(tag) && fresh === tag)) &&
-							'bg-secondary-500 dark:border-secondary-500 hover:bg-transparent hover:dark:border-white hover:dark:text-white'
+							'bg-secondary-500 dark:border-secondary-500 hover:bg-transparent dark:hover:border-white dark:hover:text-white'
 					]}
 				>
 					{tag}

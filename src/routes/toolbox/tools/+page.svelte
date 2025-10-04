@@ -67,9 +67,10 @@
 	};
 
 	let justToggled = $state('');
-	function clearJustToggled(e) {
+
+	function clearJustToggled(el, pointerId) {
 		try {
-			e?.currentTarget?.releasePointerCapture?.(e.pointerId);
+			el?.releasePointerCapture?.(pointerId);
 		} catch {}
 		justToggled = '';
 	}
@@ -85,23 +86,39 @@
 					onpointerdown={(e) => {
 						toggleTag(tag);
 						justToggled = tag;
+						const btn = e.target;
 						try {
-							e.currentTarget.setPointerCapture(e.pointerId);
+							btn?.setPointerCapture?.(e.pointerId);
 						} catch {}
 					}}
 					onpointermove={(e) => {
-						if (e.pointerType !== 'mouse') {
-							const el = document.elementFromPoint(e.clientX, e.clientY);
-							if (!el || !e.currentTarget.contains(el)) justToggled = '';
-						}
+						const btn = e.target;
+						const hit = document.elementFromPoint(e.clientX, e.clientY);
+						if (!btn || !hit || !btn.contains(hit)) clearJustToggled(btn, e.pointerId);
 					}}
 					onpointerup={(e) => {
-						if (e.pointerType !== 'mouse') clearJustToggled(e);
+						if (e.pointerType !== 'mouse') {
+							const btn = e.target;
+							clearJustToggled(btn, e.pointerId);
+						}
 					}}
-					onpointercancel={clearJustToggled}
-					onpointerleave={clearJustToggled}
-					ontouchend={clearJustToggled}
-					ontouchcancel={clearJustToggled}
+					onpointercancel={(e) => {
+						const btn = e.target;
+						clearJustToggled(btn, e.pointerId);
+					}}
+					onpointerleave={(e) => {
+						const btn = e.target;
+						clearJustToggled(btn, e.pointerId);
+					}}
+					ontouchmove={(e) => {
+						const btn = e.target;
+						const t = e.touches[0];
+						if (!t) return;
+						const hit = document.elementFromPoint(t.clientX, t.clientY);
+						if (!btn || !hit || !btn.contains(hit)) clearJustToggled(btn);
+					}}
+					ontouchend={() => clearJustToggled()}
+					ontouchcancel={() => clearJustToggled()}
 					class={[
 						'text-primary-500 rounded-full border-1 px-3 text-[18px]',
 						!allowedTags.includes(tag) &&

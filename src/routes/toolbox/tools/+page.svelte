@@ -2,7 +2,6 @@
 	import Tile from '$lib/components/Tile.svelte';
 	import { onMount } from 'svelte';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
-	import Overlap from './Overlap.svelte';
 
 	let { data } = $props();
 
@@ -111,11 +110,7 @@
 			thumbActive="bg-primary-500 dark:bg-white"
 			onCheckedChange={(e) => (useAllTags = e.checked)}
 		>
-			{#if useAllTags}
-				<Overlap state="overlap"></Overlap>
-			{:else}
-				<Overlap state="full"></Overlap>
-			{/if}
+			{useAllTags ? 'Alle' : 'Einige'}
 		</Switch>
 	</div>
 </div>

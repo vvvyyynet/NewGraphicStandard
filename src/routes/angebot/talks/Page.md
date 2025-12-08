@@ -19,6 +19,8 @@ Zum Thema "Nachhaltigkeit im Grafikdesign" im Allgemeinen oder zu spezifischen T
 
 2025
 
+- Kreativgesellschaft Metropolregion Basel, Stadtwerkstatt, Basel
+- SFG BB, Biel, Berufskenntnisse, Grafik Fachklasse
 - FHNW, HGK, Basel, Editorial Design, Sustainable Publishing
 - Gewerkschaft Medien und Kommunikation, Syndicom, Grafik Design
 

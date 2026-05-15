@@ -4,9 +4,9 @@ export const load: LayoutLoad = () => {
 	return {
 		title: "Angebot",
 		sections: [
-			{ slug: 'beratung', title: 'Beratung' },
 			{ slug: 'talks', title: 'Talks' },
-			{ slug: 'workshops', title: 'Workshops' }
+			{ slug: 'workshops', title: 'Workshops' },
+			{ slug: 'beratung', title: 'Beratung' }
 		]
 	};
 };

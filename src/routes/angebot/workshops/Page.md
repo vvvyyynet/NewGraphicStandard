@@ -21,6 +21,10 @@ Wichtig ist, dass ihr einen Raum mit der entsprechenden Infrastruktur organisier
 
 ## Vergangene Workshops
 
+2026
+
+– Full Circle Symposium, Das Symposium für Kreislaufwirtschaft, FHNW Basel
+
 2025
 
 - Helias, Weiterbildungsinstitut der Gewerkschaften syndicom, Syna und Viscom

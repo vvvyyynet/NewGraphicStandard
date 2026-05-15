@@ -4,6 +4,6 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		goto(`${base}/angebot/beratung`, { replaceState: true });
+		goto(`${base}/angebot/talks`, { replaceState: true });
 	});
 </script>

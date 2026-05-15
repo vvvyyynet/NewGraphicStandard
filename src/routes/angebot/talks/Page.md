@@ -7,7 +7,7 @@ abstract:
     import Div from '$lib/components/Div.svelte';
 </script>
 
-Zum Thema "Nachhaltigkeit im Grafikdesign" im Allgemeinen oder zu spezifischen Themen aus den Bereichen Print oder Digitale Nachhaltigkeit bieten wir Kurzreferate und umfassendere Inputvorträge.
+Zum Thema Nachhaltigkeit im Grafikdesign im Allgemeinen oder zu spezifischen Themen aus den Bereichen Print oder digitale Nachhaltigkeit bieten wir Kurzreferate und umfassendere Inputvorträge.
 
 <Div classes="border-1 border-secondary p-1 text-center rounded-3xl">
 

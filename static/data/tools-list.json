@@ -4,4 +4,5 @@
 {"slug": "font", "size":4, "tags":["typografie"],"hasContent":true, "folder":"font-diversity"},
 {"slug": "papierrechner", "size":2, "tags":["papier"], "hasContent":false, "folder":"papierrechner"},
 {"slug": "handbook", "size":4, "tags":["news"], "hasContent":true, "folder":"handbook"}
+{"slug": "hochparterre", "size":2, "tags":["news"], "hasContent":false, "folder":"handbook"}
 ]

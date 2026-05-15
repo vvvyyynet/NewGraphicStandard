@@ -23,7 +23,7 @@ Wichtig ist, dass ihr einen Raum mit der entsprechenden Infrastruktur organisier
 
 2026
 
-– Full Circle Symposium, Das Symposium für Kreislaufwirtschaft, FHNW Basel
+- Full Circle Symposium, Das Symposium für Kreislaufwirtschaft, FHNW Basel
 
 2025
 

@@ -33,16 +33,15 @@ Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder z
 
 De A à Z : Concevoir de manière responsable – Chapitres 1 à 3 (1re partie). La version complète sera disponible d'ici fin octobre.
 
-<div classes='flex flex-wrap gap-5'>
+<Div classes='flex flex-wrap gap-5'>
 
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/New_Graphic_Standard_A_Z_Handbook_F_1re_partie.pdf" target="_blank">Download</a>
 
-</div>
+</Div>
 
-</div>
+</Div>
 
-
-<div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
+<Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
 <img src="/img/Faltplakat.png" alt="Faltplakat" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 

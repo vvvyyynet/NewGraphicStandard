@@ -3,9 +3,9 @@
     import Div from '$lib/components/Div.svelte'
 </script>
 
-<Div classes='max-auto flex flex-wrap gap-18 justify-start items-start pl-[5vw] md:pl-[0vw] lg:pl-[5vw]'>
+<div classes='max-auto flex flex-wrap gap-18 justify-start items-start pl-[5vw] md:pl-[0vw] lg:pl-[5vw]'>
 
-<Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
+<div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
 <img src="/img/Handbook_Cover.png" alt="Poster Handbook" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
@@ -13,7 +13,7 @@
 
 Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder zum selbst ausdrucken (empfohlene Druckanwendung: zwei Seiten pro A4-Seite, doppelseitig).
 
-<Div classes='flex flex-wrap gap-2'>
+<div classes='flex flex-wrap gap-2'>
 
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 min-h-5 justify-center rounded-full border p-0 text-lg" style="text-decoration:none;" href="/toolbox/tools/handbook">Preview</a>
 
@@ -21,29 +21,11 @@ Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder z
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 text-lg" style="text-decoration:none;" href={undefined}>Download</a>
 </DownloadModal>
 
-</Div>
+</div>
 
-</Div>
+</div>
 
-<Div classes='max-auto flex flex-wrap gap-18 justify-start items-start pl-[5vw] md:pl-[0vw] lg:pl-[5vw]'>
-
-<Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
-
-<img src="/img/Handbook_Cover_FR.png" alt="Poster Handbook" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
-
-## New Graphic Standard A—Z <br>Francais
-
-De A à Z : Concevoir de manière responsable – Chapitres 1 à 3 (1re partie). La version complète sera disponible d'ici fin octobre.
-
-<Div classes='flex flex-wrap gap-5'>
-
-<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/New_Graphic_Standard_A_Z_Handbook_F_1re_partie.pdf" target="_blank">Download</a>
-
-</Div>
-
-</Div>
-
-<Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
+<div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
 <img src="/img/Faltplakat.png" alt="Faltplakat" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
@@ -53,15 +35,15 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wie können wir ökologisches un
 
 👉🏻 Werde selbst aktiv: Druck das Plakat aus, häng es sichtbar auf oder gib die Merkblätter an Kolleg\*innen weiter. So wird klimaschonendes Handeln zum Teil unserer Gestaltungspraxis
 
-<Div classes='flex flex-wrap gap-5'>
+<div classes='flex flex-wrap gap-5'>
 
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Faltplakat_A2.pdf" target="_blank">Download</a>
 
-</Div>
+</div>
 
-</Div>
+</div>
 
-<Div classes='max-w-[80vw] md:max-w-[40vw] md:max-w-[40vw] lg:max-w-[20vw]'>
+<div classes='max-w-[80vw] md:max-w-[40vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
 <img src="/img/Checkliste_Nachhaltigkeit.png" alt="Checkliste Nachhaltigkeit" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
@@ -69,15 +51,15 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wie können wir ökologisches un
 
 Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
-<Div classes='flex flex-wrap gap-5'>
+<div classes='flex flex-wrap gap-5'>
 
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Nachhaltigkeit_A4.pdf" target="_blank">Download</a>
 
-</Div>
+</div>
 
-</Div>
+</div>
 
-<Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
+<div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
 <img src="/img/Checkliste_Kommunikation.png" alt="Checkliste Kommunikation" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
@@ -85,15 +67,15 @@ Was hat Nachhaltigkeit mit Grafikdesign zu tun? Wir haben die wichtigsten Aspekt
 
 Nachhaltig(keit) kommunizieren, aber wie? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
-<Div classes='flex flex-wrap gap-5'>
+<div classes='flex flex-wrap gap-5'>
 
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Kommunikation_A4.pdf" target="_blank">Download</a>
 
-</Div>
+</div>
 
-</Div>
+</div>
 
-<Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
+<div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
 <img src="/img/Checkliste_Entwurfsprozess.png" alt="Checkliste Entwurfsprozess" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
@@ -101,15 +83,15 @@ Nachhaltig(keit) kommunizieren, aber wie? Wir haben die wichtigsten Aspekte in e
 
 Wie sieht ein umweltbewusster Entwurfsprozess aus? Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
-<Div classes='flex flex-wrap gap-5'>
+<div classes='flex flex-wrap gap-5'>
 
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Entwurfsprozess_A4.pdf" target="_blank">Download</a>
 
-</Div>
+</div>
 
-</Div>
+</div>
 
-<Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
+<div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
 
 <img src="/img/Checkliste_Herstellung.png" alt="Checkliste Herstellung" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
@@ -117,12 +99,12 @@ Wie sieht ein umweltbewusster Entwurfsprozess aus? Wir haben die wichtigsten Asp
 
 Papier, Druck und Digitale Alternativen unter der Lupe. Wir haben die wichtigsten Aspekte in einer kompakten Checkliste aufbereitet.
 
-<Div classes='flex flex-wrap gap-5'>
+<div classes='flex flex-wrap gap-5'>
 
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/Checkliste_Herstellung_A4.pdf" target="_blank">Download</a>
 
-</Div>
+</div>
 
-</Div>
+</div>
 
-</Div>
+</div>

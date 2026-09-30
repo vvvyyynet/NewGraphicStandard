@@ -139,7 +139,7 @@
 				</button>
 			{/each}
 		</div>
-		<Switch
+		<!-- <Switch
 			checked={useAllTags}
 			classes="ml-5"
 			labelClasses="text-lg"
@@ -152,7 +152,7 @@
 			onCheckedChange={(e) => (useAllTags = e.checked)}
 		>
 			{useAllTags ? 'Strikt' : 'Locker'}
-		</Switch>
+		</Switch> -->
 	</div>
 </div>
 

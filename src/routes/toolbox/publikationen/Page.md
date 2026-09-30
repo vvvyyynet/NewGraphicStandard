@@ -9,7 +9,7 @@
 
 <img src="/img/Handbook_Cover.png" alt="Poster Handbook" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
-## Handbook: <br>New Graphic Standard A—Z
+## New Graphic Standard A—Z <br>Deutsch
 
 Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder zum selbst ausdrucken (empfohlene Druckanwendung: zwei Seiten pro A4-Seite, doppelseitig).
 
@@ -20,6 +20,24 @@ Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder z
 <DownloadModal>
 <a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 text-lg" style="text-decoration:none;" href={undefined}>Download</a>
 </DownloadModal>
+
+</Div>
+
+</Div>
+
+<Div classes='max-auto flex flex-wrap gap-18 justify-start items-start pl-[5vw] md:pl-[0vw] lg:pl-[5vw]'>
+
+<Div classes='max-w-[80vw] md:max-w-[40vw] lg:max-w-[20vw]'>
+
+<img src="/img/Handbook_Cover_FR.png" alt="Poster Handbook" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
+
+## New Graphic Standard A—Z <br>Francais
+
+De A à Z : Concevoir de manière responsable – Chapitres 1 à 3 (1re partie). La version complète sera disponible d'ici fin octobre.
+
+<Div classes='flex flex-wrap gap-5'>
+
+<a class="dark:hover:border-secondary-500 dark:hover:text-primary-500 hover:bg-secondary-500 dark:hover:bg-secondary-500 flex min-w-40 justify-center rounded-full border p-0 px-4 text-lg" style="text-decoration:none;" href="/pdf/New_Graphic_Standard_A_Z_Handbook_F_1re_partie.pdf" target="_blank">Download</a>
 
 </Div>
 

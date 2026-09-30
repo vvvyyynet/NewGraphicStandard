@@ -35,7 +35,7 @@
 								page.url.pathname.includes(section.slug) && 'bg-secondary-500 text-primary-500',
 								!page.url.pathname.includes(section.slug) &&
 									'dark:hover:border-secondary-500 dark:hover:text-secondary-500 hover:bg-secondary-500 dark:hover:bg-primary-500',
-								'flex min-w-30 justify-center rounded-full border p-0 text-lg'
+								'flex min-w-30 justify-center rounded-full border py-0 px-4 text-lg'
 							]}
 						>
 							<span class="text-center">{section.title}</span>

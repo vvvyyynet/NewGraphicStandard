@@ -9,7 +9,7 @@
 
 <img src="/img/Handbook_Cover.png" alt="Poster Handbook" class="mx-auto max-h-[60vh] drop-shadow-[2px_2px_4px_var(--color-primary-500)] dark:drop-shadow-[2px_2px_4px_var(--color-primary-800)]"/>
 
-## Handbook: <br>New Graphic Standard A—Z
+## New Graphic Standard A—Z<br>Deutsch
 
 Das gesamte Wissen in einem kompakten A5-Format, für den online Gebrauch oder zum selbst ausdrucken (empfohlene Druckanwendung: zwei Seiten pro A4-Seite, doppelseitig).
 
